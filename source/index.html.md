@@ -3,12 +3,12 @@ title: API Reference
 
 language_tabs:
   - shell
+  - node
   - ruby
   - python
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
 
 includes:
   - errors
@@ -18,11 +18,39 @@ search: true
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+A brief introduction...
 
-We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+## Brands
 
-This example API documentation page was created with [Slate](https://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
+A brief explanation about brands...
+
+You will notice that the following tag will be replaced by the Brand model.
+
+[[model:Brand]]
+
+### Getting Brands
+
+A brief explanation on how to get brands...
+
+[[operation:getBrands]]
+
+### Creating Brands
+
+A brief explanation on how to create new brands...
+
+[[operation:createBrands]]
+
+### Updating Brands
+
+A brief explanation on how to update brands...
+
+[[operation:updateBrands]]
+
+### Deleting Brands
+
+A brief explanation on how to delete brands...
+
+[[operation:deleteBrands]]
 
 # Authentication
 
