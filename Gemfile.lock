@@ -98,7 +98,7 @@ GEM
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
-    rake (10.5.0)
+    rake (11.1.2)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
@@ -127,6 +127,7 @@ DEPENDENCIES
   middleman-gh-pages (~> 0.0.3)
   middleman-sprockets (~> 4.0.0.rc)
   middleman-syntax (~> 2.1.0)
+  rake (~> 11.1.2)
   redcarpet (~> 3.3.2)
   rouge (~> 1.10.1)
 
