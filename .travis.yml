@@ -3,13 +3,13 @@ rvm:
 - 2.1.0
 cache: bundler
 script:
+- bundle install
 - bundle exec rspec spec
 - bundle exec rake build
+- bundle exec middleman build --clean
 deploy:
   provider: script
-  script: deploy.sh
+  skip_cleanup: true
+  script: bash -c './deploy.sh'
   on:
     branch: master
-before_install:
-- openssl aes-256-cbc -K $encrypted_9d680ccc9428_key -iv $encrypted_9d680ccc9428_iv
-  -in .ssh/id_rsa.enc -out .ssh/id_rsa -d

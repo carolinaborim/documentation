@@ -30,12 +30,14 @@ overridden by environment variables. Any environment variables are overridden
 by values set in a '.env' file (if it exists), and in turn by those set in a
 file specified by the '--config-file' option."
 
+
 mkdir -p ~/.ssh
-cp .ssh/id_rsa ~/.ssh/
+openssl aes-256-cbc -K $encrypted_9d680ccc9428_key -iv $encrypted_9d680ccc9428_iv -in .ssh/id_rsa.enc -out ~/.ssh/id_rsa -d
 chmod 600 ~/.ssh/id_rsa
 
-bundle exec middleman build --clean
+#bundle exec middleman build --clean
 git checkout .
+git remote set-url origin git@github.com:agco-fuse/documentation.git
 
 parse_args() {
   # Set args from a local environment file.
