@@ -1,5 +1,8 @@
 Documentation
 -------------
+
+[![Build Status](https://travis-ci.org/agco-fuse/documentation.svg?branch=master)](https://travis-ci.org/agco-fuse/documentation)
+
 ## Requirements
 
 You should have the following components installed on your computer:
