@@ -30,6 +30,10 @@ overridden by environment variables. Any environment variables are overridden
 by values set in a '.env' file (if it exists), and in turn by those set in a
 file specified by the '--config-file' option."
 
+mkdir -p ~/.ssh
+cp .ssh/id_rsa ~/.ssh/
+chmod 600 ~/.ssh/id_rsa
+
 bundle exec middleman build --clean
 git checkout .
 
