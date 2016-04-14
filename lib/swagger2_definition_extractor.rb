@@ -1,8 +1,8 @@
-require_relative './swagger_definition.rb'
+require_relative 'swagger_definition.rb'
 
+# The Swagger2DefinitionExtractor class is responsible for
+# extracting information out of Swagger 2.x documents.
 class Swagger2DefinitionExtractor
-  # The Swagger2DefinitionExtractor class is responsible for
-  # extracting information out of Swagger 2.x documents.
   def extract(json)
     operations = available_operations(json)
     models = available_models(json)

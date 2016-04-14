@@ -1,6 +1,6 @@
+# The SwaggerVersionChecker class is responsible for
+# identifying the Swagger document version.
 class SwaggerVersionChecker
-  # The SwaggerVersionChecker class is responsible for
-  # identifying the Swagger document version.
   def initialize(json)
     swagger_version = if json.key?('swaggerVersion')
                         Float(json['swaggerVersion'])

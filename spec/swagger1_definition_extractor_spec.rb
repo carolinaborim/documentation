@@ -1,10 +1,10 @@
 require 'spec_helper'
 require 'json'
-require './lib/swagger1_definition_extractor.rb'
+require_relative '../lib/swagger1_definition_extractor.rb'
 
-describe(Swagger1DefinitionExtractor) do
-  describe('when extracing definitions from a valid document') do
-    let(:content) do
+describe Swagger1DefinitionExtractor do
+  describe 'when extracing definitions from a valid document' do
+    let :content do
       <<-EOS
 {
     "apiVersion": "0.43.0",
@@ -42,11 +42,11 @@ describe(Swagger1DefinitionExtractor) do
 EOS
     end
 
-    let(:json) do
+    let :json do
       JSON.parse(content)
     end
 
-    it('should return the correct operations') do
+    it 'should return the correct operations' do
       expected_operations = {
         'getBrands' => {
           'method' => 'GET',
@@ -63,7 +63,7 @@ EOS
       expect(swagger_definition.operations).to be_eql(expected_operations)
     end
 
-    it('should return the correct models') do
+    it 'should return the correct models' do
       expected_models = {
         'Brand' => {
           'id' => 'Brand',
@@ -86,17 +86,17 @@ EOS
     end
   end
 
-  describe('when extracting information from an empty document') do
-    let(:json) do
+  describe 'when extracting information from an empty document' do
+    let :json do
       JSON.parse('{}')
     end
 
-    it('should return empty operations') do
+    it 'should return empty operations' do
       swagger_definition = subject.extract(json)
       expect(swagger_definition.operations).to be_eql({})
     end
 
-    it('should return empty models') do
+    it 'should return empty models' do
       swagger_definition = subject.extract(json)
       expect(swagger_definition.models).to be_eql({})
     end

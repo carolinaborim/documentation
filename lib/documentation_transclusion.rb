@@ -1,6 +1,6 @@
+# The DocumentationTransclusion class is responsible for
+# choreographing the whole process.
 class DocumentationTransclusion
-  # The DocumentationTransclusion class is responsible for
-  # choreographing the whole process.
   def initialize(swagger_document_fetcher,
                  swagger_definition_extractor,
                  documentation_finder,
@@ -16,7 +16,7 @@ class DocumentationTransclusion
 
     swagger_documents.each do |document|
       swagger_definition = @swagger_definition_extractor.extract(document)
-      documentation_filenames = @documentation_finder\
+      documentation_filenames = @documentation_finder
                                 .find_all(documentation_root)
 
       @template_handler.apply(swagger_definition, documentation_filenames)

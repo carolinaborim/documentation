@@ -1,8 +1,8 @@
 require 'json'
 
+# The JsonTemplate class responsible for converting a JSON
+# file into its Markdown representation.
 class JsonTemplate
-  # The JsonTemplate class responsible for converting a JSON
-  # file into its Markdown representation.
   def render(json)
     pretty_json = JSON.pretty_generate(json)
 

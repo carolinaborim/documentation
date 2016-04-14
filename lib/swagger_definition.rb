@@ -1,6 +1,6 @@
+# The SwaggerDefinition class is responsible for representing
+# the available Swagger operations and models.
 class SwaggerDefinition
-  # The SwaggerDefinition class is responsible for representing
-  # the available Swagger operations and models.
   attr_reader :operations, :models
 
   def initialize(operations, models)

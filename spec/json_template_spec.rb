@@ -1,8 +1,8 @@
 require 'spec_helper'
-require './lib/json_template.rb'
+require_relative '../lib/json_template.rb'
 
-describe(JsonTemplate) do
-  it('should convert a hash into a pretty JSON template') do
+describe JsonTemplate do
+  it 'should convert a hash into a pretty JSON template' do
     json = JSON.parse('{ "summary": "...", "description": "..." }')
 
     pretty = subject.render(json)

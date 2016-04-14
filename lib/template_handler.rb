@@ -1,8 +1,8 @@
-require_relative './json_template.rb'
+require_relative 'json_template.rb'
 
+# The TemplateHandler class is responsible for applying a given
+# SwaggerDefinition to the markdown documentation file.
 class TemplateHandler
-  # The TemplateHandler class is responsible for applying a given
-  # SwaggerDefinition to the markdown documentation file.
   def initialize(template)
     @template = template
   end

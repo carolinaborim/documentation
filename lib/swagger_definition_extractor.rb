@@ -1,9 +1,9 @@
-require_relative './swagger_version_checker.rb'
+require_relative 'swagger_version_checker.rb'
 
+# The SwaggerDefinitionExtractor is a facade/strategy that ensures
+# end users will not be bothered about which Swagger document is
+# being handled.
 class SwaggerDefinitionExtractor
-  # The SwaggerDefinitionExtractor is a facade/strategy that ensures
-  # end users will not be bothered about which Swagger document is
-  # being handled.
   def initialize(swagger1_definition_extractor,
                  swagger2_definition_extractor)
     @swagger1_definition_extractor = swagger1_definition_extractor

@@ -1,9 +1,9 @@
 require 'net/http'
 require 'json'
 
+# The SwaggerDocumentFetcher class is responsible for
+# retrieving Swagger documents.
 class SwaggerDocumentFetcher
-  # The SwaggerDocumentFetcher class is responsible for
-  # retrieving Swagger documents.
   def fetch(swagger_url)
     documents = []
 
