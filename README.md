@@ -3,6 +3,8 @@ Documentation
 
 [![Build Status](https://travis-ci.org/agco-fuse/documentation.svg?branch=master)](https://travis-ci.org/agco-fuse/documentation)
 
+[![Code Climate](https://codeclimate.com/github/agco-fuse/documentation/badges/gpa.svg)](https://codeclimate.com/github/agco-fuse/documentation)
+
 ## Requirements
 
 You should have the following components installed on your computer:
