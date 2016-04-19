@@ -5,7 +5,7 @@
 Name | Description | Standard Unit
 ---- | ----------- | -------------
 ENGINE_HOURS | Total hours of equipment engine | Seconds
-ENGINE_SPEED | Engine speed of equipment | Rpm
+ENGINE_SPEED | Engine speed of equipment | RPM
 DRIVE_DIRECTION | Driving direction of equipment | Enumeration DRIVE_DIRECTION
 
 
