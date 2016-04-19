@@ -12,6 +12,7 @@ toc_footers:
 
 includes:
   - errors
+  - can-variables
 
 search: true
 ---
