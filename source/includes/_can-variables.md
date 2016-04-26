@@ -15,6 +15,9 @@ MOISTURE_AVERAGE | ??? | Percentage (%)
 YIELD_AVERAGE | ??? | Kilograms per square metre (kg/m²)
 CAPACITY_Average | ??? | Kilograms per second (kg/s)
 TEST_WEIGHT | ??? | Kilograms per cubic metre (kg/m³)
+HARVEST_HOURS | ??? | Seconds
+RATE | ??? | ???
+UNLOAD_AUGER | ??? | [Enumeration UNLOAD_AUGER](#enumeration-unload_auger)
 
 ## Enumeration DRIVE_DIRECTION
 
@@ -27,6 +30,15 @@ STAND STILL | 3
 CRUISE CONTROL | 4
 
 ## Enumeration MASTER_APPLY
+
+Name | Value
+---- | -----
+OFF | 0
+ON | 1
+ERROR | 2
+NA | 3
+
+## Enumeration UNLOAD_AUGER
 
 Name | Value
 ---- | -----
