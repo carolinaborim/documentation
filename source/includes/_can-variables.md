@@ -25,6 +25,11 @@ COUNTER_Bale_Cut | ??? | ???
 COUNTER_Bale_Uncut | ??? | ???
 GRAIN_LOSS_Shaker | ??? | Percentage (%)
 GRAIN_LOSS_Rotor | ??? | Percentage (%)
+INDUSTRIAL_DRIVE_ENGAGE | ??? | [Enumeration INDUSTRIAL_DRIVE_ENGAGE](#enumeration-industrial_drive_engage)
+PRIMARY_EXTRACTOR_ENGAGE | ??? | [Enamuration PRIMARY_EXTRACTOR_ENGAGE](#enumeration-primary_extractor_engage)
+SIEVE_POSITION_Upper_Right | ??? | Distance in miles
+STROKE_PER_FLAKE | ??? | ???
+TOPPER_DRIVE_ENGAGE | ??? | [Enumeration TOPPER_DRIVE_ENGAGE](#enumeration-topper_drive_engage)
 
 ## Enumeration DRIVE_DIRECTION
 
@@ -46,6 +51,34 @@ ERROR | 2
 NA | 3
 
 ## Enumeration UNLOAD_AUGER
+
+Name | Value
+---- | -----
+OFF | 0
+ON | 1
+ERROR | 2
+NA | 3
+
+## Enumeration INDUSTRIAL_DRIVE_ENGAGE
+
+Name | Value
+---- | -----
+OFF | 0
+ON | 1
+ERROR | 2
+NA | 3
+Reverse | 4
+
+## Enumeration PRIMARY_EXTRACTOR_ENGAGE
+
+Name | Value
+---- | -----
+OFF | 0
+ON | 1
+ERROR | 2
+NA | 3
+
+## Enumeration TOPPER_DRIVE_ENGAGE
 
 Name | Value
 ---- | -----
