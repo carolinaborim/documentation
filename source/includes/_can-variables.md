@@ -6,11 +6,11 @@ Name | Description | Standard Unit
 ---- | ----------- | -------------
 ENGINE_HOURS | Total hours of equipment engine | Seconds
 ENGINE_SPEED | Engine speed of equipment | RPM
-DRIVE_DIRECTION | Driving direction of equipment | Enumeration DRIVE_DIRECTION
+DRIVE_DIRECTION | Driving direction of equipment | [Enumeration DRIVE_DIRECTION](#enumeration-drive_direction)
 ENGINE_LOAD | ??? | Percentage (%)
 FUEL_LEVEL | ??? | Percentage (%)
 FUEL_RATE | ??? | Cubic metre per seconds (m³/s)
-MASTER_APPLY | ??? | Enumeration MASTER_APPLY
+MASTER_APPLY | ??? | [Enumeration MASTER_APPLY](#enumeration-master_apply)
 
 ## Enumeration DRIVE_DIRECTION
 
