@@ -23,6 +23,8 @@ BALE_WEIGHT_AVERAGE | ??? | Kilograms
 BALE_FLAKES_AVERAGE | ??? | ???
 COUNTER_Bale_Cut | ??? | ???
 COUNTER_Bale_Uncut | ??? | ???
+GRAIN_LOSS_Shaker | ??? | Percentage (%)
+GRAIN_LOSS_Rotor | ??? | Percentage (%)
 
 ## Enumeration DRIVE_DIRECTION
 
