@@ -11,6 +11,10 @@ ENGINE_LOAD | ??? | Percentage (%)
 FUEL_LEVEL | ??? | Percentage (%)
 FUEL_RATE | ??? | Cubic metre per seconds (m³/s)
 MASTER_APPLY | ??? | [Enumeration MASTER_APPLY](#enumeration-master_apply)
+MOISTURE_AVERAGE | ??? | Percentage (%)
+YIELD_AVERAGE | ??? | Kilograms per square metre (kg/m²)
+CAPACITY_Average | ??? | Kilograms per second (kg/s)
+TEST_WEIGHT | ??? | Kilograms per cubic metre (kg/m³)
 
 ## Enumeration DRIVE_DIRECTION
 
