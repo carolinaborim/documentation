@@ -18,6 +18,11 @@ TEST_WEIGHT | ??? | Kilograms per cubic metre (kg/m³)
 HARVEST_HOURS | ??? | Seconds
 RATE | ??? | ???
 UNLOAD_AUGER | ??? | [Enumeration UNLOAD_AUGER](#enumeration-unload_auger)
+BALE_WEIGHT | ??? | Kilograms
+BALE_WEIGHT_AVERAGE | ??? | Kilograms
+BALE_FLAKES_AVERAGE | ??? | ???
+COUNTER_Bale_Cut | ??? | ???
+COUNTER_Bale_Uncut | ??? | ???
 
 ## Enumeration DRIVE_DIRECTION
 
