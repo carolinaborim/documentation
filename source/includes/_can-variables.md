@@ -30,6 +30,9 @@ PRIMARY_EXTRACTOR_ENGAGE | ??? | [Enamuration PRIMARY_EXTRACTOR_ENGAGE](#enumera
 SIEVE_POSITION_Upper_Right | ??? | Distance in miles
 STROKE_PER_FLAKE | ??? | ???
 TOPPER_DRIVE_ENGAGE | ??? | [Enumeration TOPPER_DRIVE_ENGAGE](#enumeration-topper_drive_engage)
+CAPACITY | Instant combine capacity | Kilograms per second (kg/s)
+MOISTURE | ??? | Percentage (%)
+BALE_WEIGHT_Total | Total weight baled | Kilograms
 
 ## Enumeration DRIVE_DIRECTION
 
