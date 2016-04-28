@@ -2,12 +2,13 @@
 title: API Reference
 
 language_tabs:
-  - shell
+  - json
 
 toc_footers:
   - <a href='https://agco-fuse.github.io/'>Get in touch for Sandbox access</a>
 
 includes:
+  - equipments
   - canVariables
 
 search: true
