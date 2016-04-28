@@ -532,7 +532,137 @@ Remember — a happy kitten is an authenticated kitten!
 <tr>
 <td>DRIVE_DIRECTION</td>
 <td>Driving direction of equipment</td>
-<td>Enumeration DRIVE_DIRECTION</td>
+<td><a href="#enumeration-drive_direction">Enumeration DRIVE_DIRECTION</a></td>
+</tr>
+<tr>
+<td>ENGINE_LOAD</td>
+<td>Percentage load on engine</td>
+<td>Percentage (%)</td>
+</tr>
+<tr>
+<td>FUEL_LEVEL</td>
+<td>Percentage of fuel tank level</td>
+<td>Percentage (%)</td>
+</tr>
+<tr>
+<td>FUEL_RATE</td>
+<td>Rate of fuel consuption</td>
+<td>Cubic metre per seconds (m³/s)</td>
+</tr>
+<tr>
+<td>MASTER_APPLY</td>
+<td>Sprayer applying product</td>
+<td><a href="#enumeration-master_apply">Enumeration MASTER_APPLY</a></td>
+</tr>
+<tr>
+<td>MOISTURE_AVERAGE</td>
+<td>Average crop moisture in a combine</td>
+<td>Percentage (%)</td>
+</tr>
+<tr>
+<td>YIELD_AVERAGE</td>
+<td>Average yeild /area from combine</td>
+<td>Kilograms per square metre (kg/m²)</td>
+</tr>
+<tr>
+<td>CAPACITY_Average</td>
+<td>Average capacity for a combine</td>
+<td>Kilograms per second (kg/s)</td>
+</tr>
+<tr>
+<td>TEST_WEIGHT</td>
+<td>User defined test weight for a crop in a combine</td>
+<td>Kilograms per cubic metre (kg/m³)</td>
+</tr>
+<tr>
+<td>HARVEST_HOURS</td>
+<td>Hours on combine seperator</td>
+<td>Seconds</td>
+</tr>
+<tr>
+<td>RATE</td>
+<td>Rate being applied by a sprayer</td>
+<td>Milimeters squared per second (mm²/s)</td>
+</tr>
+<tr>
+<td>UNLOAD_AUGER</td>
+<td>Combine unloading auger status</td>
+<td><a href="#enumeration-unload_auger">Enumeration UNLOAD_AUGER</a></td>
+</tr>
+<tr>
+<td>BALE_WEIGHT</td>
+<td>Weight of last bale</td>
+<td>Kilograms</td>
+</tr>
+<tr>
+<td>BALE_WEIGHT_AVERAGE</td>
+<td>Average bale weight</td>
+<td>Kilograms</td>
+</tr>
+<tr>
+<td>BALE_FLAKES_AVERAGE</td>
+<td>Average flakes per bale</td>
+<td>Range 0 - 65635</td>
+</tr>
+<tr>
+<td>COUNTER_Bale_Cut</td>
+<td>Number of cut bales with cutter engaged</td>
+<td>Range 0 - 65635</td>
+</tr>
+<tr>
+<td>COUNTER_Bale_Uncut</td>
+<td>Number of uncut bales</td>
+<td>Range 0 - 1000</td>
+</tr>
+<tr>
+<td>GRAIN_LOSS_Shaker</td>
+<td>Percentage of grain lost at shaker in a combine</td>
+<td>Percentage (%)</td>
+</tr>
+<tr>
+<td>GRAIN_LOSS_Rotor</td>
+<td>Percentage of grain lost at rotor in a combine</td>
+<td>Percentage (%)</td>
+</tr>
+<tr>
+<td>INDUSTRIAL_DRIVE_ENGAGE</td>
+<td>Sugar Cane harvester drive status</td>
+<td><a href="#enumeration-industrial_drive_engage">Enumeration INDUSTRIAL_DRIVE_ENGAGE</a></td>
+</tr>
+<tr>
+<td>PRIMARY_EXTRACTOR_ENGAGE</td>
+<td>Sugar Cane harvester extractor status</td>
+<td><a href="#enumeration-primary_extractor_engage">Enamuration PRIMARY_EXTRACTOR_ENGAGE</a></td>
+</tr>
+<tr>
+<td>SIEVE_POSITION_Upper_Right</td>
+<td>Combine sieve setting</td>
+<td>Distance in miles</td>
+</tr>
+<tr>
+<td>STROKE_PER_FLAKE</td>
+<td>Strokes per flake - baler</td>
+<td>Range 0 - 1000</td>
+</tr>
+<tr>
+<td>TOPPER_DRIVE_ENGAGE</td>
+<td>Sugar Cane harvester topper drive status</td>
+<td><a href="#enumeration-topper_drive_engage">Enumeration TOPPER_DRIVE_ENGAGE</a></td>
+</tr>
+<tr>
+<td>CAPACITY</td>
+<td>Instant combine capacity</td>
+<td>Kilograms per second (kg/s)</td>
+</tr>
+<tr>
+<td>MOISTURE</td>
+<td>Measurement of crop moisture during harvest</td>
+<td>Percentage (%)</td>
+</tr>
+<tr>
+<td>BALE_WEIGHT_Total</td>
+<td>Total weight baled</td>
+<td>Kilograms</td>
 </tr>
 </tbody></table>
 
@@ -563,6 +693,140 @@ Remember — a happy kitten is an authenticated kitten!
 <tr>
 <td>CRUISE CONTROL</td>
 <td>4</td>
+</tr>
+</tbody></table>
+
+<h2 id="enumeration-master_apply">Enumeration MASTER_APPLY</h2>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OFF</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ON</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ERROR</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NA</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<h2 id="enumeration-unload_auger">Enumeration UNLOAD_AUGER</h2>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OFF</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ON</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ERROR</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NA</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<h2 id="enumeration-industrial_drive_engage">Enumeration INDUSTRIAL_DRIVE_ENGAGE</h2>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OFF</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ON</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ERROR</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NA</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Reverse</td>
+<td>4</td>
+</tr>
+</tbody></table>
+
+<h2 id="enumeration-primary_extractor_engage">Enumeration PRIMARY_EXTRACTOR_ENGAGE</h2>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OFF</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ON</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ERROR</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NA</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<h2 id="enumeration-topper_drive_engage">Enumeration TOPPER_DRIVE_ENGAGE</h2>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OFF</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ON</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ERROR</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NA</td>
+<td>3</td>
 </tr>
 </tbody></table>
 
