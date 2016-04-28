@@ -118,8 +118,8 @@ EOS
       .and_return(DOCUMENTATION_FILENAMES)
 
     expect(template_handler).to receive(:apply)
-      .with(SWAGGER_DEFINITION, DOCUMENTATION_FILENAMES)
+      .with('prefix', SWAGGER_DEFINITION, DOCUMENTATION_FILENAMES)
 
-    documentation_transclusion.transclude(SWAGGER_URL, DOCUMENTATION_ROOT)
+    documentation_transclusion.transclude('prefix', SWAGGER_URL, DOCUMENTATION_ROOT)
   end
 end

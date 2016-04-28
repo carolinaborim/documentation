@@ -23,28 +23,28 @@ A brief explanation about brands...
 
 You will notice that the following tag will be replaced by the Brand model.
 
-[[model:Brand]]
+[[telemetry:telemetry:model:Brand]]
 
 ### Getting Brands
 
 A brief explanation on how to get brands...
 
-[[operation:getBrands]]
+[[telemetry:operation:getBrands]]
 
 ### Creating Brands
 
 A brief explanation on how to create new brands...
 
-[[operation:createBrands]]
+[[telemetry:operation:createBrands]]
 
 ### Updating Brands
 
 A brief explanation on how to update brands...
 
-[[operation:updateBrands]]
+[[telemetry:operation:updateBrands]]
 
 ### Deleting Brands
 
 A brief explanation on how to delete brands...
 
-[[operation:deleteBrands]]
+[[telemetry:operation:deleteBrands]]

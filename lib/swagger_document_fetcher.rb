@@ -4,7 +4,13 @@ require 'json'
 # The SwaggerDocumentFetcher class is responsible for
 # retrieving Swagger documents.
 class SwaggerDocumentFetcher
+  def initialize(logger)
+    @logger = logger
+  end
+
+
   def fetch(swagger_url)
+    @logger.info("Fetching Swagger definition on #{swagger_url}")
     documents = []
 
     json = fetch_content_as_json(swagger_url)

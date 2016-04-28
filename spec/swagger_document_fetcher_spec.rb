@@ -2,6 +2,8 @@ require 'spec_helper'
 require_relative '../lib/swagger_document_fetcher.rb'
 
 describe SwaggerDocumentFetcher do
+  subject { SwaggerDocumentFetcher.new(spy(:logger)) }
+
   it 'should fetch various documents recursively' do
     swagger_url = 'https://agco-fuse-trackers-dev.herokuapp.com/api-docs'
     brands_url = 'https://agco-fuse-trackers-dev.herokuapp.com/api-docs/brands'
