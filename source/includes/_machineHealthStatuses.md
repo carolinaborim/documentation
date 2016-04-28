@@ -1,0 +1,3 @@
+# Machine Health Statuses
+
+## Description
