@@ -639,6 +639,8 @@ html, body {
     box-sizing: border-box;
     display: block;
     text-shadow: 0px 1px 0px #fff; }
+  .content > table {
+    font-size: 0.9em; }
   .content > ul, .content > ol {
     padding-left: 43px; }
   .content > h1, .content > h2, .content > div {
