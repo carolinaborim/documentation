@@ -31,7 +31,7 @@ SIEVE_POSITION_Upper_Right | Combine sieve setting  | Distance in miles
 STROKE_PER_FLAKE | Strokes per flake - baler | Range 0 - 1000
 TOPPER_DRIVE_ENGAGE | Sugar Cane harvester topper drive status | [Enumeration TOPPER_DRIVE_ENGAGE](#enumeration-topper_drive_engage)
 CAPACITY | Instant combine capacity | Kilograms per second (kg/s)
-MOISTURE | ??? | Percentage (%)
+MOISTURE | Measurement of crop moisture during harvest | Percentage (%)
 BALE_WEIGHT_Total | Total weight baled | Kilograms
 
 ## Enumeration DRIVE_DIRECTION
