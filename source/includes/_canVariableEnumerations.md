@@ -1,0 +1,3 @@
+# CAN Variable Enumerations
+
+## Description
