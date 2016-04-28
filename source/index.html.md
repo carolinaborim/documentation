@@ -5,7 +5,7 @@ language_tabs:
   - shell
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
+  - <a href='https://agco-fuse.github.io/'>Get in touch for Sandbox access</a>
 
 includes:
   - can-variables
