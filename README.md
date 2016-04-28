@@ -25,6 +25,13 @@ In order to get the latest Swagger operations and models, you should execute the
 bundle exec rake build
 ```
 
+This will include the information extracted from the API endpoints and replace it on the appropriate locations on the documentation.
+To then have the HTML rendered on a server, execute `middleman`:
+
+```
+bundle exec middleman
+```
+
 ## Publishing to GitHub pages
 
 In order to deploy to GitHub pages you should execute the following command:
