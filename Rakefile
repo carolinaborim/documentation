@@ -22,7 +22,7 @@ desc 'Update documentation to include Swagger operations and models'
 task :build do
   log.info('Building the documentation...')
 
-  swagger_document_fetcher = SwaggerDocumentFetcher.new
+  swagger_document_fetcher = SwaggerDocumentFetcher.new(log)
   swagger_definition_extractor = SwaggerDefinitionExtractor.new(
     Swagger1DefinitionExtractor.new,
     Swagger2DefinitionExtractor.new
