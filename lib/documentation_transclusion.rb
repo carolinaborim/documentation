@@ -11,7 +11,7 @@ class DocumentationTransclusion
     @template_handler = template_handler
   end
 
-  def transclude(swagger_url, documentation_root)
+  def transclude(prefix, swagger_url, documentation_root)
     swagger_documents = @swagger_document_fetcher.fetch(swagger_url)
 
     swagger_documents.each do |document|
@@ -19,7 +19,7 @@ class DocumentationTransclusion
       documentation_filenames = @documentation_finder
                                 .find_all(documentation_root)
 
-      @template_handler.apply(swagger_definition, documentation_filenames)
+      @template_handler.apply(prefix, swagger_definition, documentation_filenames)
     end
   end
 end

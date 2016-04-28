@@ -7,14 +7,14 @@ class TemplateHandler
     @template = template
   end
 
-  def apply(swagger_definition, documentation_filenames)
+  def apply(prefix, swagger_definition, documentation_filenames)
     read_files(documentation_filenames).each do |filename, content|
       swagger_definition.operations.each do |key, value|
-        content.gsub!("[[operation:#{key}]]", @template.render(value))
+        content.gsub!("[[#{prefix}:operation:#{key}]]", @template.render(value))
       end
 
       swagger_definition.models.each do |key, value|
-        content.gsub!("[[model:#{key}]]", @template.render(value))
+        content.gsub!("[[#{prefix}:model:#{key}]]", @template.render(value))
       end
 
       save(filename, content)

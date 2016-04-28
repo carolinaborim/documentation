@@ -38,7 +38,7 @@ task :build do
   )
 
   log.info('Updating Swagger references...')
-  documentation_transclusion.transclude(SWAGGER_URL, DOCUMENTATION_ROOT)
+  documentation_transclusion.transclude('telemetry', SWAGGER_URL, DOCUMENTATION_ROOT)
   log.info('Done!')
 end
 

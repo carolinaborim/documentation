@@ -19,7 +19,7 @@ describe TemplateHandler do
   it 'should apply a template to a documentation file' do
     expect(File).to receive(:read)
       .with('source/doc1.html.md')
-      .and_return('[[operation:getBrands]]\n\n[[model:Brands]]')
+      .and_return('[[prefix:operation:getBrands]]\n\n[[prefix:model:Brands]]')
 
     operation_template = '```json\n{ operation: true }\n```'
     expect(template).to receive(:render)
@@ -42,6 +42,6 @@ describe TemplateHandler do
     swagger_definition = SwaggerDefinition.new(operations, models)
 
     documentation_filenames = ['source/doc1.html.md']
-    subject.apply(swagger_definition, documentation_filenames)
+    subject.apply('prefix', swagger_definition, documentation_filenames)
   end
 end
