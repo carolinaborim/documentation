@@ -344,6 +344,10 @@ html, body {
     @extend %left-col;
   }
 
+  &>table {
+    font-size: 0.9em;
+  }
+
   &>ul, &>ol {
     padding-left: $main-padding + 15px;
   }
