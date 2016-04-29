@@ -7,9 +7,7 @@ class JsonTemplate
     pretty_json = JSON.pretty_generate(json)
 
     <<-EOS
-```json
 #{pretty_json}
-```
 EOS
   end
 end

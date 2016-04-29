@@ -8,12 +8,10 @@ describe JsonTemplate do
     pretty = subject.render(json)
 
     expected = <<-EOS
-```json
 {
   "summary": "...",
   "description": "..."
 }
-```
 EOS
     expect(pretty).to be_eql(expected)
   end

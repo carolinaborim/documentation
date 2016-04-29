@@ -23,7 +23,9 @@ You must replace <code>[token]</code> with the token response from the Authentic
 
 > The endpoint information is the following:
 
+```json
 [[equipment:operation:equipments]]
+````
 
 This is the endpoint for retrieving the list of equipments.
 The equipments returned will be the equipments your accesss token have access to.
@@ -47,7 +49,9 @@ Code | Status
 
 > The returned model schema is the following:
 
+```json
 [[equipment:model:Model 2]]
+```
 
 When the information is returned with success, a list of equipments will be available.
 
@@ -60,7 +64,9 @@ Refer to the [CAN Variables](#can-variables) section to see the possible returne
 
 > The returned model schema is the following:
 
+```json
 [[equipment:model:Model 3]]
+```
 
 When the authentication token is invalid or expired, the response will return an array of errors, with an item pointing out the status and the response code.
 
@@ -68,7 +74,9 @@ When the authentication token is invalid or expired, the response will return an
 
 > The returned model schema is the following:
 
+```json
 [[equipment:model:Model 5]]
+```
 
 When the list does not exist, the response will return an array of errors, with an item pointing out the status and the response code.
 
@@ -76,7 +84,9 @@ When the list does not exist, the response will return an array of errors, with 
 
 > The returned model schema is the following:
 
+```json
 [[equipment:model:Model 7]]
+```
 
 When there is an error processing the request, the response will return an array of errors, with an item pointing out the status and the response code.
 
