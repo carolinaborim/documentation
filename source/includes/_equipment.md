@@ -45,7 +45,7 @@ Code | Status
 500  | Unhandled Error
 
 
-### 200 Successful
+## 200 Successful
 
 > The returned model schema is the following:
 
@@ -60,7 +60,7 @@ informations present according to the availability on that specific equipment.
 
 Refer to the [CAN Variables](#can-variables) section to see the possible returned values.
 
-### 401 Unauthorized
+## 401 Unauthorized
 
 > The returned model schema is the following:
 
@@ -70,7 +70,7 @@ Refer to the [CAN Variables](#can-variables) section to see the possible returne
 
 When the authentication token is invalid or expired, the response will return an array of errors, with an item pointing out the status and the response code.
 
-### 404 Not Found
+## 404 Not Found
 
 > The returned model schema is the following:
 
@@ -80,7 +80,7 @@ When the authentication token is invalid or expired, the response will return an
 
 When the list does not exist, the response will return an array of errors, with an item pointing out the status and the response code.
 
-### 500 Unhandled Error
+## 500 Unhandled Error
 
 > The returned model schema is the following:
 
