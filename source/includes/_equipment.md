@@ -18,7 +18,7 @@ Refer to the [Authentication](#authentication) section to learn how to aquire a 
 You must replace <code>[token]</code> with the token response from the Authentication endpoint.
 </aside>
 
-## List endpoint
+## GET /equipments
 
 
 > The endpoint information is the following:
