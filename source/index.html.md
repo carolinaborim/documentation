@@ -8,7 +8,7 @@ toc_footers:
   - <a href='https://agco-fuse.github.io/'>Get in touch for Sandbox access</a>
 
 includes:
-  - equipments
+  - equipment
   - canVariables
 
 search: true
