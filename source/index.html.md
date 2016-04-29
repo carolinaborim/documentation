@@ -25,7 +25,7 @@ A brief explanation about brands...
 You will notice that the following tag will be replaced by the Brand model.
 
 ```json
-[[telemetry:telemetry:model:Brand]]
+[[telemetry:model:Brand]]
 ```
 
 ### Getting Brands
