@@ -91,7 +91,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;]">
+  <body class="index" data-languages="[&quot;json&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -100,7 +100,7 @@
     </a>
     <div class="tocify-wrapper">
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
+              <a href="#" data-language-name="json">json</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -125,8 +125,25 @@
 <p>A brief explanation about brands&hellip;</p>
 
 <p>You will notice that the following tag will be replaced by the Brand model.</p>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brand"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Name of manufacturer"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
 
-<p>[[telemetry:telemetry:model:Brand]]</p>
+</span></code></pre>
 
 <h3 id="getting-brands">Getting Brands</h3>
 
@@ -171,6 +188,7 @@
   </span><span class="p">],</span><span class="w">
   </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/brands"</span><span class="w">
 </span><span class="p">}</span><span class="w">
+
 </span></code></pre>
 
 <h3 id="creating-brands">Creating Brands</h3>
@@ -202,6 +220,7 @@
   </span><span class="p">],</span><span class="w">
   </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/brands"</span><span class="w">
 </span><span class="p">}</span><span class="w">
+
 </span></code></pre>
 
 <h3 id="updating-brands">Updating Brands</h3>
@@ -244,6 +263,7 @@
   </span><span class="p">],</span><span class="w">
   </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/brands/{id}"</span><span class="w">
 </span><span class="p">}</span><span class="w">
+
 </span></code></pre>
 
 <h3 id="deleting-brands">Deleting Brands</h3>
@@ -279,7 +299,198 @@
   </span><span class="p">],</span><span class="w">
   </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/brands/{id}"</span><span class="w">
 </span><span class="p">}</span><span class="w">
+
 </span></code></pre>
+
+          <h1 id="equipment-api">Equipment API</h1>
+
+<p>The <a href="#equipment-api">Equipment API</a> is an endpoint with the goal to provide equipment related structured information.</p>
+
+<p>The information about the equipments are retrieved from the Telemetry API and should contain the same values, but on a specific structure.</p>
+
+<h2 id="authentication">Authentication</h2>
+
+<p>To make use of the endpoints, a bearer token is required on the authorization header.</p>
+
+<table><thead>
+<tr>
+<th>Header key</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>Bearer [token]</td>
+</tr>
+</tbody></table>
+
+<p>Refer to the <a href="#authentication">Authentication</a> section to learn how to aquire a valid token.</p>
+
+<aside class="notice">
+You must replace <code>[token]</code> with the token response from the Authentication endpoint.
+</aside>
+
+<h2 id="list-endpoint">List endpoint</h2>
+
+<blockquote>
+<p>The endpoint information is the following:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"operationId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"equipments"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"equipments"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"responses"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"200"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Success"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"schema"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"$ref"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#/definitions/Model 2"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"401"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Unauthorized"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"schema"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"$ref"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#/definitions/Model 3"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"404"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Not Found"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"schema"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"$ref"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#/definitions/Model 5"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"500"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Unhandled Error"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"schema"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"$ref"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#/definitions/Model 7"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"parameters"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"in"</span><span class="p">:</span><span class="w"> </span><span class="s2">"header"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"authorization"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Paging offset"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"in"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"offset"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Paging limit"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"in"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"limit"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/equipments"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+
+<p>This is the endpoint for retrieving the list of equipments.
+The equipments returned will be the equipments your accesss token have access to.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p>On the Equipment API server:</p>
+
+<p><code class="prettyprint">GET /equipments</code>.</p>
+
+<h3 id="possible-responses">Possible responses</h3>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Status</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Unhandled Error</td>
+</tr>
+</tbody></table>
+
+<h3 id="200-successful">200 Successful</h3>
+
+<blockquote>
+<p>The returned model schema is the following:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"$ref"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#/definitions/response_equipments_get_200"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+
+<p>When the information is returned with success, a list of equipments will be available.</p>
+
+<p>The list of equipments may contain 0 or more equipments, with the CAN variable
+informations present according to the availability on that specific equipment.</p>
+
+<p>Refer to the <a href="#can-variables">CAN Variables</a> section to see the possible returned values.</p>
+
+<h3 id="401-unauthorized">401 Unauthorized</h3>
+
+<blockquote>
+<p>The returned model schema is the following:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"$ref"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#/definitions/response_equipments_get_401"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+
+<p>When the authentication token is invalid or expired, the response will return an array of errors, with an item pointing out the status and the response code.</p>
+
+<h3 id="404-not-found">404 Not Found</h3>
+
+<blockquote>
+<p>The returned model schema is the following:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"$ref"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#/definitions/response_equipments_get_404"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+
+<p>When the list does not exist, the response will return an array of errors, with an item pointing out the status and the response code.</p>
+
+<h3 id="500-unhandled-error">500 Unhandled Error</h3>
+
+<blockquote>
+<p>The returned model schema is the following:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"$ref"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#/definitions/response_equipments_get_500"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+
+<p>When there is an error processing the request, the response will return an array of errors, with an item pointing out the status and the response code.</p>
 
           <h1 id="can-variables">Can Variables</h1>
 
@@ -606,7 +817,7 @@
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
+                <a href="#" data-language-name="json">json</a>
           </div>
       </div>
     </div>
