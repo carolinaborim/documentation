@@ -20,7 +20,6 @@ You must replace <code>[token]</code> with the token response from the Authentic
 
 ## GET /equipment
 
-
 > The endpoint information is the following:
 
 ```json
@@ -43,7 +42,6 @@ Code | Status
 401  | Unauthorized
 404  | Not Found
 500  | Unhandled Error
-
 
 ## 200 Successful
 
@@ -114,7 +112,6 @@ Code | Status
 401  | Unauthorized
 404  | Not Found
 500  | Unhandled Error
-
 
 ## 200 Successful
 
