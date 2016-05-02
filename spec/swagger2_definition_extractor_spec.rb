@@ -9,7 +9,6 @@ describe Swagger2DefinitionExtractor do
 {
     "tags": [],
     "host": "fuse-equipment-api.herokuapp.com",
-    "definitions": {},
     "basePath": "/",
     "paths": {
         "/equipment": {
