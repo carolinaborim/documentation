@@ -16,7 +16,7 @@ describe Swagger2DefinitionExtractor do
                 "responses": {
                     "default": {
                         "schema": {
-                            "type": "string"
+                            "$ref": "#/definitions/Tag"
                         },
                         "description": "Successful"
                     }
@@ -27,6 +27,14 @@ describe Swagger2DefinitionExtractor do
         }
     },
     "definitions": {
+        "Person": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
         "Tag": {
             "type": "object",
             "properties": {
@@ -34,8 +42,9 @@ describe Swagger2DefinitionExtractor do
                     "type": "integer",
                     "format": "int64"
                 },
-                "name": {
-                    "type": "string"
+                "person": {
+                    "$ref": "#/definitions/Person",
+                    "type": "object"
                 }
             }
         }
@@ -55,7 +64,21 @@ EOS
           'responses' => {
             'default' => {
               'schema' => {
-                'type' => 'string'
+                'type' => 'object',
+                'properties' => {
+                  'id' => {
+                    'type' => 'integer',
+                    'format' => 'int64'
+                  },
+                  'person' => {
+                    'type' => 'object',
+                    'properties' => {
+                      'name' => {
+                        'type' => 'string'
+                      }
+                    }
+                  }
+                }
               },
               'description' => 'Successful'
             }
@@ -79,10 +102,23 @@ EOS
               'type' => 'integer',
               'format' => 'int64'
             },
+            'person' => {
+              'properties' => {
+                'name' => {
+                    'type' => 'string'
+                }
+              },
+              'type' => 'object'
+            }
+          }
+        },
+        'Person' => {
+          'properties' => {
             'name' => {
               'type' => 'string'
             }
-          }
+          },
+          'type' => 'object'
         }
       }
 
