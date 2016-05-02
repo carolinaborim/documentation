@@ -4,6 +4,7 @@ require_relative 'swagger_definition.rb'
 # extracting information out of Swagger 2.x documents.
 class Swagger2DefinitionExtractor
   def extract(json)
+    parse!(json, json)
     operations = available_operations(json)
     models = available_models(json)
     SwaggerDefinition.new(operations, models)
@@ -31,5 +32,17 @@ class Swagger2DefinitionExtractor
     return {} unless json.key?('definitions')
 
     json['definitions']
+  end
+
+  def parse!(json, element)
+    if element.key? '$ref'
+      key = element['$ref'].sub('#/definitions/', '')
+      return parse!(json, json['definitions'][key])
+    end
+
+    element.each do |key, value|
+      value = parse!(json, value) if value.is_a? Hash
+      element[key] = value
+    end
   end
 end
