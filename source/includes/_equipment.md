@@ -2,7 +2,7 @@
 
 The [Equipment API](#equipment-api) is an endpoint with the goal to provide equipment related structured information.
 
-The information about the equipments are retrieved from the Telemetry API and should contain the same values, but on a specific structure.
+The information about the equipment are retrieved from the Telemetry API and should contain the same values, but on a specific structure.
 
 ## Authentication
 
@@ -18,22 +18,22 @@ Refer to the [Authentication](#authentication) section to learn how to aquire a 
 You must replace <code>[token]</code> with the token response from the Authentication endpoint.
 </aside>
 
-## GET /equipments
+## GET /equipment
 
 
 > The endpoint information is the following:
 
 ```json
-[[equipments:operation:equipments]]
+[[equipment:operation:equipment]]
 ````
 
-This is the endpoint for retrieving the list of equipments.
-The equipments returned will be the equipments your accesss token have access to.
+This is the endpoint for retrieving the list of equipment.
+The equipment returned will be the equipment your accesss token have access to.
 
 ### HTTP Request
 On the Equipment API server:
 
-`GET /equipments`.
+`GET /equipment`.
 
 ### Possible responses
 
@@ -50,12 +50,12 @@ Code | Status
 > The returned model schema is the following:
 
 ```json
-[[equipments:model:Model 2]]
+[[equipment:model:Model 2]]
 ```
 
-When the information is returned with success, a list of equipments will be available.
+When the information is returned with success, a list of equipment will be available.
 
-The list of equipments may contain 0 or more equipments, with the CAN variable
+The list of equipment may contain 0 or more equipment, with the CAN variable
 informations present according to the availability on that specific equipment.
 
 Refer to the [CAN Variables](#can-variables) section to see the possible returned values.
@@ -65,7 +65,7 @@ Refer to the [CAN Variables](#can-variables) section to see the possible returne
 > The returned model schema is the following:
 
 ```json
-[[equipments:model:Model 3]]
+[[equipment:model:Model 3]]
 ```
 
 When the authentication token is invalid or expired, the response will return an array of errors, with an item pointing out the status and the response code.
@@ -75,7 +75,7 @@ When the authentication token is invalid or expired, the response will return an
 > The returned model schema is the following:
 
 ```json
-[[equipments:model:Model 5]]
+[[equipment:model:Model 5]]
 ```
 
 When the list does not exist, the response will return an array of errors, with an item pointing out the status and the response code.
@@ -85,7 +85,7 @@ When the list does not exist, the response will return an array of errors, with 
 > The returned model schema is the following:
 
 ```json
-[[equipments:model:Model 7]]
+[[equipment:model:Model 7]]
 ```
 
 When there is an error processing the request, the response will return an array of errors, with an item pointing out the status and the response code.
