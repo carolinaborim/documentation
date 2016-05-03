@@ -45,6 +45,9 @@ You must choose at least <code>3</code> questions.
 
 ## How to Authenticate
 
+The authentication proccess is handled by a `OAuth2`, then the developer need to send a request containing the credentials
+access token like the `authentication response` example in the right column.
+
 > `curl` example request
 
 ```shell
@@ -57,5 +60,27 @@ curl -k -X "POST"
     --data-urlencode "client_secret=YOUR_CLIENT_SECRET"
     --data-urlencode "grant_type=password"
 ```
+
+> authentication response
+
+```json
+{
+  "scope":"mail cn agcoUUID",
+  "expires_in":7199,
+  "token_type":"Bearer",
+  "refresh_token":"2483055a-cb08-4027-a8a9-03f89988d025",
+  "access_token":"be9225f4-961a-49c5-bd0d-cf36cb855f69"
+}  
+```
+
+### Authentication response fields
+
+Field | Description
+----- | -----------
+ `scope` | Requested scope
+ `expires_in`| Token expiration time
+ `token_type`| Access token type
+ `refresh_token`| Refresh token
+ `access_token` | Access token
 
 ## Making Requests
