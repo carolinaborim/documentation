@@ -49,7 +49,7 @@ The authentication methods supported by `AGCO's APIs` are [Basic](#basic) and [O
 > `curl` example of Basic authentication
 
 ```shell
-curl -X GET -u email@domain.com:password \
+curl -X GET -u email@example.com:password \
     "https://fuse-equipment-api.herokuapp.com/equipment"
 ```
 
@@ -104,7 +104,7 @@ Field | Description
 
 ```shell
 curl -X GET \
-    -u email@domain.com:password \
+    -u email@example.com:password \
     "https://fuse-equipment-api.herokuapp.com/equipment"
 ```
 
