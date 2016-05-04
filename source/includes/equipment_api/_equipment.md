@@ -12,7 +12,7 @@ Header key    | Value
 ------------- | -----
 Authorization | Bearer [token]
 
-Refer to the [Authentication](#how-to-authenticate) section to learn how to aquire a valid token.
+Refer to the [How to Authenticate](#how-to-authenticate) section to learn how to aquire a valid token.
 
 <aside class="notice">
 You must replace <code>[token]</code> with the token response from the Authentication endpoint.
