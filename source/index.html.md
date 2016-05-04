@@ -1,9 +1,6 @@
 ---
 title: API Reference
 
-language_tabs:
-  - json
-
 toc_footers:
   - <a href='https://agco-fuse.github.io/'>Get in touch for Sandbox access</a>
 
