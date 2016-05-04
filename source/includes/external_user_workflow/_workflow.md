@@ -70,7 +70,7 @@ curl -k -X "POST"\
   "token_type":"Bearer",
   "refresh_token":"2483055a-cb08-4027-a8a9-03f89988d025",
   "access_token":"be9225f4-961a-49c5-bd0d-cf36cb855f69"
-}  
+}
 ```
 
 ### Authentication response fields
@@ -84,3 +84,25 @@ Field | Description
  `access_token` | Access token
 
 ## Making Requests
+
+> Get Equipment list from Equipment API
+
+```shell
+curl -X GET \
+    -H "Authorization: Bearer 2483055a-cb08-4027-a8a9-03f89988d025"\
+    "https://fuse-equipment-api.herokuapp.com/equipment"
+```
+
+> Get models list from Telemetry API 
+
+```shell
+curl -X GET \
+    -H "Authorization: Bearer 2483055a-cb08-4027-a8a9-03f89988d025"\
+    "https://agco-fuse-trackers-sandbox.herokuapp.com/models"
+```
+
+All requests through AGCO APIs are authenticated using the received `token Bearer` from the previous example.
+
+### How permissions are handled
+
+The `token Bearer` corespond to the user credentials and the APIs will use it to check which data can be retrieved.
