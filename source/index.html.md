@@ -5,9 +5,9 @@ toc_footers:
   - <a href='https://agco-fuse.github.io/'>Get in touch for Sandbox access</a>
 
 includes:
+  - external_user_workflow/workflow
   - equipment_api/equipment
   - canVariables
-  - external_user_workflow/workflow
 
 search: true
 ---

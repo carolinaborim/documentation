@@ -92,19 +92,19 @@ curl -k -X "POST"\
 
 Field | Description
 ----- | -----------
- `scope` | Requested scope
- `expires_in`| Token expiration time
- `token_type`| Access token type
- `refresh_token`| Refresh token
- `access_token` | Access token
+`scope` | Requested scope
+`expires_in`| Token expiration time
+`token_type`| Access token type
+`refresh_token`| Refresh token
+`access_token` | Access token
 
-## Making Requests
+### Making Requests
 
-> Get Equipment list from Equipment API
+> Get Equipment list from Equipment API with basic authentication
 
 ```shell
 curl -X GET \
-    -H "Authorization: Bearer 2483055a-cb08-4027-a8a9-03f89988d025"\
+    -u email@domain.com:password \
     "https://fuse-equipment-api.herokuapp.com/equipment"
 ```
 
@@ -112,11 +112,11 @@ curl -X GET \
 
 ```shell
 curl -X GET \
-    -H "Authorization: Bearer 2483055a-cb08-4027-a8a9-03f89988d025"\
+    -H "Authorization: Bearer YOUR_ACCESS_TOKEN"\
     "https://agco-fuse-trackers-sandbox.herokuapp.com/models"
 ```
 
-All requests through AGCO APIs are authenticated using the received `token Bearer` from the previous example.
+All requests through `AGCO APIs` are authenticated using `OAuth2 token Bearer` or `username` and `password` as `HTTP Basic` like the previous example.
 
 ### How permissions are handled
 
