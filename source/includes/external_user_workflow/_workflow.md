@@ -1,7 +1,5 @@
 # Getting started
 
-This getting started is for developers who wants to get access to `AGCO's Sandbox Environment`.
-
 The steps below introduce the workflow about how to connect and consume `AGCO's APIs`.
 
 - [Ask for credentials](#asking-for-credentials)
@@ -12,7 +10,7 @@ The steps below introduce the workflow about how to connect and consume `AGCO's 
 ## Asking for credentials
 
 Access the <a href="https://agco-fuse.github.io/" target="_blank">landing page</a> and require for `sandbox credentials`.
-Your request will be handled and you will soon get an email back with your credentials.
+A request will be handled and an email will be sent with the credentials.
 
 Sandbox users have their own data such as `Dealer, Equipment and Telementry data`
 
@@ -44,10 +42,28 @@ You also will be required to answer your security questions, as of the image bel
 
 ## How to Authenticate
 
-The authentication proccess is handled by a `OAuth2`, then the developer need to send a request containing the credentials
+The authentication methods supported by `AGCO's APIs` are [Basic](#basic) and [OAuth2](#oauth2).
+
+### Basic
+
+> `curl` example of Basic authentication
+
+```shell
+curl -X GET -u email@domain.com:password \
+    "https://fuse-equipment-api.herokuapp.com/equipment"
+```
+
+For more details about the `HTTP Basic` authentication access the [Mozilla documenation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basic_access_authentication).
+
+
+### OAuth2
+
+To authenticate using `OAuth2` just send a request containing the credentials
 access token like the `authentication response` example in the right column.
 
-> `curl` example request
+For more details about OAuth2 access the [http://oauth.net/2/](http://oauth.net/2/)
+
+> `curl` example of OAuth2 authentication
 
 ```shell
 curl -k -X "POST"\
