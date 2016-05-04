@@ -51,13 +51,13 @@ access token like the `authentication response` example in the right column.
 > `curl` example request
 
 ```shell
-curl -k -X "POST"
-    "https://aaat.agcocorp.com/auth/oauth2/access_token?realm=/dealers"
-    --data-urlencode "username=YOUR_USERNAME"
-    --data-urlencode "password=YOUR_PASSWORD"
-    --data-urlencode "scope=cn mail agcoUUID"
-    --data-urlencode "client_id=YOUR_CLIENT_ID"
-    --data-urlencode "client_secret=YOUR_CLIENT_SECRET"
+curl -k -X "POST"\
+    "https://aaat.agcocorp.com/auth/oauth2/access_token?realm=/dealers"\
+    --data-urlencode "username=YOUR_USERNAME"\
+    --data-urlencode "password=YOUR_PASSWORD"\
+    --data-urlencode "scope=cn mail agcoUUID"\
+    --data-urlencode "client_id=YOUR_CLIENT_ID"\
+    --data-urlencode "client_secret=YOUR_CLIENT_SECRET"\
     --data-urlencode "grant_type=password"
 ```
 
