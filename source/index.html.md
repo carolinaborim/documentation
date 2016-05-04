@@ -10,6 +10,7 @@ toc_footers:
 includes:
   - equipment_api/equipment
   - canVariables
+  - external_user_workflow/workflow
 
 search: true
 ---
