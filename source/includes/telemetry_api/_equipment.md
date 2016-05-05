@@ -24,8 +24,6 @@ On the Telemetry API server:
 
 When the information is returned with success, a list of equipment will be available.
 
-The list of equipment may contain 0 or more equipment.
-
 There are some [parameters](#request-parameters) that can be send to `GET /equipment` to get more data on the response.
 
 ## GET /equipment/{id}

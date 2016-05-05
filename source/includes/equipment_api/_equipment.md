@@ -34,9 +34,7 @@ On the Equipment API server:
 
 `GET /equipment`.
 
-When the information is returned with success, a list of equipment will be available.
-
-The list of equipment may contain 0 or more equipment, with the CAN variable
+When the information is returned with success, a list of equipment will be available with the CAN variable
 informations present according to the availability on that specific equipment.
 
 Refer to the [CAN Variables](#can-variables) section to see the possible returned values.
