@@ -27,7 +27,7 @@ You must replace <code>[token]</code> with the token response from the Authentic
 ````
 
 This is the endpoint for retrieving the list of equipment.
-The equipment returned will be the equipment your accesss token have access to.
+You will only have access to equipment you own.
 
 ### HTTP Request
 On the Equipment API server:
@@ -48,7 +48,7 @@ Refer to the [CAN Variables](#can-variables) section to see the possible returne
 ````
 
 This is the endpoint to receive a single equipment equivalent to the id sent.
-The equipment returned will be the equipment your accesss token have access to.
+You will only have access to equipment you own.
 
 ### HTTP Request
 On the Equipment API server:
