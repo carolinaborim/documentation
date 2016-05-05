@@ -14,7 +14,7 @@ curl -X GET \
 [[telemetry:operation:getEquipment]]
 ```
 
-This is the endpoint for retrieving the list of equipment. The equipment returned will be the equipment your accesss token have access to.
+This is the endpoint for retrieving the list of equipment. You will only have access to equipment you own.
 
 ### HTTP Request
 
@@ -78,9 +78,9 @@ curl -X GET \
 
 The parameters are optional. A few parameters available below:
 
-- **include**: Includes models payload that the equipment refers to. It possible send more than one separated by comma `,`.
+- **include**: Includes the equipment relationship. Is possible send more than one separated by comma `,`.
  - **model**: The model of the equipment.
- - **dealer**: The Dealer that equioment belongs.
+ - **dealer**: The Dealer that equipment belongs.
  - **manufacturingModel**: The manufacturing model code.
 - **offset**: Defines from each index start the list (the first index is 0).
 - **limit**: Defines max number of equipment on the response
