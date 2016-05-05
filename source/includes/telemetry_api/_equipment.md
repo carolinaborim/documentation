@@ -4,7 +4,7 @@
 
 ```shell
 curl -X GET \
-    --header "authorization: Bearer be9225f4-961a-49c5-bd0d-cf36cb855f69" \
+    --header "authorization: Bearer YOUR_ACCESS_TOKEN" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/equipment"
 ```
 
@@ -12,7 +12,7 @@ curl -X GET \
 
 ```shell
 curl -X GET \
-    --header "authorization: Bearer be9225f4-961a-49c5-bd0d-cf36cb855f69" \
+    --header "authorization: Bearer YOUR_ACCESS_TOKEN" \
     --data-urlencode "include=model,dealer,manufacturingModel" \
     --data-urlencode "limit=10" \
     --data-urlencode "offset=0" \
