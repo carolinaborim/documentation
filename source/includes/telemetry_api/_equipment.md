@@ -24,7 +24,7 @@ On the Telemetry API server:
 
 When the information is returned with success, a list of equipment will be available.
 
-There are some [parameters](#request-parameters) that can be send to `GET /equipment` to get more data on the response.
+There are some [parameters](#request-parameters) that can be sent to `GET /equipment` to get more data on the response.
 
 ## GET /equipment/{id}
 
@@ -50,7 +50,7 @@ curl -X GET \
 [[telemetry:operation:getEquipment]]
 ```
 
-This is the endpoint to receive a equipment equivalent to the id sent.
+This is the endpoint to receive an equipment equivalent to the id sent.
 The equipment returned will be the equipment your accesss token have access to.
 
 ### HTTP Request
@@ -61,7 +61,7 @@ On the Telemetry API server:
 
 When the information is returned with success, a list with one or more equipment will be available.
 
-There are some parameters that can be send to `GET /equipment/{id}` to get more data on the response such as `include=model,dealer`.
+There are some parameters that can be sent to `GET /equipment/{id}` to get more data on the response such as `include=model,dealer`.
 
 ## Request parameters
 
@@ -76,7 +76,7 @@ curl -X GET \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/equipment"
 ```
 
-The parameters are optional. A few parameters available below:
+The parameters below are optional:
 
 - **include**: Includes the equipment relationship. Is possible send more than one separated by comma `,`.
  - **model**: The model of the equipment.
