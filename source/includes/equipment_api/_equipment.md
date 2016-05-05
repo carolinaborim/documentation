@@ -20,7 +20,7 @@ You must replace <code>[token]</code> with the token response from the Authentic
 
 ## GET /equipment
 
-> HTTP 200 Successful:
+> HTTP 200 Successful Response schema:
 
 ```json
 [[equipment:model:Model 2]]
@@ -41,7 +41,7 @@ Refer to the [CAN Variables](#can-variables) section to see the possible returne
 
 ## GET /equipment/{id}
 
-> HTTP 200 Successful
+> HTTP 200 Successfu Response schemal
 
 ```json
 [[equipment:model:Model 8]]
