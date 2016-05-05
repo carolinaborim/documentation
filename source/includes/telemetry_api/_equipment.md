@@ -28,6 +28,41 @@ There are some [parameters](#request-parameters) that can be send to `GET /equip
 
 ## GET /equipment/{id}
 
+> curl example to get one equipment by id
+
+```shell
+curl -X GET \
+    --header "authorization: Bearer YOUR_ACCESS_TOKEN" \
+    "https://agco-fuse-trackers-sandbox.herokuapp.com/equipment/ff6f026f-eac7-44c1-8456-c59ac061f467"
+```
+
+> curl example to get two equipment by id
+
+```shell
+curl -X GET \
+    --header "authorization: Bearer YOUR_ACCESS_TOKEN" \
+    "https://agco-fuse-trackers-sandbox.herokuapp.com/equipment/ff6f026f-eac7-44c1-8456-c59ac061f467,fc5eb98f-31fe-4daf-a68r-1fe6f647ad71"
+```
+
+> HTTP 200 Successful Response Schema:
+
+```json
+[[telemetry:operation:getEquipment]]
+```
+
+This is the endpoint to receive a equipment equivalent to the id sent.
+The equipment returned will be the equipment your accesss token have access to.
+
+### HTTP Request
+
+On the Telemetry API server:
+
+`GET /equipment/{id}`.
+
+When the information is returned with success, a list with one or more equipment will be available.
+
+There are some parameters that can be send to `GET /equipment/{id}` to get more data on the response such as `include=model,dealer`.
+
 ## Request parameters
 
 > curl example to get a list of equipment sending paramenters:
