@@ -20,37 +20,35 @@ You must replace <code>[token]</code> with the token response from the Authentic
 
 ## GET /equipment
 
-> HTTP 200 Successful:
+> HTTP 200 Successful Response schema:
 
 ```json
 [[equipment:model:Model 2]]
 ````
 
 This is the endpoint for retrieving the list of equipment.
-The equipment returned will be the equipment your accesss token have access to.
+You will only have access to equipment you own.
 
 ### HTTP Request
 On the Equipment API server:
 
 `GET /equipment`.
 
-When the information is returned with success, a list of equipment will be available.
-
-The list of equipment may contain 0 or more equipment, with the CAN variable
+When the information is returned with success, a list of equipment will be available with the CAN variable
 informations present according to the availability on that specific equipment.
 
 Refer to the [CAN Variables](#can-variables) section to see the possible returned values.
 
 ## GET /equipment/{id}
 
-> HTTP 200 Successful
+> HTTP 200 Successfu Response schemal
 
 ```json
 [[equipment:model:Model 8]]
 ````
 
 This is the endpoint to receive a single equipment equivalent to the id sent.
-The equipment returned will be the equipment your accesss token have access to.
+You will only have access to equipment you own.
 
 ### HTTP Request
 On the Equipment API server:
