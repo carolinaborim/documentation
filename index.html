@@ -913,13 +913,17 @@ You will only have access to equipment you own.</p>
 
 <p>Is possible get <a href="#get-equipment">equipment</a>, trackingPoint, trackingData with <a href="#can-variables">canVariables</a>.</p>
 
-          <h2 id="get-equipment">GET /equipment</h2>
+          <h2 id="equipment">Equipment</h2>
+
+<p>Manages Equipment data.</p>
+
+<h2 id="get-equipment">GET /equipment</h2>
 
 <blockquote>
 <p>curl example to get a list of equipment:</p>
 </blockquote>
 <pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
-    --header <span class="s2">"authorization: Bearer YOUR_ACCESS_TOKEN"</span> <span class="se">\</span>
+    --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/equipment"</span>
 </code></pre>
 
@@ -1033,7 +1037,7 @@ You will only have access to equipment you own.</p>
 
 <p>To understand the equipment the user can see, access the <a href="#equipment-ownership">Equipment Ownership</a> section.</p>
 
-<p>There are some <a href="#request-parameters">parameters</a> that can be sent to <code class="prettyprint">GET /equipment</code> to get more data on the response.</p>
+<p>There are some <a href="#equipment-request-parameters">parameters</a> that can be sent to <code class="prettyprint">GET /equipment</code> to get more data on the response.</p>
 
 <h2 id="get-equipment-id">GET /equipment/{id}</h2>
 
@@ -1041,16 +1045,16 @@ You will only have access to equipment you own.</p>
 <p>curl example to get one equipment by id</p>
 </blockquote>
 <pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
-    --header <span class="s2">"authorization: Bearer YOUR_ACCESS_TOKEN"</span> <span class="se">\</span>
-    <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/equipment/ff6f026f-eac7-44c1-8456-c59ac061f467"</span>
+    --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+    <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/equipment/{EQUIPMENT ID}"</span>
 </code></pre>
 
 <blockquote>
 <p>curl example to get two equipment by id</p>
 </blockquote>
 <pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
-    --header <span class="s2">"authorization: Bearer YOUR_ACCESS_TOKEN"</span> <span class="se">\</span>
-    <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/equipment/ff6f026f-eac7-44c1-8456-c59ac061f467,fc5eb98f-31fe-4daf-a68r-1fe6f647ad71"</span>
+    --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+    <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/equipment?id={EQUIPMENT ID 1},{EQUIPMENT ID 2}"</span>
 </code></pre>
 
 <blockquote>
@@ -1167,17 +1171,16 @@ You will only have access to equipment you own.</p>
 
 <p>There are some parameters that can be sent to <code class="prettyprint">GET /equipment/{id}</code> to get more data on the response such as <code class="prettyprint">include=model,dealer</code>.</p>
 
-<h2 id="request-parameters">Request parameters</h2>
+<h2 id="equipment-request-parameters">Equipment request parameters</h2>
 
 <blockquote>
 <p>curl example to get a list of equipment sending paramenters:</p>
 </blockquote>
-<pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
-    --header <span class="s2">"authorization: Bearer YOUR_ACCESS_TOKEN"</span> <span class="se">\</span>
-    --data-urlencode <span class="s2">"include=model,dealer,manufacturingModel"</span> <span class="se">\</span>
-    --data-urlencode <span class="s2">"limit=10"</span> <span class="se">\</span>
-    --data-urlencode <span class="s2">"offset=0"</span> <span class="se">\</span>
-    <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/equipment"</span>
+<pre class="highlight shell"><code>curl -X GET --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+<span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/equipment?&amp;</span><span class="se">\</span><span class="s2">
+include=model,dealer,manufacturingModel&amp;</span><span class="se">\</span><span class="s2">
+limit=10&amp;</span><span class="se">\</span><span class="s2">
+offset=0"</span>
 </code></pre>
 
 <p>The parameters below are optional:</p>
@@ -1200,6 +1203,233 @@ You will only have access to equipment you own.</p>
 
 <p>There are no difference do a request to get equipment as a farmer or a dealer user.
 The response always will return the equipment that the user owns</p>
+
+          <h2 id="tracking-data">Tracking Data</h2>
+
+<p>Manages tracking data.</p>
+
+<h2 id="get-trackingdata">GET /trackingData</h2>
+
+<blockquote>
+<p>curl example to get a list of tracking data:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
+    --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+    <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP 200 Successful Response Schema:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Get tracking data"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Returns tracking data"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TrackingData_topElement"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"nickname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"getTrackingData"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"produces"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"application/json"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"parameters"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"id"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"externalId"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"raw"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"links.trackingData"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"links.canVariable"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"include"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jsonapi inclusion. e.g. include=trackingData"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"limit"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paging limit"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"offset"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paging offset"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"responseMessages"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/trackingData"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p>On the Telemetry API server:</p>
+
+<p><code class="prettyprint">GET /trackingData</code></p>
+
+<p>When the information is returned with success, a list of tracking data will be available.</p>
+
+<p>There are some <a href="#tracking-data-request-parameters">parameters</a> that can be sent to <code class="prettyprint">GET /trackingData</code> to get more data on the response.</p>
+
+<h2 id="get-trackingdata-id">GET /trackingData/{id}</h2>
+
+<blockquote>
+<p>curl example to get one tracking data by id</p>
+</blockquote>
+<pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
+    --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+    <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData/{TRACKING DATA ID}"</span>
+</code></pre>
+
+<blockquote>
+<p>curl example to get two tracking data by id</p>
+</blockquote>
+<pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
+    --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+    <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData?id={TRACKING DATA ID 1},{TRACKING DATA ID 2}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP 200 Successful Response Schema:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Get tracking data"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Returns tracking data"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TrackingData_topElement"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"nickname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"getTrackingData"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"produces"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"application/json"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"parameters"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"id"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"externalId"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"raw"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"links.trackingData"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"links.canVariable"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"include"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jsonapi inclusion. e.g. include=trackingData"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"limit"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paging limit"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"offset"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paging offset"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"responseMessages"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/trackingData"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+
+<p>This is the endpoint to receive a tracking data equivalent to the id sent.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p>On the Telemetry API server:</p>
+
+<p><code class="prettyprint">GET /trackingData/{id}</code>.</p>
+
+<p>When the information is returned with success, a list with one or more tracking data will be available.</p>
+
+<p>There are some parameters that can be sent to <code class="prettyprint">GET /trackingData/{id}</code> to get more data on the response such as <code class="prettyprint">include=canVariable,trackingPoint</code>.</p>
+
+<h2 id="tracking-data-request-parameters">Tracking data request parameters</h2>
+
+<blockquote>
+<p>curl example to get a list of tracking data sending paramenters:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl -X GET --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+<span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData?</span><span class="se">\</span><span class="s2">
+externalId={EXTERNAL TRACKING DATA ID}&amp;</span><span class="se">\</span><span class="s2">
+raw={RAW VALUE}&amp;</span><span class="se">\</span><span class="s2">
+links.trackingData={TRACKING DATA}&amp;</span><span class="se">\</span><span class="s2">
+links.canVariable={CAN VARIABLE}&amp;</span><span class="se">\</span><span class="s2">
+include=canvariable,trackingPoint&amp;</span><span class="se">\</span><span class="s2">
+limit=10&amp;</span><span class="se">\</span><span class="s2">
+offset=0"</span>
+</code></pre>
+
+<p>The parameters below are optional:</p>
+
+<ul>
+<li><strong>externalId</strong>: TBD.</li>
+<li><strong>raw</strong>: Denormalized data (the actual value sent by the sensor).</li>
+<li><strong>links.trackingData</strong>: TBD.</li>
+<li><strong>links.canVariable</strong>: TBD.</li>
+<li><strong>include</strong>: Includes the equipment relationship. Is possible send more than one separated by comma <code class="prettyprint">,</code>.
+
+<ul>
+<li><strong>canVariable</strong>: TBD.</li>
+<li><strong>trackingPoint</strong>: TBD.</li>
+</ul></li>
+<li><strong>offset</strong>: Defines from each index start the list (the first index is 0).</li>
+<li><strong>limit</strong>: Defines max number of equipment on the response</li>
+</ul>
 
           <h1 id="can-variables">Can Variables</h1>
 
