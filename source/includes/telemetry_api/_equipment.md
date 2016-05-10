@@ -1,10 +1,14 @@
+## Equipment
+
+Manages Equipment data.
+
 ## GET /equipment
 
 > curl example to get a list of equipment:
 
 ```shell
 curl -X GET \
-    --header "authorization: Bearer YOUR_ACCESS_TOKEN" \
+    --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/equipment"
 ```
 
@@ -24,7 +28,7 @@ When the information is returned with success, a list of equipment will be avail
 
 To understand the equipment the user can see, access the [Equipment Ownership](#equipment-ownership) section.
 
-There are some [parameters](#request-parameters) that can be sent to `GET /equipment` to get more data on the response.
+There are some [parameters](#equipment-request-parameters) that can be sent to `GET /equipment` to get more data on the response.
 
 ## GET /equipment/{id}
 
@@ -32,16 +36,16 @@ There are some [parameters](#request-parameters) that can be sent to `GET /equip
 
 ```shell
 curl -X GET \
-    --header "authorization: Bearer YOUR_ACCESS_TOKEN" \
-    "https://agco-fuse-trackers-sandbox.herokuapp.com/equipment/ff6f026f-eac7-44c1-8456-c59ac061f467"
+    --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
+    "https://agco-fuse-trackers-sandbox.herokuapp.com/equipment/{EQUIPMENT ID}"
 ```
 
 > curl example to get two equipment by id
 
 ```shell
 curl -X GET \
-    --header "authorization: Bearer YOUR_ACCESS_TOKEN" \
-    "https://agco-fuse-trackers-sandbox.herokuapp.com/equipment/ff6f026f-eac7-44c1-8456-c59ac061f467,fc5eb98f-31fe-4daf-a68r-1fe6f647ad71"
+    --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
+    "https://agco-fuse-trackers-sandbox.herokuapp.com/equipment?id={EQUIPMENT ID 1},{EQUIPMENT ID 2}"
 ```
 
 > HTTP 200 Successful Response Schema:
@@ -64,17 +68,16 @@ When the information is returned with success, a list with one or more equipment
 
 There are some parameters that can be sent to `GET /equipment/{id}` to get more data on the response such as `include=model,dealer`.
 
-## Request parameters
+## Equipment request parameters
 
 > curl example to get a list of equipment sending paramenters:
 
 ```shell
-curl -X GET \
-    --header "authorization: Bearer YOUR_ACCESS_TOKEN" \
-    --data-urlencode "include=model,dealer,manufacturingModel" \
-    --data-urlencode "limit=10" \
-    --data-urlencode "offset=0" \
-    "https://agco-fuse-trackers-sandbox.herokuapp.com/equipment"
+curl -X GET --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
+"https://agco-fuse-trackers-sandbox.herokuapp.com/equipment?&\
+include=model,dealer,manufacturingModel&\
+limit=10&\
+offset=0"
 ```
 
 The parameters below are optional:

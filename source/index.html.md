@@ -9,6 +9,7 @@ includes:
   - equipment_api/equipment
   - telemetry_api/introduction
   - telemetry_api/equipment
+  - telemetry_api/trackingData
   - canVariables
 
 search: true
