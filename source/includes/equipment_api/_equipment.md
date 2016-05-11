@@ -23,7 +23,7 @@ You must replace <code>[token]</code> with the token response from the Authentic
 > HTTP 200 Successful Response schema:
 
 ```json
-[[equipment:model:Model 2]]
+[[equipment:model:equipmentData]]
 ````
 
 This is the endpoint for retrieving the list of equipment.
@@ -44,7 +44,7 @@ Refer to the [CAN Variables](#can-variables) section to see the possible returne
 > HTTP 200 Successfu Response schemal
 
 ```json
-[[equipment:model:Model 8]]
+[[equipment:model:anEquipmentData]]
 ````
 
 This is the endpoint to receive a single equipment equivalent to the id sent.
@@ -74,7 +74,7 @@ Error Code | Meaning
 > 401 Unauthorized
 
 ```json
-[[equipment:model:Model 3]]
+[[equipment:model:401]]
 ```
 
 When the authentication token is invalid or expired, the response will return an array of errors, with an item pointing out the status and the response code.
@@ -84,7 +84,7 @@ When the authentication token is invalid or expired, the response will return an
 > 404 Not Found
 
 ```json
-[[equipment:model:Model 5]]
+[[equipment:model:404]]
 ```
 
 When the list does not exist, the response will return an array of errors, with an item pointing out the status and the response code.
@@ -94,7 +94,7 @@ When the list does not exist, the response will return an array of errors, with 
 > 500 Internal Server Error
 
 ```json
-[[equipment:model:Model 7]]
+[[equipment:model:500]]
 ```
 
 When there is an error processing the request, the response will return an array of errors, with an item pointing out the status and the response code.
