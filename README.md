@@ -1,7 +1,9 @@
 Documentation
 -------------
 
-[![Build Status](https://travis-ci.org/agco-fuse/documentation.svg?branch=master)](https://travis-ci.org/agco-fuse/documentation) [![Code Climate](https://codeclimate.com/github/agco-fuse/documentation/badges/gpa.svg)](https://codeclimate.com/github/agco-fuse/documentation)
+[![Build Status](https://travis-ci.org/agco-fuse/documentation.svg?branch=master)](https://travis-ci.org/agco-fuse/documentation)
+[![Code Climate](https://codeclimate.com/github/agco-fuse/documentation/badges/gpa.svg)](https://codeclimate.com/github/agco-fuse/documentation)
+[![License](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/agco-fuse/documentation/blob/master/LICENSE)
 
 ## Requirements
 
