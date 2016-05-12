@@ -63,10 +63,10 @@ Refer to the [CAN Variables](#can-variables) section to see the possible returne
 
 ## Errors
 
-Error Code | Meaning
----------- | -------
-[401](#401-unauthorized) | [Unauthorized](#401-unauthorized)
-[404](#404-not-found) | [Not Found](#404-not-found)
+Error Code                        | Meaning
+----------                        | -------
+[401](#401-unauthorized)          | [Unauthorized](#401-unauthorized)
+[404](#404-not-found)             | [Not Found](#404-not-found)
 [500](#500-internal-server-error) | [Internal Server Error](#500-internal-server-error)
 
 ## 401 Unauthorized
