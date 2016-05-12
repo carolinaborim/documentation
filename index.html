@@ -1438,154 +1438,214 @@ offset=0"</span>
 <table><thead>
 <tr>
 <th>Name</th>
+<th>CAN variable name</th>
 <th>Description</th>
 <th>Standard Unit</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ENGINE_HOURS</td>
-<td>Total hours of equipment engine</td>
-<td>Seconds</td>
-</tr>
-<tr>
-<td>ENGINE_SPEED</td>
-<td>Engine speed of equipment</td>
-<td>RPM</td>
-</tr>
-<tr>
-<td>DRIVE_DIRECTION</td>
-<td>Driving direction of equipment</td>
-<td><a href="#enumeration-drive_direction">Enumeration DRIVE_DIRECTION</a></td>
-</tr>
-<tr>
-<td>ENGINE_LOAD</td>
-<td>Percentage load on engine</td>
-<td>Percentage (%)</td>
-</tr>
-<tr>
-<td>FUEL_LEVEL</td>
-<td>Percentage of fuel tank level</td>
-<td>Percentage (%)</td>
-</tr>
-<tr>
-<td>FUEL_RATE</td>
-<td>Rate of fuel consuption</td>
-<td>Cubic metre per seconds (m³/s)</td>
-</tr>
-<tr>
-<td>MASTER_APPLY</td>
-<td>Sprayer applying product</td>
-<td><a href="#enumeration-master_apply">Enumeration MASTER_APPLY</a></td>
-</tr>
-<tr>
-<td>MOISTURE_AVERAGE</td>
-<td>Average crop moisture in a combine</td>
-<td>Percentage (%)</td>
-</tr>
-<tr>
-<td>YIELD_AVERAGE</td>
-<td>Average yeild /area from combine</td>
-<td>Kilograms per square metre (kg/m²)</td>
-</tr>
-<tr>
-<td>CAPACITY_Average</td>
-<td>Average capacity for a combine</td>
-<td>Kilograms per second (kg/s)</td>
-</tr>
-<tr>
-<td>TEST_WEIGHT</td>
-<td>User defined test weight for a crop in a combine</td>
-<td>Kilograms per cubic metre (kg/m³)</td>
-</tr>
-<tr>
-<td>HARVEST_HOURS</td>
-<td>Hours on combine seperator</td>
-<td>Seconds</td>
-</tr>
-<tr>
-<td>RATE</td>
-<td>Rate being applied by a sprayer</td>
-<td>Milimeters squared per second (mm²/s)</td>
-</tr>
-<tr>
-<td>UNLOAD_AUGER</td>
-<td>Combine unloading auger status</td>
-<td><a href="#enumeration-unload_auger">Enumeration UNLOAD_AUGER</a></td>
-</tr>
-<tr>
-<td>BALE_WEIGHT</td>
-<td>Weight of last bale</td>
-<td>Kilograms</td>
-</tr>
-<tr>
-<td>BALE_WEIGHT_AVERAGE</td>
-<td>Average bale weight</td>
-<td>Kilograms</td>
-</tr>
-<tr>
+<td>Bale Flakes, Average</td>
 <td>BALE_FLAKES_AVERAGE</td>
 <td>Average flakes per bale</td>
 <td>Range 0 - 65635</td>
 </tr>
 <tr>
+<td>Bale Flakes, Strokes per</td>
+<td>STROKE_PER_FLAKE</td>
+<td>Strokes per flake</td>
+<td>Range 0 - 1000</td>
+</tr>
+<tr>
+<td>Bale Weight, Average</td>
+<td>BALE_WEIGHT_AVERAGE</td>
+<td>Average bale weight</td>
+<td>Kilograms</td>
+</tr>
+<tr>
+<td>Bale Weight, Last</td>
+<td>BALE_WEIGHT</td>
+<td>Weight of last bale</td>
+<td>Kilograms</td>
+</tr>
+<tr>
+<td>Bale Weight, Total</td>
+<td>BALE_WEIGHT_Total</td>
+<td>Accumulated mass of bales produced during equipment operation</td>
+<td>Kilograms</td>
+</tr>
+<tr>
+<td>Bale, Total Cut</td>
 <td>COUNTER_Bale_Cut</td>
-<td>Number of cut bales with cutter engaged</td>
+<td>Accumulated count of cut bales produced during equipment operation</td>
 <td>Range 0 - 65635</td>
 </tr>
 <tr>
+<td>Bale, Total Uncut</td>
 <td>COUNTER_Bale_Uncut</td>
-<td>Number of uncut bales</td>
+<td>Accumulated count of uncut bales produced during equipment operation</td>
 <td>Range 0 - 1000</td>
 </tr>
 <tr>
-<td>GRAIN_LOSS_Shaker</td>
-<td>Percentage of grain lost at shaker in a combine</td>
-<td>Percentage (%)</td>
-</tr>
-<tr>
-<td>GRAIN_LOSS_Rotor</td>
-<td>Percentage of grain lost at rotor in a combine</td>
-<td>Percentage (%)</td>
-</tr>
-<tr>
-<td>INDUSTRIAL_DRIVE_ENGAGE</td>
-<td>Sugar Cane harvester drive status</td>
-<td><a href="#enumeration-industrial_drive_engage">Enumeration INDUSTRIAL_DRIVE_ENGAGE</a></td>
-</tr>
-<tr>
-<td>PRIMARY_EXTRACTOR_ENGAGE</td>
-<td>Sugar Cane harvester extractor status</td>
-<td><a href="#enumeration-primary_extractor_engage">Enamuration PRIMARY_EXTRACTOR_ENGAGE</a></td>
-</tr>
-<tr>
-<td>SIEVE_POSITION_Upper_Right</td>
-<td>Combine sieve setting</td>
-<td>Distance in miles</td>
-</tr>
-<tr>
-<td>STROKE_PER_FLAKE</td>
-<td>Strokes per flake - baler</td>
-<td>Range 0 - 1000</td>
-</tr>
-<tr>
-<td>TOPPER_DRIVE_ENGAGE</td>
-<td>Sugar Cane harvester topper drive status</td>
-<td><a href="#enumeration-topper_drive_engage">Enumeration TOPPER_DRIVE_ENGAGE</a></td>
-</tr>
-<tr>
-<td>CAPACITY</td>
-<td>Instant combine capacity</td>
+<td>Capacity, Average</td>
+<td>CAPACITY_Average</td>
+<td>Average equipment mass capacity</td>
 <td>Kilograms per second (kg/s)</td>
 </tr>
 <tr>
-<td>MOISTURE</td>
-<td>Measurement of crop moisture during harvest</td>
+<td>Capacity, Instant</td>
+<td>CAPACITY</td>
+<td>Instantaneous equipment mass capacity</td>
+<td>Kilograms per second (kg/s)</td>
+</tr>
+<tr>
+<td>Crop Moisture, Average</td>
+<td>MOISTURE_AVERAGE</td>
+<td>Average moisture in crop yield</td>
 <td>Percentage (%)</td>
 </tr>
 <tr>
-<td>BALE_WEIGHT_Total</td>
-<td>Total weight baled</td>
-<td>Kilograms</td>
+<td>Crop Moisture, Instant</td>
+<td>MOISTURE</td>
+<td>Moisture in crop yeild</td>
+<td>Percentage (%)</td>
+</tr>
+<tr>
+<td>Drive State</td>
+<td>DRIVING_DIRECTION</td>
+<td>Equipment drive configuration</td>
+<td><a href="#enumeration-drive_direction">Enumeration DRIVE_DIRECTION</a></td>
+</tr>
+<tr>
+<td>Effective Total Time</td>
+<td>HARVEST_HOURS</td>
+<td>Accumulated time in working position</td>
+<td>Seconds</td>
+</tr>
+<tr>
+<td>Engine Fuel Rate</td>
+<td>FUEL_RATE</td>
+<td>Amount of fuel consumed by engine per unit of time</td>
+<td>Cubic metre per seconds (m³/s)</td>
+</tr>
+<tr>
+<td>Engine Hours</td>
+<td>ENGINE_HOURS</td>
+<td>Accumulated time of operation of engine</td>
+<td>Seconds</td>
+</tr>
+<tr>
+<td>Engine Load</td>
+<td>ENGINE_LOAD</td>
+<td>The ratio of actual engine percent torque (indicated) to maximum indicated torque available at the current engine speed, clipped to zero torque during engine braking</td>
+<td>Percentage (%)</td>
+</tr>
+<tr>
+<td>Engine Speed</td>
+<td>ENGINE_SPEED</td>
+<td>Actual engine speed which is calculated over a minimum crankshaft angle of 720 degrees divided by the number of cylinders</td>
+<td>RPM</td>
+</tr>
+<tr>
+<td>Equipment Speed</td>
+<td>VEHICLE_SPEED</td>
+<td>A value of the speed of a machine as calculated from the measured wheel or tail shaft speed</td>
+<td>Meters per second (m/s)</td>
+</tr>
+<tr>
+<td>Fuel Level</td>
+<td>FUEL_LEVEL</td>
+<td>Ratio of volume of fuel to the total volume of fuel storage container</td>
+<td>Percentage (%)</td>
+</tr>
+<tr>
+<td>Grain Bin/Tank, Full Indicator</td>
+<td>GRAIN_BIN_FULL</td>
+<td>Status of grain bin/tank full indicator</td>
+<td><a href="#enumeration-grain_bin_full">Enumeration GRAIN_BIN_FULL</a></td>
+</tr>
+<tr>
+<td>Grain Loss, Rotor</td>
+<td>GRAIN_LOSS_Rotor</td>
+<td>Percentage of crop loss measured at the rotor</td>
+<td>Percentage (%)</td>
+</tr>
+<tr>
+<td>Grain Loss, Shaker</td>
+<td>GRAIN_LOSS_Shaker</td>
+<td>Percentage of crop loss measured at the shaker</td>
+<td>Percentage (%)</td>
+</tr>
+<tr>
+<td>Grain Loss, Shoe</td>
+<td>GRAIN_LOSS_Shoe</td>
+<td>Percentage of crop loss measured at the shoe</td>
+<td>Percentage (%)</td>
+</tr>
+<tr>
+<td>Industrial Drive Status</td>
+<td>INDUSTRIAL_DRIVE_ENGAGE</td>
+<td>Status of sugar cane harvester industrial drive</td>
+<td><a href="#enumeration-industrial_drive_engage">Enumeration INDUSTRIAL_DRIVE_ENGAGE</a></td>
+</tr>
+<tr>
+<td>Instantaneous Area Per Time Capacity</td>
+<td>RATE</td>
+<td>Area per time</td>
+<td>Milimeters squared per second (mm²/s)</td>
+</tr>
+<tr>
+<td>Master Apply Status</td>
+<td>MASTER_APPLY</td>
+<td>Applicator Master Apply Switch Status</td>
+<td><a href="#enumeration-master_apply">Enumeration MASTER_APPLY</a></td>
+</tr>
+<tr>
+<td>Primary Extractor Status</td>
+<td>PRIMARY_EXTRACTOR_ENGAGE</td>
+<td>Status of sugar cane harvester primary extractor</td>
+<td><a href="#enumeration-primary_extractor_engage">Enamuration PRIMARY_EXTRACTOR_ENGAGE</a></td>
+</tr>
+<tr>
+<td>Sieve Position, Upper Right</td>
+<td>SIEVE_POSITION_Upper_Right</td>
+<td>Upper right sieve position setting</td>
+<td>Distance in miles</td>
+</tr>
+<tr>
+<td>Topper Drive Status</td>
+<td>TOPPER_DRIVE_ENGAGE</td>
+<td>Status of sugar cane harvester topper drive</td>
+<td><a href="#enumeration-topper_drive_engage">Enumeration TOPPER_DRIVE_ENGAGE</a></td>
+</tr>
+<tr>
+<td>Unload Auger Status</td>
+<td>UNLOAD_AUGER_STATUS</td>
+<td>Status of the unload auger</td>
+<td><a href="#enumeration-unload_auger_status">Enumeration UNLOAD_AUGER_STATUS</a></td>
+</tr>
+<tr>
+<td>Wheel Slip</td>
+<td>WHEEL_SLIP</td>
+<td>Wheel slippage as a percent</td>
+<td>Percentage (%)</td>
+</tr>
+<tr>
+<td>Yield, Mass per Area, Average</td>
+<td>YIELD_AVERAGE</td>
+<td>Average yield as mass per area, not corrected for the reference moisture percentage</td>
+<td>Kilograms per square metre (kg/m²)</td>
+</tr>
+<tr>
+<td>Yield, Mass per Area, Instant</td>
+<td>YIELD</td>
+<td>Instantaneous yield as mass per area, not corrected for the reference moisture percentage</td>
+<td>Kilograms per square metre (kg/m²)</td>
+</tr>
+<tr>
+<td>Yield, Test Weight</td>
+<td>TEST_WEIGHT</td>
+<td>Test weight of crop for yield calculation conversion</td>
+<td>Kilograms per cubic metre (kg/m³)</td>
 </tr>
 </tbody></table>
 
@@ -1619,33 +1679,7 @@ offset=0"</span>
 </tr>
 </tbody></table>
 
-<h2 id="enumeration-master_apply">Enumeration MASTER_APPLY</h2>
-
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Value</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>OFF</td>
-<td>0</td>
-</tr>
-<tr>
-<td>ON</td>
-<td>1</td>
-</tr>
-<tr>
-<td>ERROR</td>
-<td>2</td>
-</tr>
-<tr>
-<td>NA</td>
-<td>3</td>
-</tr>
-</tbody></table>
-
-<h2 id="enumeration-unload_auger">Enumeration UNLOAD_AUGER</h2>
+<h2 id="enumeration-grain_bin_full">Enumeration GRAIN_BIN_FULL</h2>
 
 <table><thead>
 <tr>
@@ -1701,6 +1735,32 @@ offset=0"</span>
 </tr>
 </tbody></table>
 
+<h2 id="enumeration-master_apply">Enumeration MASTER_APPLY</h2>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OFF</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ON</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ERROR</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NA</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
 <h2 id="enumeration-primary_extractor_engage">Enumeration PRIMARY_EXTRACTOR_ENGAGE</h2>
 
 <table><thead>
@@ -1728,6 +1788,32 @@ offset=0"</span>
 </tbody></table>
 
 <h2 id="enumeration-topper_drive_engage">Enumeration TOPPER_DRIVE_ENGAGE</h2>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OFF</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ON</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ERROR</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NA</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<h2 id="enumeration-unload_auger_status">Enumeration UNLOAD_AUGER_STATUS</h2>
 
 <table><thead>
 <tr>
