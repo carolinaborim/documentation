@@ -624,7 +624,7 @@ You must replace <code>[token]</code> with the token response from the Authentic
 </span></code></pre>
 
 <p>This is the endpoint for retrieving the list of equipment.
-You will only have access to equipment you own.</p>
+You will only access equipment your access token allows.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
@@ -634,6 +634,9 @@ You will only have access to equipment you own.</p>
 
 <p>When the information is returned with success, a list of equipment will be available with the CAN variable
 informations present according to the availability on that specific equipment.</p>
+
+<p>You will get a list of 100 equipment. If you want more than 100 or to do paging you will have to use the
+extra parameters.</p>
 
 <p>Refer to the <a href="#can-variables">CAN Variables</a> section to see the possible returned values.</p>
 
@@ -764,7 +767,7 @@ informations present according to the availability on that specific equipment.</
 </span></code></pre>
 
 <p>This is the endpoint to receive a single equipment equivalent to the id sent.
-You will only have access to equipment you own.</p>
+You will only access equipment your access token allows.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
@@ -1421,14 +1424,14 @@ offset=0"</span>
 <li><strong>raw</strong>: Denormalized data (the actual value sent by the sensor).</li>
 <li><strong>links.trackingData</strong>: TBD.</li>
 <li><strong>links.canVariable</strong>: TBD.</li>
-<li><strong>include</strong>: Includes the equipment relationship. Is possible send more than one separated by comma <code class="prettyprint">,</code>.
+<li><strong>include</strong>: Includes the tracking data relationship. Is possible send more than one separated by comma <code class="prettyprint">,</code>.
 
 <ul>
 <li><strong>canVariable</strong>: TBD.</li>
 <li><strong>trackingPoint</strong>: TBD.</li>
 </ul></li>
 <li><strong>offset</strong>: Defines from each index start the list (the first index is 0).</li>
-<li><strong>limit</strong>: Defines max number of equipment on the response</li>
+<li><strong>limit</strong>: Defines max number of tracking data on the response</li>
 </ul>
 
           <h1 id="can-variables">Can Variables</h1>
