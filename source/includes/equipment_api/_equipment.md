@@ -24,10 +24,10 @@ You must replace <code>[token]</code> with the token response from the Authentic
 
 ```json
 [[equipment:model:equipmentData]]
-````
+```
 
 This is the endpoint for retrieving the list of equipment.
-You will only have access to equipment you own.
+You will only access equipment your access token allows.
 
 ### HTTP Request
 On the Equipment API server:
@@ -37,6 +37,9 @@ On the Equipment API server:
 When the information is returned with success, a list of equipment will be available with the CAN variable
 informations present according to the availability on that specific equipment.
 
+You will get a list of 100 equipment. If you want more than 100 or to do paging you will have to use the
+extra parameters.
+
 Refer to the [CAN Variables](#can-variables) section to see the possible returned values.
 
 ## GET /equipment/{id}
@@ -45,10 +48,10 @@ Refer to the [CAN Variables](#can-variables) section to see the possible returne
 
 ```json
 [[equipment:model:anEquipmentData]]
-````
+```
 
 This is the endpoint to receive a single equipment equivalent to the id sent.
-You will only have access to equipment you own.
+You will only access equipment your access token allows.
 
 ### HTTP Request
 On the Equipment API server:

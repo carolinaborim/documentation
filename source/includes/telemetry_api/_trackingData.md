@@ -86,8 +86,8 @@ The parameters below are optional:
 - **raw**: Denormalized data (the actual value sent by the sensor).
 - **links.trackingData**: TBD.
 - **links.canVariable**: TBD.
-- **include**: Includes the equipment relationship. Is possible send more than one separated by comma `,`.
+- **include**: Includes the tracking data relationship. Is possible send more than one separated by comma `,`.
   - **canVariable**: TBD.
   - **trackingPoint**: TBD.
 - **offset**: Defines from each index start the list (the first index is 0).
-- **limit**: Defines max number of equipment on the response
+- **limit**: Defines max number of tracking data on the response
