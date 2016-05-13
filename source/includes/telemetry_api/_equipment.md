@@ -54,7 +54,7 @@ curl -X GET \
 [[telemetry:operation:getEquipment]]
 ```
 
-This is the endpoint to receive an equipment equivalent to the id sent.
+This is the endpoint to receive an equipment equivalent to the sent id.
 
 To understand the equipment the user can see, access the [ownership](#equipment-ownership) section.
 

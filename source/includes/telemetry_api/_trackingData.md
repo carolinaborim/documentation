@@ -52,7 +52,7 @@ curl -X GET \
 [[telemetry:operation:getTrackingData]]
 ```
 
-This is the endpoint to receive a tracking data equivalent to the id sent.
+This is the endpoint to receive a tracking data equivalent to the sent id.
 
 ### HTTP Request
 
