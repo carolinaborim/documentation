@@ -8,8 +8,10 @@ includes:
   - external_user_workflow/workflow
   - equipment_api/equipment
   - telemetry_api/introduction
+  - telemetry_api/duties
   - telemetry_api/equipment
   - telemetry_api/trackingData
+  - telemetry_api/trackingPoints
   - canVariables
 
 search: true
