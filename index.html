@@ -916,6 +916,172 @@ You will only access equipment your access token allows.</p>
 
 <p>Is possible get <a href="#get-equipment">equipment</a>, trackingPoint, trackingData with <a href="#can-variables">canVariables</a>.</p>
 
+          <h2 id="duties">Duties</h2>
+
+<p>Manages equipment status.</p>
+
+<h2 id="get-duties">GET /duties</h2>
+
+<blockquote>
+<p>curl example to get a list of duties:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
+    --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+    <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/duties"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP 200 Successful Response Schema:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gets the duties available in the Telemetry API"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Duty_topElement"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"nickname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"getDuty"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"produces"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"application/json"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"parameters"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"id"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"status"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"limit"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paging limit"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"offset"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paging offset"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"responseMessages"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/duties"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p>On the Telemetry API server:</p>
+
+<p><code class="prettyprint">GET /duties</code></p>
+
+<p>When the information is returned with success, a list of duties will be available.</p>
+
+<p>There are some <a href="#duties-request-parameters">parameters</a> that can be sent to <code class="prettyprint">GET /duties</code> to filter the response.</p>
+
+<h2 id="get-duties-id">GET /duties/{id}</h2>
+
+<blockquote>
+<p>curl example to get one duties by id</p>
+</blockquote>
+<pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
+    --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+    <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/duties/{DUTY ID}"</span>
+</code></pre>
+
+<blockquote>
+<p>curl example to get two duties by id</p>
+</blockquote>
+<pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
+    --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+    <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData?id={DUTY ID 1},{DUTY ID 2}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP 200 Successful Response Schema:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gets the duties available in the Telemetry API"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Duty_topElement"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"nickname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"getDuty"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"produces"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"application/json"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"parameters"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"id"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"status"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"limit"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paging limit"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"offset"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paging offset"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"responseMessages"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/duties"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+
+<p>This is the endpoint to receive a duty equivalent to the sent id.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p>On the Telemetry API server:</p>
+
+<p><code class="prettyprint">GET /duties/{id}</code>.</p>
+
+<p>When the information is returned with success, a list with one or more duties will be available.</p>
+
+<p>There are some parameters that can be sent to <code class="prettyprint">GET /duties/{id}</code> to filter data on the response such as <code class="prettyprint">limit=2</code>.</p>
+
+<h2 id="duties-request-parameters">duties request parameters</h2>
+
+<blockquote>
+<p>curl example to get a list of tracking points sending paramenters:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl -X GET --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+<span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData?</span><span class="se">\</span><span class="s2">
+status={DUTY VALUE}&amp;</span><span class="se">\</span><span class="s2">
+limit=10&amp;</span><span class="se">\</span><span class="s2">
+offset=0"</span>
+</code></pre>
+
+<p>The parameters below are optional:</p>
+
+<ul>
+<li><strong>status</strong>: Equipment status.</li>
+<li><strong>offset</strong>: Defines from each index start the list (the first index is 0).</li>
+<li><strong>limit</strong>: Defines max number of tracking points on the response</li>
+</ul>
+
           <h2 id="equipment">Equipment</h2>
 
 <p>Manages Equipment data.</p>
@@ -1160,7 +1326,7 @@ You will only access equipment your access token allows.</p>
 
 </span></code></pre>
 
-<p>This is the endpoint to receive an equipment equivalent to the id sent.</p>
+<p>This is the endpoint to receive an equipment equivalent to the sent id.</p>
 
 <p>To understand the equipment the user can see, access the <a href="#equipment-ownership">ownership</a> section.</p>
 
@@ -1389,7 +1555,7 @@ The response always will return the equipment that the user owns</p>
 
 </span></code></pre>
 
-<p>This is the endpoint to receive a tracking data equivalent to the id sent.</p>
+<p>This is the endpoint to receive a tracking data equivalent to the sent id.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
@@ -1432,6 +1598,273 @@ offset=0"</span>
 </ul></li>
 <li><strong>offset</strong>: Defines from each index start the list (the first index is 0).</li>
 <li><strong>limit</strong>: Defines max number of tracking data on the response</li>
+</ul>
+
+          <h2 id="tracking-points">Tracking Points</h2>
+
+<p>Manages tracking points.</p>
+
+<h2 id="get-trackingpoints">GET /trackingPoints</h2>
+
+<blockquote>
+<p>curl example to get a list of tracking points:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
+    --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+    <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingPoints"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP 200 Successful Response Schema:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Get tracking points"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Returns tracking points"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TrackingPoint_topElement"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"nickname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"getTrackingPoint"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"produces"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"application/json"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"parameters"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"id"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"deviceId"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"externalId"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"head"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"location"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"links.duty"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"links.equipment"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"include"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jsonapi inclusion. e.g. include=duty"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"limit"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paging limit"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"timeOfOccurrence"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"time"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"date"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"offset"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paging offset"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"responseMessages"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/trackingPoints"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p>On the Telemetry API server:</p>
+
+<p><code class="prettyprint">GET /trackingData</code></p>
+
+<p>When the information is returned with success, a list of tracking points will be available.</p>
+
+<p>There are some <a href="#tracking-points-request-parameters">parameters</a> that can be sent to <code class="prettyprint">GET /trackingPoints</code> to get more data on the response.</p>
+
+<h2 id="get-trackingpoints-id">GET /trackingPoints/{id}</h2>
+
+<blockquote>
+<p>curl example to get one tracking points by id</p>
+</blockquote>
+<pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
+    --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+    <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingPoints/{TRACKING POINT ID}"</span>
+</code></pre>
+
+<blockquote>
+<p>curl example to get two tracking points by id</p>
+</blockquote>
+<pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
+    --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+    <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData?id={TRACKING POINT ID 1},{TRACKING POINT ID 2}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP 200 Successful Response Schema:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Get tracking points"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Returns tracking points"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TrackingPoint_topElement"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"nickname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"getTrackingPoint"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"produces"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"application/json"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"parameters"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"id"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"deviceId"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"externalId"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"head"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"location"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"links.duty"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"links.equipment"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"include"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jsonapi inclusion. e.g. include=duty"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"limit"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paging limit"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"timeOfOccurrence"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"time"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"date"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"offset"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paging offset"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"paramType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"responseMessages"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/trackingPoints"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+
+<p>This is the endpoint to receive a tracking points equivalent to the sent id.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p>On the Telemetry API server:</p>
+
+<p><code class="prettyprint">GET /trackingPoints/{id}</code>.</p>
+
+<p>When the information is returned with success, a list with one or more tracking points will be available.</p>
+
+<p>There are some parameters that can be sent to <code class="prettyprint">GET /trackingPoints/{id}</code> to get more data on the response such as <code class="prettyprint">include=duty,equipment</code>.</p>
+
+<h2 id="tracking-points-request-parameters">tracking points request parameters</h2>
+
+<blockquote>
+<p>curl example to get a list of tracking points sending paramenters:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl -X GET --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+<span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData?</span><span class="se">\</span><span class="s2">
+deviceId={DEVICE ID}&amp;</span><span class="se">\</span><span class="s2">
+head={HEAD VALUE}&amp;</span><span class="se">\</span><span class="s2">
+location={LOCATION VALUE}&amp;</span><span class="se">\</span><span class="s2">
+links.duty={DUTY}&amp;</span><span class="se">\</span><span class="s2">
+links.equipment={EQUIPMENT}&amp;</span><span class="se">\</span><span class="s2">
+timeOfOccurrence={TIME}&amp;</span><span class="se">\</span><span class="s2">
+include=duty,equipment&amp;</span><span class="se">\</span><span class="s2">
+limit=10&amp;</span><span class="se">\</span><span class="s2">
+offset=0"</span>
+</code></pre>
+
+<p>The parameters below are optional:</p>
+
+<ul>
+<li><strong>deviceId</strong>: Gateway device identification number.</li>
+<li><strong>head</strong>: TBD.</li>
+<li><strong>location</strong>: Equipment location.</li>
+<li><strong>links.duty</strong>: <a href="#duties">Equipment status</a>.</li>
+<li><strong>links.equipment</strong>: <a href="#equipment">Equipment information</a>.</li>
+<li><strong>timeOfOccurrence</strong>: time.</li>
+<li><strong>include</strong>: Includes the tracking points relationships. Is possible send more than one separated by comma <code class="prettyprint">,</code>.
+
+<ul>
+<li><strong>duty</strong>: <a href="#duties">Equipment status</a>.</li>
+<li><strong>equipment</strong>: <a href="#equipment">Equipment information</a>.</li>
+</ul></li>
+<li><strong>offset</strong>: Defines from each index start the list (the first index is 0).</li>
+<li><strong>limit</strong>: Defines max number of tracking points on the response</li>
 </ul>
 
           <h1 id="can-variables">Can Variables</h1>
