@@ -4,6 +4,14 @@ The [Equipment API](#equipment-api) is an endpoint with the goal to provide equi
 
 The information about the equipment are retrieved from the Telemetry API and should contain the same values, but on a specific structure.
 
+### Usage Demonstration
+
+An example of the usage of the Equipment API can be observed on the [Dealership Demo Application](https://github.com/agco-fuse/dealership-demo).
+
+This application is written in NodeJS and Angular, demonstrating how to [authenticate](#authentication), retrieve a [list of equipment](#get-equipment) and [single equipment details](#get-equipment-id).
+
+There are more details and instructions on the [application project](https://github.com/agco-fuse/dealership-demo), including how to deploy your own instance of the example.
+
 ## Authentication
 
 To make use of the endpoints, a bearer token is required on the authorization header.
