@@ -64,6 +64,66 @@ When the information is returned with success, a list with one or more tracking 
 
 There are some parameters that can be sent to `GET /trackingData/{id}` to get more data on the response such as `include=canVariable,trackingPoint`.
 
+## GET /trackingData/search
+
+This endpoint allows you
+[searching, filtering and aggregating](https://github.com/agco/agco-json-api-profiles/blob/master/public/search-profile.md)
+tracking data.
+
+It allows filtering by a specific field or relationship,
+retrieving CAN variables and tracking points associated
+to a given equipment and also aggregating equipment
+information, if needed.
+
+### Getting more information from trackingData
+
+In case you need more information other than the pure trackingData
+payload you can enrich it by using the `include` field. In the example,
+the `trackingPoint` is being added to the response.
+
+> curl example to get tracking data and tracking points:
+
+```shell
+curl -X GET \
+    --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
+    "https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData/search?include=trackingPoint"
+```
+
+### Getting associated CAN variables
+
+In case you need to add other CAN variables than the ones available by
+default, you can enrich the trackingData payload by adding a
+`links.canVariable` field. In the example below, the `ENGINE_HOURS`
+is being added to the response.
+
+> curl example to get tracking data and engine hours:
+
+```shell
+curl -X GET \
+    --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
+    "https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData/search?links.canVariable=ENGINE_HOURS"
+```
+
+### Aggregating information
+
+In case you want to group equipment information by its id, you can add a
+combination of 2 fields, as shown in the example:
+
+  - `aggregations`, which should be equal to `equipmentAgg`
+
+  - `equipmentAgg.property`, which should be equal to
+  `links.trackingPoint.equipment.id`
+
+> curl example to get tracking data aggregated by equipment id:
+
+```shell
+curl -X GET \
+    --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
+    "https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData/search?include=trackingPoint&\
+aggregations=equipmentAgg&\
+equipmentAgg.property=links.trackingPoint.equipment.id"
+```
+
 ## Tracking data request parameters
 
 > curl example to get a list of tracking data sending paramenters:
