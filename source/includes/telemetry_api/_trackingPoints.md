@@ -64,7 +64,7 @@ When the information is returned with success, a list with one or more tracking 
 
 There are some parameters that can be sent to `GET /trackingPoints/{id}` to get more data on the response such as `include=duty,equipment`.
 
-## tracking points request parameters
+## Tracking points request parameters
 
 > curl example to get a list of tracking points sending paramenters:
 
