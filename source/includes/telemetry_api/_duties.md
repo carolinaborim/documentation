@@ -64,7 +64,7 @@ When the information is returned with success, a list with one or more duties wi
 
 There are some parameters that can be sent to `GET /duties/{id}` to filter data on the response such as `limit=2`.
 
-## duties request parameters
+## Duties request parameters
 
 > curl example to get a list of tracking points sending paramenters:
 
