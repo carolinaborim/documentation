@@ -107,17 +107,24 @@ In case you need more information other than the pure trackingData
 payload you can enrich it by using the `include` field. In the example,
 the `trackingPoint` is being added to the response.
 
-### Getting associated CAN variables
+### Getting associated CAN variables or tracking points
 
 In case you need to add other CAN variables than the ones available by
-default, you can enrich the trackingData payload by adding a
-`links.canVariable` field. In the example below, the `ENGINE_HOURS`
-is being added to the response.
+default, you can enrich the `trackingData` payload by adding a
+`/trackingData/search?links.canVariable={CAN VARIABLE NAME}` field.
+In the example below, the `ENGINE_HOURS` is being added to the response.
+
+You can also include the `trackingPoint` associated to this `trackingData`
+by adding a `/trackingData/search?include=trackingPoint` field.
+In the previous example, the `trackingPoint` is being added to the response.
 
 ### Aggregating information
 
 In case you want to group information by properties, you can create and
-use aggregations. To create a new aggregation, you need to add a field
+use aggregations.
+You can only aggregate information based on the `includes` you did or on
+the information available on `trackingData` payload.
+To create a new aggregation, you need to add a field
 `aggregations` and in this case, it is up to you to provide an
 aggregation name, as its value. In our  exemple, the created aggregation
 name is `equipmentAgg`. The result of this aggregation is going to be
@@ -147,10 +154,10 @@ The parameters below are optional:
 
 - **externalId**: TBD.
 - **raw**: Denormalized data (the actual value sent by the sensor).
-- **links.trackingData**: TBD.
-- **links.canVariable**: TBD.
+- **links.canVariable**: Equipment CAN variable value.
+- **links.trackingPoint**: Equipment geolocation information.
 - **include**: Includes the tracking data relationship. Is possible send more than one separated by comma `,`.
-  - **canVariable**: TBD.
-  - **trackingPoint**: TBD.
+  - **canVariable**: Equipment CAN variable value.
+  - **trackingPoint**: Equipment geolocation information.
 - **offset**: Defines from each index start the list (the first index is 0).
 - **limit**: Defines max number of tracking data on the response
