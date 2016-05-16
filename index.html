@@ -756,9 +756,30 @@ You will only access equipment your access token allows.</p>
 
 <h2 id="introduction">Introduction</h2>
 
-<p>This is the API that contain the equipment and all telemetry data for each equipment the user own.</p>
+<p>The Telemetry API provides access to data about each equipment the user owns.
+The information queried provides a rich inspection of the telemetry data sent
+to AGCO&rsquo;s platform.</p>
 
-<p>Is possible get <a href="#get-equipment">equipment</a>, trackingPoint, trackingData with <a href="#can-variables">canVariables</a>.</p>
+<p>You are able to retrieve information about equipment,
+<a href="#get-equipment20">equipment</a>, <a href="#get-duties">equipment&rsquo;s duty state</a>, <a href="#get-trackingdata">tracking
+data</a>, or <a href="#get-trackingpoints">tracking point</a> for example.</p>
+
+<p>This service is built on top of our open source
+<a href="https://github.com/agco/elastic-harvesterjs">elastic-harversterjs</a> library,
+enabling advanced queries to be sent so you can have precise access to
+information available on the platform.</p>
+
+<p>The endpoints on this service implement <a href="https://github.com/agco/agco-json-api-profiles">AGCO&rsquo;s JSON API
+Profile</a> extensions, which let
+you
+<a href="https://github.com/agco/agco-json-api-profiles/blob/master/public/filtering-profile.md">filter</a>,
+<a href="https://github.com/agco/agco-json-api-profiles/blob/master/public/change-events-profile.md">request change
+events</a>,
+and
+<a href="https://github.com/agco/agco-json-api-profiles/blob/master/public/search-profile.md">search</a>
+the information available.</p>
+
+<p>For further information on each endpoint, as examples and status code, see the following sections.</p>
 
           <h2 id="duties">Duties</h2>
 
