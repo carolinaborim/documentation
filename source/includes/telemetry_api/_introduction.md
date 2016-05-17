@@ -18,9 +18,7 @@ information available on the platform.
 The endpoints on this service implement [AGCO's JSON API
 Profile](https://github.com/agco/agco-json-api-profiles) extensions, which let
 you
-[filter](https://github.com/agco/agco-json-api-profiles/blob/master/public/filtering-profile.md),
-[request change
-events](https://github.com/agco/agco-json-api-profiles/blob/master/public/change-events-profile.md),
+[filter](https://github.com/agco/agco-json-api-profiles/blob/master/public/filtering-profile.md)
 and
 [search](https://github.com/agco/agco-json-api-profiles/blob/master/public/search-profile.md)
 the information available.
