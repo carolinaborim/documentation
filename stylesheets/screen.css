@@ -704,8 +704,6 @@ html, body {
   .content p, .content li, .content dt, .content dd {
     line-height: 1.6;
     margin-top: 0; }
-  .content img {
-    max-width: 525px; }
   .content code {
     background-color: rgba(0, 0, 0, 0.05);
     padding: 3px;
@@ -739,6 +737,8 @@ html, body {
     text-shadow: 1px 1px 0 #666;
     background: linear-gradient(to top left, #F7E633 0%, #F1D32F 100%); }
 
+.content > img {
+  max-width: 50%; }
 .content pre, .content blockquote {
   background-color: #292929;
   color: #fff;
@@ -802,3 +802,8 @@ html, body {
 
 .highlight, .highlight .w {
   background-color: #292929; }
+
+p > img {
+  max-width: 80%;
+  display: block;
+  margin: 0 auto; }
