@@ -454,10 +454,6 @@ html, body {
     margin-top: 0;
   }
 
-  img {
-    max-width: 525px;
-  }
-
   code {
     background-color: rgba(0,0,0,0.05);
     padding: 3px;
@@ -525,6 +521,10 @@ html, body {
 // This is all the stuff that appears in the right half of the page
 
 .content {
+  &>img {
+    max-width: 50%;
+  }
+
   pre, blockquote {
     background-color: $code-bg;
     color: #fff;
@@ -628,4 +628,12 @@ html, body {
 
 .highlight, .highlight .w {
   background-color: $code-bg;
+}
+
+p {
+  &>img {
+    max-width: 80%;
+    display: block;
+    margin: 0 auto;
+  }
 }
