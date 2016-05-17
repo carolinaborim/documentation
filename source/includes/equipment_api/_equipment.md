@@ -4,8 +4,8 @@ The [Equipment API](#equipment-api) is an endpoint with the goal to provide equi
 
 The information about the equipment are retrieved from the Telemetry API and should contain the same values, but on a specific structure.
 
-The structure of the response of the endpoints follow the [JSON API 1.0](http://jsonapi.org/format/1.0/) specification.
-JSON API is a specification for how a client should request that resources be fetched or modified, and how a server should respond to those requests.
+The structure of endpoint responses follow the [JSON API 1.0](http://jsonapi.org/format/1.0/) specification.
+JSON API is a specification concerning how a client should request that resources to be fetched or modified, and how a server should respond to those requests.
 
 ### Usage Demonstration
 

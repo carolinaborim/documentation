@@ -15,7 +15,7 @@ This service is built on top of our open source
 advanced queries to be sent so you can have precise access to information
 available on the platform.
 
-The responses follow the [JSON API](http://jsonapi.org/) on version 0.8.
+The responses follow the [JSON API](http://jsonapi.org/) version 0.8.
 This normalizes how to request and parse the responses on the service.
 
 The endpoints on this service implement [AGCO's JSON API
