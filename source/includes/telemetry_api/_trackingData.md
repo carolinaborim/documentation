@@ -126,7 +126,7 @@ You can only aggregate information based on the `includes` you did or on
 the information available on `trackingData` payload.
 To create a new aggregation, you need to add a field
 `aggregations` and in this case, it is up to you to provide an
-aggregation name, as its value. In our  exemple, the created aggregation
+aggregation name, as its value. In our  example, the created aggregation
 name is `equipmentAgg`. The result of this aggregation is going to be
 included in the `meta` index, as a list of created aggregations.
 
@@ -136,7 +136,7 @@ further information about aggregations operators
 
 ## Tracking data request parameters
 
-> curl example to get a list of tracking data sending paramenters:
+> curl example to get a list of tracking data sending parameters:
 
 ```shell
 curl -X GET --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \

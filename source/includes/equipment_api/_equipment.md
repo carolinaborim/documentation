@@ -20,7 +20,7 @@ Header key    | Value
 ------------- | -----
 Authorization | Bearer [token]
 
-Refer to the [How to Authenticate](#how-to-authenticate) section to learn how to aquire a valid token.
+Refer to the [How to Authenticate](#how-to-authenticate) section to learn how to acquire a valid token.
 
 <aside class="notice">
 You must replace <code>[token]</code> with the token response from the Authentication endpoint.
@@ -52,7 +52,7 @@ Refer to the [CAN Variables](#can-variables) section to see the possible returne
 
 ## GET /equipment/{id}
 
-> HTTP 200 Successfu Response schemal
+> HTTP 200 Successful Response schema
 
 ```json
 [[equipment:model:anEquipmentData]]
