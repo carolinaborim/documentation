@@ -1432,6 +1432,76 @@ The response always will return the equipment that the user owns</p>
 
 <p>There are some parameters that can be sent to <code class="prettyprint">GET /trackingData/{id}</code> to get more data on the response such as <code class="prettyprint">include=canVariable,trackingPoint</code>.</p>
 
+<h2 id="get-trackingdata-search">GET /trackingData/search</h2>
+
+<blockquote>
+<p>curl example to get more information from trackingData:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
+    --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+    <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData/search?include=trackingPoint"</span>
+</code></pre>
+
+<blockquote>
+<p>curl example to get ENGINE_HOURS as an associated CAN variable:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
+    --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+    <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData/search?links.canVariable=ENGINE_HOURS"</span>
+</code></pre>
+
+<blockquote>
+<p>curl example to get aggregated trackingData information:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
+    --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+    <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData/search?include=trackingPoint&amp;</span><span class="se">\</span><span class="s2">
+aggregations=equipmentAgg&amp;</span><span class="se">\</span><span class="s2">
+equipmentAgg.property=links.trackingPoint.equipment.id"</span>
+</code></pre>
+
+<p>This endpoint allows you
+<a href="https://github.com/agco/agco-json-api-profiles/blob/master/public/search-profile.md">searching, filtering and aggregating</a>
+tracking data.</p>
+
+<p>It allows filtering by a specific field or relationship,
+retrieving CAN variables and tracking points associated
+to a given equipment and also aggregating equipment
+information, if needed.</p>
+
+<h3 id="getting-more-information-from-trackingdata">Getting more information from trackingData</h3>
+
+<p>In case you need more information other than the pure trackingData
+payload you can enrich it by using the <code class="prettyprint">include</code> field. In the example,
+the <code class="prettyprint">trackingPoint</code> is being added to the response.</p>
+
+<h3 id="getting-associated-can-variables-or-tracking-points">Getting associated CAN variables or tracking points</h3>
+
+<p>In case you need to add other CAN variables than the ones available by
+default, you can enrich the <code class="prettyprint">trackingData</code> payload by adding a
+<code class="prettyprint">/trackingData/search?links.canVariable={CAN VARIABLE NAME}</code> field.
+In the example below, the <code class="prettyprint">ENGINE_HOURS</code> is being added to the response.</p>
+
+<p>You can also include the <code class="prettyprint">trackingPoint</code> associated to this <code class="prettyprint">trackingData</code>
+by adding a <code class="prettyprint">/trackingData/search?include=trackingPoint</code> field.
+In the previous example, the <code class="prettyprint">trackingPoint</code> is being added to the response.</p>
+
+<h3 id="aggregating-information">Aggregating information</h3>
+
+<p>In case you want to group information by properties, you can create and
+use aggregations.
+You can only aggregate information based on the <code class="prettyprint">includes</code> you did or on
+the information available on <code class="prettyprint">trackingData</code> payload.
+To create a new aggregation, you need to add a field
+<code class="prettyprint">aggregations</code> and in this case, it is up to you to provide an
+aggregation name, as its value. In our  exemple, the created aggregation
+name is <code class="prettyprint">equipmentAgg</code>. The result of this aggregation is going to be
+included in the <code class="prettyprint">meta</code> index, as a list of created aggregations.</p>
+
+<p>You can also sort or limit the aggregation properties. You can find
+further information about aggregations operators
+<a href="https://github.com/agco/agco-json-api-profiles/blob/master/public/search-profile.md">here</a>.</p>
+
 <h2 id="tracking-data-request-parameters">Tracking data request parameters</h2>
 
 <blockquote>
@@ -1453,13 +1523,13 @@ offset=0"</span>
 <ul>
 <li><strong>externalId</strong>: TBD.</li>
 <li><strong>raw</strong>: Denormalized data (the actual value sent by the sensor).</li>
-<li><strong>links.trackingData</strong>: TBD.</li>
-<li><strong>links.canVariable</strong>: TBD.</li>
+<li><strong>links.canVariable</strong>: Equipment CAN variable value.</li>
+<li><strong>links.trackingPoint</strong>: Equipment geolocation information.</li>
 <li><strong>include</strong>: Includes the tracking data relationship. Is possible send more than one separated by comma <code class="prettyprint">,</code>.
 
 <ul>
-<li><strong>canVariable</strong>: TBD.</li>
-<li><strong>trackingPoint</strong>: TBD.</li>
+<li><strong>canVariable</strong>: Equipment CAN variable value.</li>
+<li><strong>trackingPoint</strong>: Equipment geolocation information.</li>
 </ul></li>
 <li><strong>offset</strong>: Defines from each index start the list (the first index is 0).</li>
 <li><strong>limit</strong>: Defines max number of tracking data on the response</li>
