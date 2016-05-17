@@ -70,7 +70,7 @@ There are some parameters that can be sent to `GET /equipment/{id}` to get more 
 
 ## Equipment request parameters
 
-> curl example to get a list of equipment sending paramenters:
+> curl example to get a list of equipment sending parameters:
 
 ```shell
 curl -X GET --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \

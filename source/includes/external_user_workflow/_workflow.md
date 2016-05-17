@@ -26,7 +26,7 @@ Property                 | Description
 `client_secret`          | application secret to authenticate using `OAuth2`.
 `url to change password` | New users are required to change their passwords, otherwise authentication will fail.
 
-### Reseting password
+### Resetting password
 
 A window asking to change/Access the provided `URL` to change your password. You will be required to authenticate using your e-mail address and auto-generated password.
 
@@ -53,7 +53,7 @@ curl -X GET -u email@example.com:password \
     "https://fuse-equipment-api.herokuapp.com/equipment"
 ```
 
-For more details about the `HTTP Basic` authentication access the [Mozilla documenation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basic_access_authentication).
+For more details about the `HTTP Basic` authentication access the [Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basic_access_authentication).
 
 
 ### OAuth2
@@ -120,4 +120,4 @@ All requests through `AGCO APIs` are authenticated using `OAuth2 token Bearer` o
 
 ### How permissions are handled
 
-The `token Bearer` corespond to the user credentials and the APIs will use it to check which data can be retrieved.
+The `token Bearer` corresponds to the user credentials and the APIs will use it to check which data can be retrieved.

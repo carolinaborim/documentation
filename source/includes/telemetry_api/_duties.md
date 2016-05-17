@@ -66,7 +66,7 @@ There are some parameters that can be sent to `GET /duties/{id}` to filter data 
 
 ## Duties request parameters
 
-> curl example to get a list of tracking points sending paramenters:
+> curl example to get a list of tracking points sending parameters:
 
 ```shell
 curl -X GET --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
