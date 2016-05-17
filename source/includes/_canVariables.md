@@ -1,4 +1,4 @@
-# Can Variables
+# CAN Variables
 
 ## Description
 
