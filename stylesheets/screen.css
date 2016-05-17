@@ -382,7 +382,7 @@ under the License.
   line-height: 1.5; }
 
 .content code {
-  word-break: break-all;
+  word-break: normal;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
