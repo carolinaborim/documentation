@@ -308,6 +308,9 @@ access token like the <code class="prettyprint">authentication response</code> e
 
 <p>The information about the equipment are retrieved from the Telemetry API and should contain the same values, but on a specific structure.</p>
 
+<p>The structure of endpoint responses follow the <a href="http://jsonapi.org/format/1.0/">JSON API 1.0</a> specification.
+JSON API is a specification concerning how a client should request that resources to be fetched or modified, and how a server should respond to those requests.</p>
+
 <h3 id="usage-demonstration">Usage Demonstration</h3>
 
 <p>An example of the usage of the Equipment API can be observed on the <a href="https://github.com/agco-fuse/dealership-demo">Dealership Demo Application</a>.</p>
@@ -768,6 +771,9 @@ data</a>, or <a href="#get-trackingpoints">tracking point</a> for example.</p>
 <a href="https://github.com/agco/harvesterjs">harversterjs</a> framework, enabling
 advanced queries to be sent so you can have precise access to information
 available on the platform.</p>
+
+<p>The responses follow the <a href="http://jsonapi.org/">JSON API</a> version 0.8.
+This normalizes how to request and parse the responses on the service.</p>
 
 <p>The endpoints on this service implement <a href="https://github.com/agco/agco-json-api-profiles">AGCO&rsquo;s JSON API
 Profile</a> extensions, which let
