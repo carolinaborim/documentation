@@ -1,11 +1,20 @@
 # Equipment API
 
-The [Equipment API](#equipment-api) is an endpoint with the goal to provide equipment related structured information.
+The [Equipment API](#equipment-api) is an endpoint with the goal to provide
+equipment related structured information.
 
-The information about the equipment are retrieved from the Telemetry API and should contain the same values, but on a specific structure.
+The information about the equipment are retrieved from the Telemetry API and
+contains the same values, with the structure modeled after the equipment
+concept.
+
+The structure of the response exposes the related information of the equipment,
+including some other sparse concepts available on the Telemetry API, as the
+location of the equipment, the working status and other CAN variables.
 
 The structure of endpoint responses follow the [JSON API 1.0](http://jsonapi.org/format/1.0/) specification.
-JSON API is a specification concerning how a client should request that resources to be fetched or modified, and how a server should respond to those requests.
+JSON API is a specification concerning how a client should request that
+resources to be fetched or modified, and how a server should respond to those
+requests.
 
 ### Usage Demonstration
 
@@ -17,7 +26,7 @@ There are more details and instructions on the [application project](https://git
 
 ## Authentication
 
-To make use of the endpoints, a bearer token is required on the authorization header.
+To access the endpoints, a bearer token is required on the authorization header of the request.
 
 Header key    | Value
 ------------- | -----
@@ -37,7 +46,16 @@ You must replace <code>[token]</code> with the token response from the Authentic
 [[equipment:model:equipmentData]]
 ```
 
-This is the endpoint for retrieving the list of equipment.
+This is the endpoint returns a list of equipment.
+
+Equipment could be either a Tractor, a Baler, an Applicator, a Harvester or any
+other model that is being tracked by the platform.
+
+An equipment on the response contains the identification information, as the
+manufacturing date and description, and related information to the current status.
+It is possible to extract the location coordinates and the latest values of CAN
+variables reported back from the tracker.
+
 You will only access equipment your access token allows.
 
 ### HTTP Request
@@ -61,7 +79,16 @@ Refer to the [CAN Variables](#can-variables) section to see the possible returne
 [[equipment:model:anEquipmentData]]
 ```
 
-This is the endpoint to receive a single equipment equivalent to the id sent.
+This endpoint returns the information of a single equipment associated with the given id.
+
+Equipment could be either a Tractor, a Baler, an Applicator, a Harvester or any
+other model that is being tracked by the platform.
+
+An equipment on the response contains the identification information, as the
+manufacturing date and description, and related information to the current status.
+It is possible to extract the location coordinates and the latest values of CAN
+variables reported back from the tracker.
+
 You will only access equipment your access token allows.
 
 ### HTTP Request
