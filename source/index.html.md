@@ -37,7 +37,6 @@ This gives you flexibility on consuming information on any platform or
 programming language.
 
 Each solution is described in more details on the following sections.
-
 Use the Table Of Contents on the left sidebar to navigate to a specific topic
 for further information.
 
