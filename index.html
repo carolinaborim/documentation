@@ -91,7 +91,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[]">
+  <body class="index" data-languages="[&quot;curl&quot;,&quot;schema&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -100,6 +100,8 @@
     </a>
     <div class="tocify-wrapper">
         <div class="lang-selector">
+              <a href="#" data-language-name="curl">curl</a>
+              <a href="#" data-language-name="schema">schema</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -352,10 +354,14 @@ You must replace <code>[token]</code> with the token response from the Authentic
 
 <h2 id="get-equipment">GET /equipment</h2>
 
-<blockquote>
-<p>HTTP 200 Successful Response schema:</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
+<blockquote class='lang-specific curl'><p>Example of using curl to request a list of equipment</p></blockquote>
+<pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
+  --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+  <span class="s2">"https://fuse-equipment-api.herokuapp.com/equipment?limit=1&amp;offset=0"</span>
+</code></pre>
+
+<blockquote class='lang-specific schema'><p>HTTP 200 Successful Response schema:</p></blockquote>
+<pre class="highlight schema"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nt">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -507,10 +513,14 @@ extra parameters.</p>
 
 <h2 id="get-equipment-id">GET /equipment/{id}</h2>
 
-<blockquote>
-<p>HTTP 200 Successful Response schema</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
+<blockquote class='lang-specific curl'><p>Example of using curl to request details of an equipment</p></blockquote>
+<pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
+  --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+  <span class="s2">"https://fuse-equipment-api.herokuapp.com/equipment/{id of the equipment}"</span>
+</code></pre>
+
+<blockquote class='lang-specific schema'><p>HTTP 200 Successful Response schema:</p></blockquote>
+<pre class="highlight schema"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -679,10 +689,8 @@ variables reported back from the tracker.</p>
 
 <h2 id="401-unauthorized">401 Unauthorized</h2>
 
-<blockquote>
-<p>401 Unauthorized</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
+<blockquote class='lang-specific schema'><p>HTTP 401 Unauthorized Response schema:</p></blockquote>
+<pre class="highlight schema"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nt">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -714,10 +722,8 @@ variables reported back from the tracker.</p>
 
 <h2 id="404-not-found">404 Not Found</h2>
 
-<blockquote>
-<p>404 Not Found</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
+<blockquote class='lang-specific schema'><p>HTTP 404 Not Found Response schema:</p></blockquote>
+<pre class="highlight schema"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nt">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -749,10 +755,8 @@ variables reported back from the tracker.</p>
 
 <h2 id="500-internal-server-error">500 Internal Server Error</h2>
 
-<blockquote>
-<p>500 Internal Server Error</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
+<blockquote class='lang-specific schema'><p>HTTP 500 Internal Server Error Response schema:</p></blockquote>
+<pre class="highlight schema"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nt">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -2244,6 +2248,8 @@ offset=0"</span>
       </div>
       <div class="dark-box">
           <div class="lang-selector">
+                <a href="#" data-language-name="curl">curl</a>
+                <a href="#" data-language-name="schema">schema</a>
           </div>
       </div>
     </div>
