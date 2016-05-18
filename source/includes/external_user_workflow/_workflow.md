@@ -57,14 +57,14 @@ Our solutions support two authentication methods:
 
 ## Authenticate using HTTP Basic Auth
 
-This is the simplest way of authenticating on our solutions.
-
 > `curl` example of Basic HTTP authentication
 
 ```shell
 curl -X GET --user email@example.com:password \
     "https://fuse-equipment-api.herokuapp.com/equipment"
 ```
+
+This is the simplest way of authenticating on our solutions.
 
 For more details on `HTTP Basic` authentication access the
 [Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basic_access_authentication).
