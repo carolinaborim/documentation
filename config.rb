@@ -1,3 +1,5 @@
+require_relative './extended_lexer_tags.rb'
+
 # Markdown
 set :markdown_engine, :redcarpet
 set :markdown,
