@@ -304,12 +304,21 @@ access token like the <code class="prettyprint">authentication response</code> e
 
           <h1 id="equipment-api">Equipment API</h1>
 
-<p>The <a href="#equipment-api">Equipment API</a> is an endpoint with the goal to provide equipment related structured information.</p>
+<p>The <a href="#equipment-api">Equipment API</a> is an endpoint with the goal to provide
+equipment related structured information.</p>
 
-<p>The information about the equipment are retrieved from the Telemetry API and should contain the same values, but on a specific structure.</p>
+<p>The information about the equipment are retrieved from the Telemetry API and
+contains the same values, with the structure modeled after the equipment
+concept.</p>
+
+<p>The structure of the response exposes the related information of the equipment,
+including some other sparse concepts available on the Telemetry API, as the
+location of the equipment, the working status and other CAN variables.</p>
 
 <p>The structure of endpoint responses follow the <a href="http://jsonapi.org/format/1.0/">JSON API 1.0</a> specification.
-JSON API is a specification concerning how a client should request that resources to be fetched or modified, and how a server should respond to those requests.</p>
+JSON API is a specification concerning how a client should request that
+resources to be fetched or modified, and how a server should respond to those
+requests.</p>
 
 <h3 id="usage-demonstration">Usage Demonstration</h3>
 
@@ -321,7 +330,7 @@ JSON API is a specification concerning how a client should request that resource
 
 <h2 id="authentication">Authentication</h2>
 
-<p>To make use of the endpoints, a bearer token is required on the authorization header.</p>
+<p>To access the endpoints, a bearer token is required on the authorization header of the request.</p>
 
 <table><thead>
 <tr>
@@ -470,8 +479,17 @@ You must replace <code>[token]</code> with the token response from the Authentic
 
 </span></code></pre>
 
-<p>This is the endpoint for retrieving the list of equipment.
-You will only access equipment your access token allows.</p>
+<p>This is the endpoint returns a list of equipment.</p>
+
+<p>Equipment could be either a Tractor, a Baler, an Applicator, a Harvester or any
+other model that is being tracked by the platform.</p>
+
+<p>An equipment on the response contains the identification information, as the
+manufacturing date and description, and related information to the current status.
+It is possible to extract the location coordinates and the latest values of CAN
+variables reported back from the tracker.</p>
+
+<p>You will only access equipment your access token allows.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
@@ -613,8 +631,17 @@ extra parameters.</p>
 
 </span></code></pre>
 
-<p>This is the endpoint to receive a single equipment equivalent to the id sent.
-You will only access equipment your access token allows.</p>
+<p>This endpoint returns the information of a single equipment associated with the given id.</p>
+
+<p>Equipment could be either a Tractor, a Baler, an Applicator, a Harvester or any
+other model that is being tracked by the platform.</p>
+
+<p>An equipment on the response contains the identification information, as the
+manufacturing date and description, and related information to the current status.
+It is possible to extract the location coordinates and the latest values of CAN
+variables reported back from the tracker.</p>
+
+<p>You will only access equipment your access token allows.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
