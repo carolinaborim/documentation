@@ -4,6 +4,10 @@ title: API Reference
 toc_footers:
   - <a href='https://agco-fuse.github.io/'>Get in touch for Sandbox access</a>
 
+language_tabs:
+  - curl
+  - schema
+
 includes:
   - external_user_workflow/workflow
   - equipment_api/equipment

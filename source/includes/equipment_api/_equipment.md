@@ -40,9 +40,17 @@ You must replace <code>[token]</code> with the token response from the Authentic
 
 ## GET /equipment
 
-> HTTP 200 Successful Response schema:
+<blockquote class='lang-specific curl'><p>Example of using curl to request a list of equipment</p></blockquote>
 
-```json
+```curl
+curl -X GET \
+  --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
+  "https://fuse-equipment-api.herokuapp.com/equipment?limit=1&offset=0"
+```
+
+<blockquote class='lang-specific schema'><p>HTTP 200 Successful Response schema:</p></blockquote>
+
+```schema
 [[equipment:model:equipmentData]]
 ```
 
@@ -73,9 +81,17 @@ Refer to the [CAN Variables](#can-variables) section to see the possible returne
 
 ## GET /equipment/{id}
 
-> HTTP 200 Successful Response schema
+<blockquote class='lang-specific curl'><p>Example of using curl to request details of an equipment</p></blockquote>
 
-```json
+```curl
+curl -X GET \
+  --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
+  "https://fuse-equipment-api.herokuapp.com/equipment/{id of the equipment}"
+```
+
+<blockquote class='lang-specific schema'><p>HTTP 200 Successful Response schema:</p></blockquote>
+
+```schema
 [[equipment:model:anEquipmentData]]
 ```
 
@@ -112,9 +128,9 @@ Error Code                        | Meaning
 
 ## 401 Unauthorized
 
-> 401 Unauthorized
+<blockquote class='lang-specific schema'><p>HTTP 401 Unauthorized Response schema:</p></blockquote>
 
-```json
+```schema
 [[equipment:model:401]]
 ```
 
@@ -122,9 +138,9 @@ When the authentication token is invalid or expired, the response will return an
 
 ## 404 Not Found
 
-> 404 Not Found
+<blockquote class='lang-specific schema'><p>HTTP 404 Not Found Response schema:</p></blockquote>
 
-```json
+```schema
 [[equipment:model:404]]
 ```
 
@@ -132,9 +148,9 @@ When the list does not exist, the response will return an array of errors, with 
 
 ## 500 Internal Server Error
 
-> 500 Internal Server Error
+<blockquote class='lang-specific schema'><p>HTTP 500 Internal Server Error Response schema:</p></blockquote>
 
-```json
+```schema
 [[equipment:model:500]]
 ```
 
