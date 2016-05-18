@@ -1,3 +1,5 @@
+require File.expand_path('../extended_lexer_tags.rb', __FILE__)
+
 # Markdown
 set :markdown_engine, :redcarpet
 set :markdown,
