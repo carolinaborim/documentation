@@ -18,21 +18,15 @@ requests.
 
 ### Usage Demonstration
 
-An example of the usage of the Equipment API can be observed on the [Dealership Demo Application](https://github.com/agco-fuse/dealership-demo).
+An example of the usage of the Equipment API can be observed on the
+[Dealership Demo Application](https://github.com/agco-fuse/dealership-demo).
 
-This application is written in NodeJS and Angular, demonstrating how to [authenticate](#authentication), retrieve a [list of equipment](#get-equipment) and [single equipment details](#get-equipment-id).
+This application is written in NodeJS and Angular, demonstrating how to [how permissions are handled](#how-permissions-are-handled),
+retrieve a [list of equipment](#get-equipment) and [single equipment details](#get-equipment-id).
 
-There are more details and instructions on the [application project](https://github.com/agco-fuse/dealership-demo), including how to deploy your own instance of the example.
+There are more details and instructions including how to deploy your own instance of the example.
 
-## Authentication
-
-To access the endpoints, a bearer token is required on the authorization header of the request.
-
-Header key    | Value
-------------- | -----
-Authorization | Bearer [token]
-
-Refer to the [How to Authenticate](#how-to-authenticate) section to learn how to acquire a valid token.
+Refer to the [Authenticate](#authenticate) section to learn how to acquire a valid token.
 
 <aside class="notice">
 You must replace <code>[token]</code> with the token response from the Authentication endpoint.
@@ -74,7 +68,7 @@ On the Equipment API server:
 When the information is returned with success, a list of equipment will be available with the CAN variable
 informations present according to the availability on that specific equipment.
 
-You will get a list of 100 equipment. If you want more than 100 or to do paging you will have to use the
+You will get a list limited of 100 equipment. If you want more than 100 or to do paging you will have to use the
 extra parameters.
 
 Refer to the [CAN Variables](#can-variables) section to see the possible returned values.

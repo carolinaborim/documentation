@@ -113,14 +113,6 @@ Field           | Description
 
 ## How permissions are handled
 
-The `token Bearer` corresponds to the user credentials and the APIs
-will use it to check which data can be retrieved.
-
-## Make HTTP Requests
-
-To make sure everything is working fine you can try executing one
-of the following examples available on the right side.
-
 > Get Equipment list from Equipment API with basic authentication
 
 ```shell
@@ -136,6 +128,12 @@ curl -X GET \
     -H "Authorization: Bearer YOUR_ACCESS_TOKEN"\
     "https://agco-fuse-trackers-sandbox.herokuapp.com/models"
 ```
+
+The `token Bearer` corresponds to the user credentials and the APIs
+will use it to check which data can be retrieved.
+
+To make sure everything is working fine you can try executing one
+of the following examples available on the right side.
 
 <aside class="notice">
 All requests should contain an authorization header.
