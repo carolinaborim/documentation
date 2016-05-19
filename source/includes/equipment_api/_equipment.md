@@ -21,8 +21,8 @@ requests.
 An example of the usage of the Equipment API can be observed on the
 [Dealership Demo Application](https://github.com/agco-fuse/dealership-demo).
 
-This application is written in NodeJS and Angular, demonstrating how to [how permissions are handled](#how-permissions-are-handled),
-retrieve a [list of equipment](#get-equipment) and [single equipment details](#get-equipment-id).
+This application is written in NodeJS and Angular. It demonstrate [how permissions are handled](#how-permissions-are-handled),
+[how to retrieve an equipment list](#get-equipment) and [how to retrieve a single equipment](#get-equipment-id).
 
 There are more details and instructions including how to deploy your own instance of the example.
 
@@ -68,7 +68,7 @@ On the Equipment API server:
 When the information is returned with success, a list of equipment will be available with the CAN variable
 informations present according to the availability on that specific equipment.
 
-You will get a list limited of 100 equipment. If you want more than 100 or to do paging you will have to use the
+You will get a limited list of 100 equipment. If you want more than 100 or to do paging you will have to use the
 extra parameters.
 
 Refer to the [CAN Variables](#can-variables) section to see the possible returned values.

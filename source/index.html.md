@@ -26,8 +26,7 @@ search: true
 
 Welcome to the AgCommand API documentation.
 
-Here you will find more information about telemetry solutions currently
-offered by AGCO.
+Here you will find more information about solutions currently offered by AGCO.
 
 Our telemetry solutions are developed following a
 [REST](https://en.wikipedia.org/wiki/Representational_state_transfer)

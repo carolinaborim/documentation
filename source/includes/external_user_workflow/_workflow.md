@@ -65,6 +65,8 @@ curl -X GET --user email@example.com:password \
 ```
 
 This is the simplest way of authenticating on our solutions.
+When publishing your application to production your won't be using this authentication method,
+as you would be authenticating on behalf of a dealer or farmer user.
 
 For more details on `HTTP Basic` authentication access the
 [Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basic_access_authentication).
