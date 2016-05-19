@@ -2,6 +2,19 @@
 
 Manages equipment status.
 
+A duty is the current work status of a given equipment.
+
+Possible duty states are:
+
+| Status           | Description              |
+| ---------------- | ------------------------ |
+| NO_CONTACT       | Equipment is unreachable |
+| OFF_PARKED       | Equipment is turned off  |
+| HEADLAND_TURNING | ???                      |
+| TRANSPORT        | ???                      |
+| WORKING          | Equipment is working     |
+| STOPPEDIDLE      | Equipment is idle        |
+
 ## GET /duties
 
 > curl example to get a list of duties:

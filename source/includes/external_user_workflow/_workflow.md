@@ -104,7 +104,7 @@ curl -X GET \
 ```
 
 The `token Bearer` corresponds to the user credentials and the APIs
-will use it to check which data can be retrieved.
+will check which data can be retrieved.
 
 To make sure everything is working fine you can try executing one
 of the following examples available on the right side.
