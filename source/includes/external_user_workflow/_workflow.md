@@ -30,7 +30,7 @@ Property                 | Description
 ## Reset your password
 
 <aside class="notice">
-New users are required to change their password. If you don't you will
+New users are required to change their password. If you don't, you will
 not be able to authenticate in any of our systems.
 </aside>
 
