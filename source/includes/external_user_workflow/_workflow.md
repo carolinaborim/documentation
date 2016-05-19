@@ -50,26 +50,7 @@ You also will be required to answer your security questions, as of the image bel
 
 ## Authenticate
 
-Our solutions support two authentication methods:
-
-- [HTTP Basic Auth](#authenticate-using-http-basic-auth)
-- [OAuth2](#authenticate-using-oauth2)
-
-## Authenticate using HTTP Basic Auth
-
-> `curl` example of Basic HTTP authentication
-
-```shell
-curl -X GET --user email@example.com:password \
-    "https://fuse-equipment-api.herokuapp.com/equipment"
-```
-
-This is the simplest way of authenticating on our solutions.
-When publishing your application to production your won't be using this authentication method,
-as you would be authenticating on behalf of a dealer or farmer user.
-
-For more details on `HTTP Basic` authentication access the
-[Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basic_access_authentication).
+Our solutions support [OAuth2 authentication](#authenticate-using-oauth2) method.
 
 ## Authenticate using OAuth2
 
