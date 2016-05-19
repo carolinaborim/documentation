@@ -22,7 +22,7 @@ curl -X GET \
 
 On the Telemetry API server:
 
-`GET /trackingData`
+`GET /trackingPoints`
 
 When the information is returned with success, a list of tracking points will be available.
 
