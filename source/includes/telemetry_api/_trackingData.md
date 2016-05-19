@@ -18,6 +18,8 @@ curl -X GET \
 [[telemetry:operation:getTrackingData]]
 ```
 
+This endpoint returns a list of tracking data.
+
 ### HTTP Request
 
 On the Telemetry API server:
@@ -52,7 +54,7 @@ curl -X GET \
 [[telemetry:operation:getTrackingData]]
 ```
 
-This is the endpoint to receive a tracking data equivalent to the sent id.
+This endpoint returns a tracking data associated to the given id.
 
 ### HTTP Request
 

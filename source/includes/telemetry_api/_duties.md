@@ -2,6 +2,19 @@
 
 Manages equipment status.
 
+A duty is the current work status of a given equipment.
+
+Possible duty states are:
+
+| Status           | Description              |
+| ---------------- | ------------------------ |
+| NO_CONTACT       | Equipment is unreachable |
+| OFF_PARKED       | Equipment is turned off  |
+| HEADLAND_TURNING | ???                      |
+| TRANSPORT        | ???                      |
+| WORKING          | Equipment is working     |
+| STOPPEDIDLE      | Equipment is idle        |
+
 ## GET /duties
 
 > curl example to get a list of duties:
@@ -17,6 +30,8 @@ curl -X GET \
 ```json
 [[telemetry:operation:getDuty]]
 ```
+
+This endpoint returns a list of duties.
 
 ### HTTP Request
 
@@ -52,7 +67,7 @@ curl -X GET \
 [[telemetry:operation:getDuty]]
 ```
 
-This is the endpoint to receive a duty equivalent to the sent id.
+This endpoint returns a duty associated with the given id.
 
 ### HTTP Request
 
@@ -62,7 +77,7 @@ On the Telemetry API server:
 
 When the information is returned with success, a list with one or more duties will be available.
 
-There are some parameters that can be sent to `GET /duties/{id}` to filter data on the response such as `limit=2`.
+There are some [parameters](#duties-request-parameters) that can be sent to `GET /duties/{id}`.
 
 ## Duties request parameters
 

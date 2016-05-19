@@ -1,9 +1,9 @@
 # Equipment API
 
-The [Equipment API](#equipment-api) is an endpoint with the goal to provide
+The [Equipment API](#equipment-api) is a façade whose goal is to provide an easier way of retrieving
 equipment related structured information.
 
-The information about the equipment are retrieved from the Telemetry API and
+The equipment information are retrieved from the Telemetry API and
 contains the same values, with the structure modeled after the equipment
 concept.
 
@@ -18,21 +18,16 @@ requests.
 
 ### Usage Demonstration
 
-An example of the usage of the Equipment API can be observed on the [Dealership Demo Application](https://github.com/agco-fuse/dealership-demo).
+An usage example of the Equipment API can be observed on the
+[Dealership Demo Application](https://github.com/agco-fuse/dealership-demo).
 
-This application is written in NodeJS and Angular, demonstrating how to [authenticate](#authentication), retrieve a [list of equipment](#get-equipment) and [single equipment details](#get-equipment-id).
+This application is written in NodeJS and Angular. It demonstrate [how permissions are handled](#how-permissions-are-handled),
+[how to retrieve an equipment list](#get-equipment) and [how to retrieve a single equipment](#get-equipment-id).
 
-There are more details and instructions on the [application project](https://github.com/agco-fuse/dealership-demo), including how to deploy your own instance of the example.
+There are more details and instructions including how to deploy your own instance of the example
+on the [project page](https://github.com/agco-fuse/dealership-demo).
 
-## Authentication
-
-To access the endpoints, a bearer token is required on the authorization header of the request.
-
-Header key    | Value
-------------- | -----
-Authorization | Bearer [token]
-
-Refer to the [How to Authenticate](#how-to-authenticate) section to learn how to acquire a valid token.
+Refer to the [Authenticate](#authenticate) section to learn how to acquire a valid token.
 
 <aside class="notice">
 You must replace <code>[token]</code> with the token response from the Authentication endpoint.
@@ -54,10 +49,10 @@ curl -X GET \
 [[equipment:model:equipmentData]]
 ```
 
-This is the endpoint returns a list of equipment.
+This endpoint returns a list of equipment.
 
 Equipment could be either a Tractor, a Baler, an Applicator, a Harvester or any
-other model that is being tracked by the platform.
+other equipment type that is being tracked by the platform.
 
 An equipment on the response contains the identification information, as the
 manufacturing date and description, and related information to the current status.
@@ -72,9 +67,9 @@ On the Equipment API server:
 `GET /equipment`.
 
 When the information is returned with success, a list of equipment will be available with the CAN variable
-informations present according to the availability on that specific equipment.
+information present according to the availability on that specific equipment.
 
-You will get a list of 100 equipment. If you want more than 100 or to do paging you will have to use the
+You will get a limited list of 100 equipment. If you want more than 100 or to do paging you can use the
 extra parameters.
 
 Refer to the [CAN Variables](#can-variables) section to see the possible returned values.
@@ -95,10 +90,10 @@ curl -X GET \
 [[equipment:model:anEquipmentData]]
 ```
 
-This endpoint returns the information of a single equipment associated with the given id.
+This endpoint returns a single equipment associated with the given id.
 
 Equipment could be either a Tractor, a Baler, an Applicator, a Harvester or any
-other model that is being tracked by the platform.
+other equipment type that is being tracked by the platform.
 
 An equipment on the response contains the identification information, as the
 manufacturing date and description, and related information to the current status.
@@ -114,7 +109,7 @@ On the Equipment API server:
 
 When the information is returned with success, a single equipment will be available.
 
-The equipment contain the CAN variable informations present according to the availability on that specific equipment.
+The equipment contain the CAN variable information present according to the availability on that specific equipment.
 
 Refer to the [CAN Variables](#can-variables) section to see the possible returned values.
 

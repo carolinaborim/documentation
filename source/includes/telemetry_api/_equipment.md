@@ -2,6 +2,14 @@
 
 Manages Equipment data.
 
+Equipment could be either a `Tractor`, a `Baler`, an `Applicator`, a `Harvester` or any
+other equipment type that is being tracked by the platform.
+
+An equipment on the response contains the identification information, as the
+manufacturing date and description.
+
+You will only access equipment your access token allows.
+
 ## GET /equipment
 
 > curl example to get a list of equipment:
@@ -17,6 +25,8 @@ curl -X GET \
 ```json
 [[telemetry:operation:getEquipment]]
 ```
+
+This endpoint returns a list of equipment.
 
 ### HTTP Request
 
@@ -54,7 +64,7 @@ curl -X GET \
 [[telemetry:operation:getEquipment]]
 ```
 
-This is the endpoint to receive an equipment equivalent to the sent id.
+This endpoint returns an equipment associated to the given id.
 
 To understand the equipment the user can see, access the [ownership](#equipment-ownership) section.
 
@@ -92,7 +102,8 @@ The parameters below are optional:
 
 ## Equipment ownership
 
-The Equipment is linked to an owner that can be a farmer or a dealer, also is possible the equipment be linked to both at the same time.
+The Equipment is always linked to an owner, being that a farmer or a dealer.
+It might happen that an equipment is linked to a dealer and farmer at the same time.
 
-There are no difference do a request to get equipment as a farmer or a dealer user.
-The response always will return the equipment that the user owns
+The way you retrieve an equipment does not vary depending on the equipment ownership.
+The response always will contain equipment that the user has access to.
