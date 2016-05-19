@@ -18,6 +18,8 @@ curl -X GET \
 [[telemetry:operation:getDuty]]
 ```
 
+This endpoint returns a list of duties.
+
 ### HTTP Request
 
 On the Telemetry API server:
@@ -52,7 +54,7 @@ curl -X GET \
 [[telemetry:operation:getDuty]]
 ```
 
-This is the endpoint to receive a duty equivalent to the sent id.
+This endpoint returns a duty associated with the given id.
 
 ### HTTP Request
 

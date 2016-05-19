@@ -18,6 +18,8 @@ curl -X GET \
 [[telemetry:operation:getTrackingPoint]]
 ```
 
+This endpoint returns a list of tracking points.
+
 ### HTTP Request
 
 On the Telemetry API server:
@@ -52,7 +54,7 @@ curl -X GET \
 [[telemetry:operation:getTrackingPoint]]
 ```
 
-This is the endpoint to receive a tracking points equivalent to the sent id.
+This endpoint returns a tracking point associated to the given id.
 
 ### HTTP Request
 

@@ -18,6 +18,8 @@ curl -X GET \
 [[telemetry:operation:getEquipment]]
 ```
 
+This endpoint returns a list of equipment.
+
 ### HTTP Request
 
 On the Telemetry API server:
@@ -54,7 +56,7 @@ curl -X GET \
 [[telemetry:operation:getEquipment]]
 ```
 
-This is the endpoint to receive an equipment equivalent to the sent id.
+This endpoint returns an equipment associated to the given id.
 
 To understand the equipment the user can see, access the [ownership](#equipment-ownership) section.
 

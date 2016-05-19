@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The Telemetry API provides access to data about each equipment the user owns.
+The Telemetry API provides access to data about each equipment the user has access to.
 The information queried provides a rich inspection of the telemetry data sent
 to AGCO's platform.
 

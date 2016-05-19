@@ -1,9 +1,9 @@
 # Equipment API
 
-The [Equipment API](#equipment-api) is an endpoint with the goal to provide
+The [Equipment API](#equipment-api) is a façade whose goal is to provide an easier way of retrieving
 equipment related structured information.
 
-The information about the equipment are retrieved from the Telemetry API and
+The equipment information are retrieved from the Telemetry API and
 contains the same values, with the structure modeled after the equipment
 concept.
 
@@ -48,10 +48,10 @@ curl -X GET \
 [[equipment:model:equipmentData]]
 ```
 
-This is the endpoint returns a list of equipment.
+This endpoint returns a list of equipment.
 
 Equipment could be either a Tractor, a Baler, an Applicator, a Harvester or any
-other model that is being tracked by the platform.
+other equipment type that is being tracked by the platform.
 
 An equipment on the response contains the identification information, as the
 manufacturing date and description, and related information to the current status.
@@ -89,10 +89,10 @@ curl -X GET \
 [[equipment:model:anEquipmentData]]
 ```
 
-This endpoint returns the information of a single equipment associated with the given id.
+This endpoint returns a single equipment associated with the given id.
 
 Equipment could be either a Tractor, a Baler, an Applicator, a Harvester or any
-other model that is being tracked by the platform.
+other equipment type that is being tracked by the platform.
 
 An equipment on the response contains the identification information, as the
 manufacturing date and description, and related information to the current status.
