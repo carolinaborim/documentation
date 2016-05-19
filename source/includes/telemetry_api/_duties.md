@@ -62,7 +62,8 @@ On the Telemetry API server:
 
 When the information is returned with success, a list with one or more duties will be available.
 
-There are some parameters that can be sent to `GET /duties/{id}` to filter data on the response such as `limit=2`.
+There are some [parameters](#duties-request-parameters) that can be sent to `GET /duties/{id}`
+to filter data on the response such as `limit=2`.
 
 ## Duties request parameters
 

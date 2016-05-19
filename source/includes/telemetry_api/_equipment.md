@@ -94,5 +94,5 @@ The parameters below are optional:
 
 The Equipment is linked to an owner that can be a farmer or a dealer, also is possible the equipment be linked to both at the same time.
 
-There are no difference do a request to get equipment as a farmer or a dealer user.
+There are no difference do a request to get equipment as a farmer or as a dealer user.
 The response always will return the equipment that the user owns
