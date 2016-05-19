@@ -62,7 +62,8 @@ On the Telemetry API server:
 
 When the information is returned with success, a list with one or more tracking points will be available.
 
-There are some parameters that can be sent to `GET /trackingPoints/{id}` to get more data on the response such as `include=duty,equipment`.
+There are some [parameters](#tracking-points-request-parameters) that can be sent to
+`GET /trackingPoints/{id}` to get more data on the response such as `include=duty,equipment`.
 
 ## Tracking points request parameters
 
