@@ -98,3 +98,5 @@ The parameters below are optional:
   - **equipment**: [Equipment information](#equipment).
 - **offset**: Defines from each index start the list (the first index is 0).
 - **limit**: Defines max number of tracking points on the response
+
+<aside class="success">There is a curl example on the right panel.</aside>
