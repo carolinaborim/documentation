@@ -220,10 +220,8 @@ access token like the <code class="prettyprint">authentication response</code> e
 
 <p>For more details about OAuth2 access the <a href="http://oauth.net/2/">http://oauth.net/2/</a></p>
 
-<blockquote>
-<p><code class="prettyprint">curl</code> example of OAuth2 authentication:</p>
-</blockquote>
-<pre class="highlight shell"><code>curl -k -X <span class="s2">"POST"</span><span class="se">\</span>
+<blockquote class='lang-specific curl'><p>`curl` example of OAuth2 authentication:</p></blockquote>
+<pre class="highlight curl"><code>curl -k -X <span class="s2">"POST"</span><span class="se">\</span>
     <span class="s2">"https://aaat.agcocorp.com/auth/oauth2/access_token?realm=/dealers"</span><span class="se">\</span>
     --data-urlencode <span class="s2">"username=YOUR_USERNAME"</span><span class="se">\</span>
     --data-urlencode <span class="s2">"password=YOUR_PASSWORD"</span><span class="se">\</span>
@@ -233,9 +231,7 @@ access token like the <code class="prettyprint">authentication response</code> e
     --data-urlencode <span class="s2">"grant_type=password"</span>
 </code></pre>
 
-<blockquote>
-<p>HTTP 200 authentication response example:</p>
-</blockquote>
+<blockquote class='lang-specific json'><p>HTTP 200 authentication response example:</p></blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"scope"</span><span class="p">:</span><span class="s2">"mail cn agcoUUID"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"expires_in"</span><span class="p">:</span><span class="mi">7199</span><span class="p">,</span><span class="w">
@@ -277,10 +273,8 @@ access token like the <code class="prettyprint">authentication response</code> e
 
 <h2 id="how-permissions-are-handled">How permissions are handled</h2>
 
-<blockquote>
-<p>Example of how to get models from Telemetry API using OAuth2 authentication:</p>
-</blockquote>
-<pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
+<blockquote class='lang-specific curl'><p>Example of how to get models from Telemetry API using OAuth2 authentication:</p></blockquote>
+<pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
     -H <span class="s2">"Authorization: Bearer YOUR_ACCESS_TOKEN"</span><span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/models"</span>
 </code></pre>
@@ -833,18 +827,14 @@ the information available.</p>
 
 <h2 id="get-duties">GET /duties</h2>
 
-<blockquote>
-<p>curl example to get a list of duties:</p>
-</blockquote>
-<pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
+<blockquote class='lang-specific curl'><p>curl example to get a list of duties:</p></blockquote>
+<pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
     --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/duties"</span>
 </code></pre>
 
-<blockquote>
-<p>HTTP 200 Successful Response Schema:</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
+<blockquote class='lang-specific schema'><p>HTTP 200 Successful Response Schema:</p></blockquote>
+<pre class="highlight schema"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gets the duties available in the Telemetry API"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
@@ -901,26 +891,20 @@ the information available.</p>
 
 <h2 id="get-duties-id">GET /duties/{id}</h2>
 
-<blockquote>
-<p>curl example to get one duties by id</p>
-</blockquote>
-<pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
+<blockquote class='lang-specific curl'><p>curl example to get one duties by id</p></blockquote>
+<pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
     --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/duties/{DUTY ID}"</span>
 </code></pre>
 
-<blockquote>
-<p>curl example to get two duties by id</p>
-</blockquote>
-<pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
+<blockquote class='lang-specific curl'><p>curl example to get two duties by id</p></blockquote>
+<pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
     --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData?id={DUTY ID 1},{DUTY ID 2}"</span>
 </code></pre>
 
-<blockquote>
-<p>HTTP 200 Successful Response Schema:</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
+<blockquote class='lang-specific schema'><p>HTTP 200 Successful Response Schema:</p></blockquote>
+<pre class="highlight schema"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gets the duties available in the Telemetry API"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
@@ -977,10 +961,8 @@ the information available.</p>
 
 <h2 id="duties-request-parameters">Duties request parameters</h2>
 
-<blockquote>
-<p>curl example to get a list of tracking points sending parameters:</p>
-</blockquote>
-<pre class="highlight shell"><code>curl -X GET --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+<blockquote class='lang-specific curl'><p>curl example to get a list of tracking points sending parameters:</p></blockquote>
+<pre class="highlight curl"><code>curl -X GET --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
 <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData?</span><span class="se">\</span><span class="s2">
 status={DUTY VALUE}&amp;</span><span class="se">\</span><span class="s2">
 limit=10&amp;</span><span class="se">\</span><span class="s2">
@@ -1009,18 +991,14 @@ manufacturing date and description.</p>
 
 <h2 id="get-equipment">GET /equipment</h2>
 
-<blockquote>
-<p>curl example to get a list of equipment:</p>
-</blockquote>
-<pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
+<blockquote class='lang-specific curl'><p>curl example to get a list of equipment:</p></blockquote>
+<pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
     --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/equipment"</span>
 </code></pre>
 
-<blockquote>
-<p>HTTP 200 Successful Response Schema:</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
+<blockquote class='lang-specific schema'><p>HTTP 200 Successful Response Schema:</p></blockquote>
+<pre class="highlight schema"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gets all of the equipment for your current account"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
@@ -1133,26 +1111,20 @@ manufacturing date and description.</p>
 
 <h2 id="get-equipment-id">GET /equipment/{id}</h2>
 
-<blockquote>
-<p>curl example to get one equipment by id</p>
-</blockquote>
-<pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
+<blockquote class='lang-specific curl'><p>curl example to get one equipment by id</p></blockquote>
+<pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
     --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/equipment/{EQUIPMENT ID}"</span>
 </code></pre>
 
-<blockquote>
-<p>curl example to get two equipment by id</p>
-</blockquote>
-<pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
+<blockquote class='lang-specific curl'><p>curl example to get two equipment by id</p></blockquote>
+<pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
     --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/equipment?id={EQUIPMENT ID 1},{EQUIPMENT ID 2}"</span>
 </code></pre>
 
-<blockquote>
-<p>HTTP 200 Successful Response Schema:</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
+<blockquote class='lang-specific schema'><p>HTTP 200 Successful Response Schema:</p></blockquote>
+<pre class="highlight schema"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gets all of the equipment for your current account"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
@@ -1265,10 +1237,8 @@ manufacturing date and description.</p>
 
 <h2 id="equipment-request-parameters">Equipment request parameters</h2>
 
-<blockquote>
-<p>curl example to get a list of equipment sending parameters:</p>
-</blockquote>
-<pre class="highlight shell"><code>curl -X GET --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+<blockquote class='lang-specific curl'><p>curl example to get a list of equipment sending parameters:</p></blockquote>
+<pre class="highlight curl"><code>curl -X GET --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
 <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/equipment?&amp;</span><span class="se">\</span><span class="s2">
 include=model,dealer,manufacturingModel&amp;</span><span class="se">\</span><span class="s2">
 limit=10&amp;</span><span class="se">\</span><span class="s2">
@@ -1303,18 +1273,14 @@ The response always will contain equipment that the user has access to.</p>
 
 <h2 id="get-trackingdata">GET /trackingData</h2>
 
-<blockquote>
-<p>curl example to get a list of tracking data:</p>
-</blockquote>
-<pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
+<blockquote class='lang-specific curl'><p>curl example to get a list of tracking data:</p></blockquote>
+<pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
     --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData"</span>
 </code></pre>
 
-<blockquote>
-<p>HTTP 200 Successful Response Schema:</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
+<blockquote class='lang-specific schema'><p>HTTP 200 Successful Response Schema:</p></blockquote>
+<pre class="highlight schema"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Get tracking data"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Returns tracking data"</span><span class="p">,</span><span class="w">
@@ -1395,26 +1361,20 @@ The response always will contain equipment that the user has access to.</p>
 
 <h2 id="get-trackingdata-id">GET /trackingData/{id}</h2>
 
-<blockquote>
-<p>curl example to get one tracking data by id</p>
-</blockquote>
-<pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
+<blockquote class='lang-specific curl'><p>curl example to get one tracking data by id</p></blockquote>
+<pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
     --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData/{TRACKING DATA ID}"</span>
 </code></pre>
 
-<blockquote>
-<p>curl example to get two tracking data by id</p>
-</blockquote>
-<pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
+<blockquote class='lang-specific curl'><p>curl example to get two tracking data by id</p></blockquote>
+<pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
     --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData?id={TRACKING DATA ID 1},{TRACKING DATA ID 2}"</span>
 </code></pre>
 
-<blockquote>
-<p>HTTP 200 Successful Response Schema:</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
+<blockquote class='lang-specific schema'><p>HTTP 200 Successful Response Schema:</p></blockquote>
+<pre class="highlight schema"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Get tracking data"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Returns tracking data"</span><span class="p">,</span><span class="w">
@@ -1495,26 +1455,20 @@ The response always will contain equipment that the user has access to.</p>
 
 <h2 id="get-trackingdata-search">GET /trackingData/search</h2>
 
-<blockquote>
-<p>curl example to get more information from trackingData:</p>
-</blockquote>
-<pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
+<blockquote class='lang-specific curl'><p>curl example to get more information from trackingData:</p></blockquote>
+<pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
     --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData/search?include=trackingPoint"</span>
 </code></pre>
 
-<blockquote>
-<p>curl example to get ENGINE_HOURS as an associated CAN variable:</p>
-</blockquote>
-<pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
+<blockquote class='lang-specific curl'><p>curl example to get ENGINE_HOURS as an associated CAN variable:</p></blockquote>
+<pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
     --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData/search?links.canVariable=ENGINE_HOURS"</span>
 </code></pre>
 
-<blockquote>
-<p>curl example to get aggregated trackingData information:</p>
-</blockquote>
-<pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
+<blockquote class='lang-specific curl'><p>curl example to get aggregated trackingData information:</p></blockquote>
+<pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
     --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData/search?include=trackingPoint&amp;</span><span class="se">\</span><span class="s2">
 aggregations=equipmentAgg&amp;</span><span class="se">\</span><span class="s2">
@@ -1565,10 +1519,8 @@ further information about aggregations operators
 
 <h2 id="tracking-data-request-parameters">Tracking data request parameters</h2>
 
-<blockquote>
-<p>curl example to get a list of tracking data sending parameters:</p>
-</blockquote>
-<pre class="highlight shell"><code>curl -X GET --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+<blockquote class='lang-specific curl'><p>curl example to get a list of tracking data sending parameters:</p></blockquote>
+<pre class="highlight curl"><code>curl -X GET --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
 <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData?</span><span class="se">\</span><span class="s2">
 externalId={EXTERNAL TRACKING DATA ID}&amp;</span><span class="se">\</span><span class="s2">
 raw={RAW VALUE}&amp;</span><span class="se">\</span><span class="s2">
@@ -1602,18 +1554,14 @@ offset=0"</span>
 
 <h2 id="get-trackingpoints">GET /trackingPoints</h2>
 
-<blockquote>
-<p>curl example to get a list of tracking points:</p>
-</blockquote>
-<pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
+<blockquote class='lang-specific curl'><p>curl example to get a list of tracking points:</p></blockquote>
+<pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
     --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingPoints"</span>
 </code></pre>
 
-<blockquote>
-<p>HTTP 200 Successful Response Schema:</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
+<blockquote class='lang-specific schema'><p>HTTP 200 Successful Response Schema:</p></blockquote>
+<pre class="highlight schema"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Get tracking points"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Returns tracking points"</span><span class="p">,</span><span class="w">
@@ -1712,26 +1660,20 @@ offset=0"</span>
 
 <h2 id="get-trackingpoints-id">GET /trackingPoints/{id}</h2>
 
-<blockquote>
-<p>curl example to get one tracking points by id</p>
-</blockquote>
-<pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
+<blockquote class='lang-specific curl'><p>curl example to get one tracking points by id</p></blockquote>
+<pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
     --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingPoints/{TRACKING POINT ID}"</span>
 </code></pre>
 
-<blockquote>
-<p>curl example to get two tracking points by id</p>
-</blockquote>
-<pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
+<blockquote class='lang-specific curl'><p>curl example to get two tracking points by id</p></blockquote>
+<pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
     --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData?id={TRACKING POINT ID 1},{TRACKING POINT ID 2}"</span>
 </code></pre>
 
-<blockquote>
-<p>HTTP 200 Successful Response Schema:</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
+<blockquote class='lang-specific schema'><p>HTTP 200 Successful Response Schema:</p></blockquote>
+<pre class="highlight schema"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Get tracking points"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Returns tracking points"</span><span class="p">,</span><span class="w">
@@ -1831,10 +1773,8 @@ offset=0"</span>
 
 <h2 id="tracking-points-request-parameters">Tracking points request parameters</h2>
 
-<blockquote>
-<p>curl example to get a list of tracking points sending parameters:</p>
-</blockquote>
-<pre class="highlight shell"><code>curl -X GET --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+<blockquote class='lang-specific curl'><p>curl example to get a list of tracking points sending parameters:</p></blockquote>
+<pre class="highlight curl"><code>curl -X GET --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
 <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData?</span><span class="se">\</span><span class="s2">
 deviceId={DEVICE ID}&amp;</span><span class="se">\</span><span class="s2">
 head={HEAD VALUE}&amp;</span><span class="se">\</span><span class="s2">
