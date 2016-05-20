@@ -4,17 +4,17 @@ Manages tracking data.
 
 ## GET /trackingData
 
-> curl example to get a list of tracking data:
+<blockquote class='lang-specific curl'><p>curl example to get a list of tracking data:</p></blockquote>
 
-```shell
+```curl
 curl -X GET \
     --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData"
 ```
 
-> HTTP 200 Successful Response Schema:
+<blockquote class='lang-specific schema'><p>HTTP 200 Successful Response Schema:</p></blockquote>
 
-```json
+```schema
 [[telemetry:operation:getTrackingData]]
 ```
 
@@ -32,25 +32,25 @@ There are some [parameters](#tracking-data-request-parameters) that can be sent 
 
 ## GET /trackingData/{id}
 
-> curl example to get one tracking data by id
+<blockquote class='lang-specific curl'><p>curl example to get one tracking data by id</p></blockquote>
 
-```shell
+```curl
 curl -X GET \
     --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData/{TRACKING DATA ID}"
 ```
 
-> curl example to get two tracking data by id
+<blockquote class='lang-specific curl'><p>curl example to get two tracking data by id</p></blockquote>
 
-```shell
+```curl
 curl -X GET \
     --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData?id={TRACKING DATA ID 1},{TRACKING DATA ID 2}"
 ```
 
-> HTTP 200 Successful Response Schema:
+<blockquote class='lang-specific schema'><p>HTTP 200 Successful Response Schema:</p></blockquote>
 
-```json
+```schema
 [[telemetry:operation:getTrackingData]]
 ```
 
@@ -68,25 +68,25 @@ There are some parameters that can be sent to `GET /trackingData/{id}` to get mo
 
 ## GET /trackingData/search
 
-> curl example to get more information from trackingData:
+<blockquote class='lang-specific curl'><p>curl example to get more information from trackingData:</p></blockquote>
 
-```shell
+```curl
 curl -X GET \
     --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData/search?include=trackingPoint"
 ```
 
-> curl example to get ENGINE_HOURS as an associated CAN variable:
+<blockquote class='lang-specific curl'><p>curl example to get ENGINE_HOURS as an associated CAN variable:</p></blockquote>
 
-```shell
+```curl
 curl -X GET \
     --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData/search?links.canVariable=ENGINE_HOURS"
 ```
 
-> curl example to get aggregated trackingData information:
+<blockquote class='lang-specific curl'><p>curl example to get aggregated trackingData information:</p></blockquote>
 
-```shell
+```curl
 curl -X GET \
     --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData/search?include=trackingPoint&\
@@ -138,9 +138,9 @@ further information about aggregations operators
 
 ## Tracking data request parameters
 
-> curl example to get a list of tracking data sending parameters:
+<blockquote class='lang-specific curl'><p>curl example to get a list of tracking data sending parameters:</p></blockquote>
 
-```shell
+```curl
 curl -X GET --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
 "https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData?\
 externalId={EXTERNAL TRACKING DATA ID}&\

@@ -58,9 +58,9 @@ access token like the `authentication response` example in the right column.
 
 For more details about OAuth2 access the [http://oauth.net/2/](http://oauth.net/2/)
 
-> `curl` example of OAuth2 authentication:
+<blockquote class='lang-specific curl'><p>`curl` example of OAuth2 authentication:</p></blockquote>
 
-```shell
+```curl
 curl -k -X "POST"\
     "https://aaat.agcocorp.com/auth/oauth2/access_token?realm=/dealers"\
     --data-urlencode "username=YOUR_USERNAME"\
@@ -71,7 +71,7 @@ curl -k -X "POST"\
     --data-urlencode "grant_type=password"
 ```
 
-> HTTP 200 authentication response example:
+<blockquote class='lang-specific json'><p>HTTP 200 authentication response example:</p></blockquote>
 
 ```json
 {
@@ -95,9 +95,9 @@ Field           | Description
 
 ## How permissions are handled
 
-> Example of how to get models from Telemetry API using OAuth2 authentication:
+<blockquote class='lang-specific curl'><p>Example of how to get models from Telemetry API using OAuth2 authentication:</p></blockquote>
 
-```shell
+```curl
 curl -X GET \
     -H "Authorization: Bearer YOUR_ACCESS_TOKEN"\
     "https://agco-fuse-trackers-sandbox.herokuapp.com/models"

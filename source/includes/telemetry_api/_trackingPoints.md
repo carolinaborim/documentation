@@ -4,17 +4,17 @@ Manages tracking points.
 
 ## GET /trackingPoints
 
-> curl example to get a list of tracking points:
+<blockquote class='lang-specific curl'><p>curl example to get a list of tracking points:</p></blockquote>
 
-```shell
+```curl
 curl -X GET \
     --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/trackingPoints"
 ```
 
-> HTTP 200 Successful Response Schema:
+<blockquote class='lang-specific schema'><p>HTTP 200 Successful Response Schema:</p></blockquote>
 
-```json
+```schema
 [[telemetry:operation:getTrackingPoint]]
 ```
 
@@ -32,25 +32,25 @@ There are some [parameters](#tracking-points-request-parameters) that can be sen
 
 ## GET /trackingPoints/{id}
 
-> curl example to get one tracking points by id
+<blockquote class='lang-specific curl'><p>curl example to get one tracking points by id</p></blockquote>
 
-```shell
+```curl
 curl -X GET \
     --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/trackingPoints/{TRACKING POINT ID}"
 ```
 
-> curl example to get two tracking points by id
+<blockquote class='lang-specific curl'><p>curl example to get two tracking points by id</p></blockquote>
 
-```shell
+```curl
 curl -X GET \
     --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData?id={TRACKING POINT ID 1},{TRACKING POINT ID 2}"
 ```
 
-> HTTP 200 Successful Response Schema:
+<blockquote class='lang-specific schema'><p>HTTP 200 Successful Response Schema:</p></blockquote>
 
-```json
+```schema
 [[telemetry:operation:getTrackingPoint]]
 ```
 
@@ -69,9 +69,9 @@ There are some [parameters](#tracking-points-request-parameters) that can be sen
 
 ## Tracking points request parameters
 
-> curl example to get a list of tracking points sending parameters:
+<blockquote class='lang-specific curl'><p>curl example to get a list of tracking points sending parameters:</p></blockquote>
 
-```shell
+```curl
 curl -X GET --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
 "https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData?\
 deviceId={DEVICE ID}&\

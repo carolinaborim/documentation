@@ -12,17 +12,17 @@ You will only access equipment your access token allows.
 
 ## GET /equipment
 
-> curl example to get a list of equipment:
+<blockquote class='lang-specific curl'><p>curl example to get a list of equipment:</p></blockquote>
 
-```shell
+```curl
 curl -X GET \
     --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/equipment"
 ```
 
-> HTTP 200 Successful Response Schema:
+<blockquote class='lang-specific schema'><p>HTTP 200 Successful Response Schema:</p></blockquote>
 
-```json
+```schema
 [[telemetry:operation:getEquipment]]
 ```
 
@@ -42,25 +42,25 @@ There are some [parameters](#equipment-request-parameters) that can be sent to `
 
 ## GET /equipment/{id}
 
-> curl example to get one equipment by id
+<blockquote class='lang-specific curl'><p>curl example to get one equipment by id</p></blockquote>
 
-```shell
+```curl
 curl -X GET \
     --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/equipment/{EQUIPMENT ID}"
 ```
 
-> curl example to get two equipment by id
+<blockquote class='lang-specific curl'><p>curl example to get two equipment by id</p></blockquote>
 
-```shell
+```curl
 curl -X GET \
     --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/equipment?id={EQUIPMENT ID 1},{EQUIPMENT ID 2}"
 ```
 
-> HTTP 200 Successful Response Schema:
+<blockquote class='lang-specific schema'><p>HTTP 200 Successful Response Schema:</p></blockquote>
 
-```json
+```schema
 [[telemetry:operation:getEquipment]]
 ```
 
@@ -80,9 +80,9 @@ There are some parameters that can be sent to `GET /equipment/{id}` to get more 
 
 ## Equipment request parameters
 
-> curl example to get a list of equipment sending parameters:
+<blockquote class='lang-specific curl'><p>curl example to get a list of equipment sending parameters:</p></blockquote>
 
-```shell
+```curl
 curl -X GET --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
 "https://agco-fuse-trackers-sandbox.herokuapp.com/equipment?&\
 include=model,dealer,manufacturingModel&\
@@ -98,7 +98,6 @@ The parameters below are optional:
  - **manufacturingModel**: The manufacturing model code.
 - **offset**: Defines from each index start the list (the first index is 0).
 - **limit**: Defines max number of equipment on the response
-
 
 ## Equipment ownership
 
