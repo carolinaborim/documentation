@@ -482,8 +482,8 @@ html, body {
     }
 
     &.success {
-      background-color: #6ac174;
-      text-shadow: 0 0px 0 #b2ff0a;
+      background-color: $aside-success-bg;
+      text-shadow: 0 0px 0 lighten($aside-success-bg, 15%);
       color: #000;
     }
   }
