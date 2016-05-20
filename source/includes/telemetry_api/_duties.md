@@ -17,17 +17,17 @@ Possible duty states are:
 
 ## GET /duties
 
-> curl example to get a list of duties:
+<blockquote class='lang-specific curl'><p>curl example to get a list of duties:</p></blockquote>
 
-```shell
+```curl
 curl -X GET \
     --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/duties"
 ```
 
-> HTTP 200 Successful Response Schema:
+<blockquote class='lang-specific schema'><p>HTTP 200 Successful Response Schema:</p></blockquote>
 
-```json
+```schema
 [[telemetry:operation:getDuty]]
 ```
 
@@ -45,25 +45,25 @@ There are some [parameters](#duties-request-parameters) that can be sent to `GET
 
 ## GET /duties/{id}
 
-> curl example to get one duties by id
+<blockquote class='lang-specific curl'><p>curl example to get one duties by id</p></blockquote>
 
-```shell
+```curl
 curl -X GET \
     --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/duties/{DUTY ID}"
 ```
 
-> curl example to get two duties by id
+<blockquote class='lang-specific curl'><p>curl example to get two duties by id</p></blockquote>
 
-```shell
+```curl
 curl -X GET \
     --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData?id={DUTY ID 1},{DUTY ID 2}"
 ```
 
-> HTTP 200 Successful Response Schema:
+<blockquote class='lang-specific schema'><p>HTTP 200 Successful Response Schema:</p></blockquote>
 
-```json
+```schema
 [[telemetry:operation:getDuty]]
 ```
 
@@ -81,9 +81,9 @@ There are some [parameters](#duties-request-parameters) that can be sent to `GET
 
 ## Duties request parameters
 
-> curl example to get a list of tracking points sending parameters:
+<blockquote class='lang-specific curl'><p>curl example to get a list of tracking points sending parameters:</p></blockquote>
 
-```shell
+```curl
 curl -X GET --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
 "https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData?\
 status={DUTY VALUE}&\
