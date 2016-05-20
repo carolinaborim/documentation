@@ -723,8 +723,9 @@ html, body {
       background-color: #f499a6;
       text-shadow: 0 1px 0 #fbdee2; }
     .content aside.success {
-      background-color: #81BC00;
-      text-shadow: 0 1px 0 #b2ff0a; }
+      background-color: #6ac174;
+      text-shadow: 0 0px 0 #a0d7a6;
+      color: #000; }
   .content aside:before {
     vertical-align: middle;
     padding-right: 0.5em;
