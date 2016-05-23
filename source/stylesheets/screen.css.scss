@@ -486,6 +486,12 @@ html, body {
       text-shadow: 0 0px 0 lighten($aside-success-bg, 15%);
       color: #000;
     }
+
+    &.info {
+      background-color: $aside-info-bg;
+      text-shadow: 0 0px 0 lighten($aside-info-bg, 15%);
+      color: #000;
+    }
   }
 
   aside:before {
@@ -495,6 +501,10 @@ html, body {
   }
 
   aside.notice:before {
+    @extend %icon-info-sign;
+  }
+
+  aside.info:before {
     @extend %icon-info-sign;
   }
 

@@ -131,7 +131,7 @@ Error Code                        | Meaning
 
 When the authentication token is invalid or expired, the response will return an array of errors, with an item pointing out the status and the response code.
 
-<aside class="success">There is a response schema on the right panel.</aside>
+<aside class="info">There is a response schema on the right panel.</aside>
 
 ## 404 Not Found
 
@@ -143,7 +143,7 @@ When the authentication token is invalid or expired, the response will return an
 
 When the list does not exist, the response will return an array of errors, with an item pointing out the status and the response code.
 
-<aside class="success">There is a response schema on the right panel.</aside>
+<aside class="info">There is a response schema on the right panel.</aside>
 
 ## 500 Internal Server Error
 
@@ -154,4 +154,4 @@ When the list does not exist, the response will return an array of errors, with 
 ```
 
 When there is an error processing the request, the response will return an array of errors, with an item pointing out the status and the response code.
-<aside class="success">There is a response schema on the right panel.</aside>
+<aside class="info">There is a response schema on the right panel.</aside>
