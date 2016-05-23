@@ -136,7 +136,7 @@ You can also sort or limit the aggregation properties. You can find
 further information about aggregations operators
 [here](https://github.com/agco/agco-json-api-profiles/blob/master/public/search-profile.md).
 
-<aside class="success">There is a curl example on the right panel.</aside>
+<aside class="info">There is a curl example on the right panel.</aside>
 
 ## Tracking data request parameters
 
@@ -166,4 +166,4 @@ The parameters below are optional:
 - **offset**: Defines from each index start the list (the first index is 0).
 - **limit**: Defines max number of tracking data on the response
 
-<aside class="success">There is a curl example on the right panel.</aside>
+<aside class="info">There is a curl example on the right panel.</aside>
