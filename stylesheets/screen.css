@@ -690,7 +690,11 @@ html, body {
       border-bottom: 1px solid #ccc;
       vertical-align: bottom; }
     .content table td {
-      padding: 10px; }
+      padding: 8px;
+      word-break: break-word;
+      width: 110px;
+      font-size: 0.8em;
+      border-bottom: 1px dotted #ccc; }
     .content table tr:last-child {
       border-bottom: 1px solid #ccc; }
     .content table tr:nth-child(odd) > td {
