@@ -215,11 +215,6 @@ using your e-mail address and the auto-generated password.</p>
 
 <h2 id="authenticate-using-oauth2">Authenticate using OAuth2</h2>
 
-<p>To authenticate using <code class="prettyprint">OAuth2</code> just send a request containing the credentials
-access token like the <code class="prettyprint">authentication response</code> example in the right column.</p>
-
-<p>For more details about OAuth2 access the <a href="http://oauth.net/2/">http://oauth.net/2/</a></p>
-
 <blockquote class='lang-specific curl'><p>`curl` example of OAuth2 authentication:</p></blockquote>
 <pre class="highlight curl"><code>curl -k -X <span class="s2">"POST"</span><span class="se">\</span>
     <span class="s2">"https://aaat.agcocorp.com/auth/oauth2/access_token?realm=/dealers"</span><span class="se">\</span>
@@ -240,6 +235,60 @@ access token like the <code class="prettyprint">authentication response</code> e
   </span><span class="nt">"access_token"</span><span class="p">:</span><span class="s2">"be9225f4-961a-49c5-bd0d-cf36cb855f69"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
+
+<p>The data on the table below should be sent to the authentication service, in
+order to generate a token:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Data</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>username</td>
+<td>The username received on email</td>
+</tr>
+<tr>
+<td>password</td>
+<td>The password set on the previous step</td>
+</tr>
+<tr>
+<td>client_id</td>
+<td>The client id received over email</td>
+</tr>
+<tr>
+<td>client_secret</td>
+<td>The client secret received over email</td>
+</tr>
+<tr>
+<td>scope</td>
+<td><code class="prettyprint">cn mail agcoUUID</code></td>
+</tr>
+<tr>
+<td>grant_type</td>
+<td><code class="prettyprint">password</code></td>
+</tr>
+</tbody></table>
+
+<p>There is an example on the sidebar using <code class="prettyprint">curl</code> with all the required data to
+request an authentication token using your recently created credentials.</p>
+
+<p>Use the token from the <code class="prettyprint">authentication response</code> to authenticate the following
+requests on different services. The token should be sent using a the
+authorization header.</p>
+
+<table><thead>
+<tr>
+<th>Header</th>
+<th>Data</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td><code class="prettyprint">Bearer {access token}</code></td>
+</tr>
+</tbody></table>
 
 <h3 id="authentication-response-fields">Authentication response fields</h3>
 
@@ -270,6 +319,8 @@ access token like the <code class="prettyprint">authentication response</code> e
 <td>Access token</td>
 </tr>
 </tbody></table>
+
+<p>For more details about OAuth2 access the <a href="http://oauth.net/2/">http://oauth.net/2/</a></p>
 
 <h2 id="how-permissions-are-handled">How permissions are handled</h2>
 

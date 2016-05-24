@@ -692,7 +692,7 @@ html, body {
     .content table td {
       padding: 8px;
       word-break: break-word;
-      width: 110px;
+      max-width: 200px;
       font-size: 0.8em;
       border-bottom: 1px dotted #ccc; }
     .content table tr:last-child {
