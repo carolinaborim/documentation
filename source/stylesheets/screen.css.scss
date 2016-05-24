@@ -425,7 +425,11 @@ html, body {
     }
 
     td {
-      padding: 10px;
+      padding: 8px;
+      word-break: break-word;
+      width: 110px;
+      font-size: 0.8em;
+      border-bottom: 1px dotted #ccc;
     }
 
     tr:last-child {
