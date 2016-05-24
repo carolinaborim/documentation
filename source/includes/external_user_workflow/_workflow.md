@@ -53,11 +53,6 @@ Our solutions support [OAuth2 authentication](#authenticate-using-oauth2) method
 
 ## Authenticate using OAuth2
 
-To authenticate using `OAuth2` just send a request containing the credentials
-access token like the `authentication response` example in the right column.
-
-For more details about OAuth2 access the [http://oauth.net/2/](http://oauth.net/2/)
-
 <blockquote class='lang-specific curl'><p>`curl` example of OAuth2 authentication:</p></blockquote>
 
 ```curl
@@ -83,6 +78,29 @@ curl -k -X "POST"\
 }
 ```
 
+The data on the table below should be sent to the authentication service, in
+order to generate a token:
+
+| Field         | Data                                  |
+| ---           | ---                                   |
+| username      | The username received on email        |
+| password      | The password set on the previous step |
+| client_id     | The client id received over email     |
+| client_secret | The client secret received over email |
+| scope         | `cn mail agcoUUID`                    |
+| grant_type    | `password`                            |
+
+There is an example on the sidebar using `curl` with all the required data to
+request an authentication token using your recently created credentials.
+
+Use the token from the `authentication response` to authenticate the following
+requests on different services. The token should be sent using a the
+authorization header.
+
+| Header        | Data                    |
+| ---           | ---                     |
+| Authorization | `Bearer {access token}` |
+
 ### Authentication response fields
 
 Field           | Description
@@ -92,6 +110,8 @@ Field           | Description
 `token_type`    | Access token type
 `refresh_token` | Refresh token
 `access_token`  | Access token
+
+For more details about OAuth2 access the [http://oauth.net/2/](http://oauth.net/2/)
 
 ## How permissions are handled
 
