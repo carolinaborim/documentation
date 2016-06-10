@@ -1,5 +1,7 @@
 # Equipment API
 
+## Introduction
+
 The [Equipment API](#equipment-api) is a façade whose goal is to provide an easier way of retrieving
 equipment related structured information.
 
@@ -15,6 +17,15 @@ The structure of endpoint responses follow the [JSON API 1.0](http://jsonapi.org
 JSON API is a specification concerning how a client should request that
 resources to be fetched or modified, and how a server should respond to those
 requests.
+
+### Environments
+
+Equipment API is available on the following environments:
+
+| Environment | URL                                                                                                    |
+| ----------- | ------------------------------------------------------------------------------------------------------ |
+| Sandbox     | [https://fuse-equipment-api-sandbox.herokuapp.com/](https://fuse-equipment-api-sandbox.herokuapp.com/) |
+| Production  | [https://fuse-equipment-api.herokuapp.com/](https://fuse-equipment-api.herokuapp.com/)                 |
 
 ### Usage Demonstration
 
@@ -40,7 +51,7 @@ You must replace <code>[token]</code> with the token response from the Authentic
 ```curl
 curl -X GET \
   --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
-  "https://fuse-equipment-api.herokuapp.com/equipment?limit=1&offset=0"
+  "https://fuse-equipment-api-sandbox.herokuapp.com/equipment?limit=1&offset=0"
 ```
 
 <blockquote class='lang-specific schema'><p>HTTP 200 Successful Response schema:</p></blockquote>
@@ -81,7 +92,7 @@ Refer to the [CAN Variables](#can-variables) section to see the possible returne
 ```curl
 curl -X GET \
   --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
-  "https://fuse-equipment-api.herokuapp.com/equipment/{id of the equipment}"
+  "https://fuse-equipment-api-sandbox.herokuapp.com/equipment/{id of the equipment}"
 ```
 
 <blockquote class='lang-specific schema'><p>HTTP 200 Successful Response schema:</p></blockquote>
