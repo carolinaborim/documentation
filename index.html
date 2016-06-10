@@ -342,6 +342,8 @@ All requests should contain an Authorization header.
 
           <h1 id="equipment-api">Equipment API</h1>
 
+<h2 id="introduction">Introduction</h2>
+
 <p>The <a href="#equipment-api">Equipment API</a> is a façade whose goal is to provide an easier way of retrieving
 equipment related structured information.</p>
 
@@ -357,6 +359,26 @@ location of the equipment, the working status and other CAN variables.</p>
 JSON API is a specification concerning how a client should request that
 resources to be fetched or modified, and how a server should respond to those
 requests.</p>
+
+<h3 id="environments">Environments</h3>
+
+<p>Equipment API is available on the following environments:</p>
+
+<table><thead>
+<tr>
+<th>Environment</th>
+<th>URL</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Sandbox</td>
+<td><a href="https://fuse-equipment-api-sandbox.herokuapp.com/">https://fuse-equipment-api-sandbox.herokuapp.com/</a></td>
+</tr>
+<tr>
+<td>Production</td>
+<td><a href="https://fuse-equipment-api.herokuapp.com/">https://fuse-equipment-api.herokuapp.com/</a></td>
+</tr>
+</tbody></table>
 
 <h3 id="usage-demonstration">Usage Demonstration</h3>
 
@@ -380,7 +402,7 @@ You must replace <code>[token]</code> with the token response from the Authentic
 <blockquote class='lang-specific curl'><p>Example of using curl to request a list of equipment</p></blockquote>
 <pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
   --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
-  <span class="s2">"https://fuse-equipment-api.herokuapp.com/equipment?limit=1&amp;offset=0"</span>
+  <span class="s2">"https://fuse-equipment-api-sandbox.herokuapp.com/equipment?limit=1&amp;offset=0"</span>
 </code></pre>
 
 <blockquote class='lang-specific schema'><p>HTTP 200 Successful Response schema:</p></blockquote>
@@ -539,7 +561,7 @@ extra parameters.</p>
 <blockquote class='lang-specific curl'><p>Example of using curl to request details of an equipment</p></blockquote>
 <pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
   --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
-  <span class="s2">"https://fuse-equipment-api.herokuapp.com/equipment/{id of the equipment}"</span>
+  <span class="s2">"https://fuse-equipment-api-sandbox.herokuapp.com/equipment/{id of the equipment}"</span>
 </code></pre>
 
 <blockquote class='lang-specific schema'><p>HTTP 200 Successful Response schema:</p></blockquote>
@@ -840,6 +862,26 @@ and <a href="https://github.com/agco/agco-json-api-profiles/blob/master/public/s
 the information available.</p>
 
 <p>For further information on each endpoint, as examples and status code, see the following sections.</p>
+
+<h3 id="environments">Environments</h3>
+
+<p>Telemetry API is available on the following environments:</p>
+
+<table><thead>
+<tr>
+<th>Environment</th>
+<th>URL</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Sandbox</td>
+<td><a href="https://agco-fuse-trackers-sandbox.herokuapp.com/">https://agco-fuse-trackers-sandbox.herokuapp.com/</a></td>
+</tr>
+<tr>
+<td>Production</td>
+<td><a href="https://agco-fuse-trackers.herokuapp.com/">https://agco-fuse-trackers.herokuapp.com/</a></td>
+</tr>
+</tbody></table>
 
           <h2 id="duties">Duties</h2>
 
