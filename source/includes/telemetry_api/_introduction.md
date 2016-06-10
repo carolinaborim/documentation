@@ -24,3 +24,12 @@ and [search](https://github.com/agco/agco-json-api-profiles/blob/master/public/s
 the information available.
 
 For further information on each endpoint, as examples and status code, see the following sections.
+
+### Environments
+
+Telemetry API is available on the following environments:
+
+| Environment | URL                                                                                                    |
+| ----------- | ------------------------------------------------------------------------------------------------------ |
+| Sandbox     | [https://agco-fuse-trackers-sandbox.herokuapp.com/](https://agco-fuse-trackers-sandbox.herokuapp.com/) |
+| Production  | [https://agco-fuse-trackers.herokuapp.com/](https://agco-fuse-trackers.herokuapp.com/)                 |
