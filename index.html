@@ -401,7 +401,7 @@ You must replace <code>[token]</code> with the token response from the Authentic
 
 <blockquote class='lang-specific curl'><p>Example of using curl to request a list of equipment</p></blockquote>
 <pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
-  --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+  --header <span class="s2">"Authorization: Bearer YOUR_ACCESS_TOKEN"</span> <span class="se">\</span>
   <span class="s2">"https://fuse-equipment-api-sandbox.herokuapp.com/equipment?limit=1&amp;offset=0"</span>
 </code></pre>
 
@@ -560,7 +560,7 @@ extra parameters.</p>
 
 <blockquote class='lang-specific curl'><p>Example of using curl to request details of an equipment</p></blockquote>
 <pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
-  --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+  --header <span class="s2">"Authorization: Bearer YOUR_ACCESS_TOKEN"</span> <span class="se">\</span>
   <span class="s2">"https://fuse-equipment-api-sandbox.herokuapp.com/equipment/{id of the equipment}"</span>
 </code></pre>
 
@@ -927,7 +927,7 @@ the information available.</p>
 
 <blockquote class='lang-specific curl'><p>curl example to get a list of duties:</p></blockquote>
 <pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
-    --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+    --header <span class="s2">"Authorization: Bearer YOUR_ACCESS_TOKEN"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/duties"</span>
 </code></pre>
 
@@ -991,13 +991,13 @@ the information available.</p>
 
 <blockquote class='lang-specific curl'><p>curl example to get one duties by id</p></blockquote>
 <pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
-    --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+    --header <span class="s2">"Authorization: Bearer YOUR_ACCESS_TOKEN"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/duties/{DUTY ID}"</span>
 </code></pre>
 
 <blockquote class='lang-specific curl'><p>curl example to get two duties by id</p></blockquote>
 <pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
-    --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+    --header <span class="s2">"Authorization: Bearer YOUR_ACCESS_TOKEN"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData?id={DUTY ID 1},{DUTY ID 2}"</span>
 </code></pre>
 
@@ -1060,7 +1060,7 @@ the information available.</p>
 <h2 id="duties-request-parameters">Duties request parameters</h2>
 
 <blockquote class='lang-specific curl'><p>curl example to get a list of tracking points sending parameters:</p></blockquote>
-<pre class="highlight curl"><code>curl -X GET --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+<pre class="highlight curl"><code>curl -X GET --header <span class="s2">"Authorization: Bearer YOUR_ACCESS_TOKEN"</span> <span class="se">\</span>
 <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData?</span><span class="se">\</span><span class="s2">
 status={DUTY VALUE}&amp;</span><span class="se">\</span><span class="s2">
 limit=10&amp;</span><span class="se">\</span><span class="s2">
@@ -1091,7 +1091,7 @@ manufacturing date and description.</p>
 
 <blockquote class='lang-specific curl'><p>curl example to get a list of equipment:</p></blockquote>
 <pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
-    --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+    --header <span class="s2">"Authorization: Bearer YOUR_ACCESS_TOKEN"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/equipment"</span>
 </code></pre>
 
@@ -1211,13 +1211,13 @@ manufacturing date and description.</p>
 
 <blockquote class='lang-specific curl'><p>curl example to get one equipment by id</p></blockquote>
 <pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
-    --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+    --header <span class="s2">"Authorization: Bearer YOUR_ACCESS_TOKEN"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/equipment/{EQUIPMENT ID}"</span>
 </code></pre>
 
 <blockquote class='lang-specific curl'><p>curl example to get two equipment by id</p></blockquote>
 <pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
-    --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+    --header <span class="s2">"Authorization: Bearer YOUR_ACCESS_TOKEN"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/equipment?id={EQUIPMENT ID 1},{EQUIPMENT ID 2}"</span>
 </code></pre>
 
@@ -1336,7 +1336,7 @@ manufacturing date and description.</p>
 <h2 id="equipment-request-parameters">Equipment request parameters</h2>
 
 <blockquote class='lang-specific curl'><p>curl example to get a list of equipment sending parameters:</p></blockquote>
-<pre class="highlight curl"><code>curl -X GET --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+<pre class="highlight curl"><code>curl -X GET --header <span class="s2">"Authorization: Bearer YOUR_ACCESS_TOKEN"</span> <span class="se">\</span>
 <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/equipment?&amp;</span><span class="se">\</span><span class="s2">
 include=model,dealer,manufacturingModel&amp;</span><span class="se">\</span><span class="s2">
 limit=10&amp;</span><span class="se">\</span><span class="s2">
@@ -1373,7 +1373,7 @@ The response always will contain equipment that the user has access to.</p>
 
 <blockquote class='lang-specific curl'><p>curl example to get a list of tracking data:</p></blockquote>
 <pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
-    --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+    --header <span class="s2">"Authorization: Bearer YOUR_ACCESS_TOKEN"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData"</span>
 </code></pre>
 
@@ -1461,13 +1461,13 @@ The response always will contain equipment that the user has access to.</p>
 
 <blockquote class='lang-specific curl'><p>curl example to get one tracking data by id</p></blockquote>
 <pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
-    --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+    --header <span class="s2">"Authorization: Bearer YOUR_ACCESS_TOKEN"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData/{TRACKING DATA ID}"</span>
 </code></pre>
 
 <blockquote class='lang-specific curl'><p>curl example to get two tracking data by id</p></blockquote>
 <pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
-    --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+    --header <span class="s2">"Authorization: Bearer YOUR_ACCESS_TOKEN"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData?id={TRACKING DATA ID 1},{TRACKING DATA ID 2}"</span>
 </code></pre>
 
@@ -1555,19 +1555,19 @@ The response always will contain equipment that the user has access to.</p>
 
 <blockquote class='lang-specific curl'><p>curl example to get more information from trackingData:</p></blockquote>
 <pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
-    --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+    --header <span class="s2">"Authorization: Bearer YOUR_ACCESS_TOKEN"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData/search?include=trackingPoint"</span>
 </code></pre>
 
 <blockquote class='lang-specific curl'><p>curl example to get ENGINE_HOURS as an associated CAN variable:</p></blockquote>
 <pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
-    --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+    --header <span class="s2">"Authorization: Bearer YOUR_ACCESS_TOKEN"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData/search?links.canVariable=ENGINE_HOURS"</span>
 </code></pre>
 
 <blockquote class='lang-specific curl'><p>curl example to get aggregated trackingData information:</p></blockquote>
 <pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
-    --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+    --header <span class="s2">"Authorization: Bearer YOUR_ACCESS_TOKEN"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData/search?include=trackingPoint&amp;</span><span class="se">\</span><span class="s2">
 aggregations=equipmentAgg&amp;</span><span class="se">\</span><span class="s2">
 equipmentAgg.property=links.trackingPoint.equipment.id"</span>
@@ -1620,7 +1620,7 @@ further information about aggregations operators
 <h2 id="tracking-data-request-parameters">Tracking data request parameters</h2>
 
 <blockquote class='lang-specific curl'><p>curl example to get a list of tracking data sending parameters:</p></blockquote>
-<pre class="highlight curl"><code>curl -X GET --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+<pre class="highlight curl"><code>curl -X GET --header <span class="s2">"Authorization: Bearer YOUR_ACCESS_TOKEN"</span> <span class="se">\</span>
 <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData?</span><span class="se">\</span><span class="s2">
 externalId={EXTERNAL TRACKING DATA ID}&amp;</span><span class="se">\</span><span class="s2">
 raw={RAW VALUE}&amp;</span><span class="se">\</span><span class="s2">
@@ -1658,7 +1658,7 @@ offset=0"</span>
 
 <blockquote class='lang-specific curl'><p>curl example to get a list of tracking points:</p></blockquote>
 <pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
-    --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+    --header <span class="s2">"Authorization: Bearer YOUR_ACCESS_TOKEN"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingPoints"</span>
 </code></pre>
 
@@ -1764,13 +1764,13 @@ offset=0"</span>
 
 <blockquote class='lang-specific curl'><p>curl example to get one tracking points by id</p></blockquote>
 <pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
-    --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+    --header <span class="s2">"Authorization: Bearer YOUR_ACCESS_TOKEN"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingPoints/{TRACKING POINT ID}"</span>
 </code></pre>
 
 <blockquote class='lang-specific curl'><p>curl example to get two tracking points by id</p></blockquote>
 <pre class="highlight curl"><code>curl -X GET <span class="se">\</span>
-    --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+    --header <span class="s2">"Authorization: Bearer YOUR_ACCESS_TOKEN"</span> <span class="se">\</span>
     <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData?id={TRACKING POINT ID 1},{TRACKING POINT ID 2}"</span>
 </code></pre>
 
@@ -1876,7 +1876,7 @@ offset=0"</span>
 <h2 id="tracking-points-request-parameters">Tracking points request parameters</h2>
 
 <blockquote class='lang-specific curl'><p>curl example to get a list of tracking points sending parameters:</p></blockquote>
-<pre class="highlight curl"><code>curl -X GET --header <span class="s2">"Authorization: Bearer {YOUR ACCESS TOKEN}"</span> <span class="se">\</span>
+<pre class="highlight curl"><code>curl -X GET --header <span class="s2">"Authorization: Bearer YOUR_ACCESS_TOKEN"</span> <span class="se">\</span>
 <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData?</span><span class="se">\</span><span class="s2">
 deviceId={DEVICE ID}&amp;</span><span class="se">\</span><span class="s2">
 head={HEAD VALUE}&amp;</span><span class="se">\</span><span class="s2">
