@@ -50,7 +50,7 @@ You must replace <code>[token]</code> with the token response from the Authentic
 
 ```curl
 curl -X GET \
-  --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
+  --header "Authorization: Bearer YOUR_ACCESS_TOKEN" \
   "https://fuse-equipment-api-sandbox.herokuapp.com/equipment?limit=1&offset=0"
 ```
 
@@ -91,7 +91,7 @@ Refer to the [CAN Variables](#can-variables) section to see the possible returne
 
 ```curl
 curl -X GET \
-  --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
+  --header "Authorization: Bearer YOUR_ACCESS_TOKEN" \
   "https://fuse-equipment-api-sandbox.herokuapp.com/equipment/{id of the equipment}"
 ```
 
