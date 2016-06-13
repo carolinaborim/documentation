@@ -8,7 +8,7 @@ Manages tracking points.
 
 ```curl
 curl -X GET \
-    --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
+    --header "Authorization: Bearer YOUR_ACCESS_TOKEN" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/trackingPoints"
 ```
 
@@ -36,7 +36,7 @@ There are some [parameters](#tracking-points-request-parameters) that can be sen
 
 ```curl
 curl -X GET \
-    --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
+    --header "Authorization: Bearer YOUR_ACCESS_TOKEN" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/trackingPoints/{TRACKING POINT ID}"
 ```
 
@@ -44,7 +44,7 @@ curl -X GET \
 
 ```curl
 curl -X GET \
-    --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
+    --header "Authorization: Bearer YOUR_ACCESS_TOKEN" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData?id={TRACKING POINT ID 1},{TRACKING POINT ID 2}"
 ```
 
@@ -72,7 +72,7 @@ There are some [parameters](#tracking-points-request-parameters) that can be sen
 <blockquote class='lang-specific curl'><p>curl example to get a list of tracking points sending parameters:</p></blockquote>
 
 ```curl
-curl -X GET --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
+curl -X GET --header "Authorization: Bearer YOUR_ACCESS_TOKEN" \
 "https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData?\
 deviceId={DEVICE ID}&\
 head={HEAD VALUE}&\

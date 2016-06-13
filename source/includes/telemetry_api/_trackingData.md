@@ -8,7 +8,7 @@ Manages tracking data.
 
 ```curl
 curl -X GET \
-    --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
+    --header "Authorization: Bearer YOUR_ACCESS_TOKEN" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData"
 ```
 
@@ -36,7 +36,7 @@ There are some [parameters](#tracking-data-request-parameters) that can be sent 
 
 ```curl
 curl -X GET \
-    --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
+    --header "Authorization: Bearer YOUR_ACCESS_TOKEN" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData/{TRACKING DATA ID}"
 ```
 
@@ -44,7 +44,7 @@ curl -X GET \
 
 ```curl
 curl -X GET \
-    --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
+    --header "Authorization: Bearer YOUR_ACCESS_TOKEN" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData?id={TRACKING DATA ID 1},{TRACKING DATA ID 2}"
 ```
 
@@ -72,7 +72,7 @@ There are some parameters that can be sent to `GET /trackingData/{id}` to get mo
 
 ```curl
 curl -X GET \
-    --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
+    --header "Authorization: Bearer YOUR_ACCESS_TOKEN" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData/search?include=trackingPoint"
 ```
 
@@ -80,7 +80,7 @@ curl -X GET \
 
 ```curl
 curl -X GET \
-    --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
+    --header "Authorization: Bearer YOUR_ACCESS_TOKEN" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData/search?links.canVariable=ENGINE_HOURS"
 ```
 
@@ -88,7 +88,7 @@ curl -X GET \
 
 ```curl
 curl -X GET \
-    --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
+    --header "Authorization: Bearer YOUR_ACCESS_TOKEN" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData/search?include=trackingPoint&\
 aggregations=equipmentAgg&\
 equipmentAgg.property=links.trackingPoint.equipment.id"
@@ -143,7 +143,7 @@ further information about aggregations operators
 <blockquote class='lang-specific curl'><p>curl example to get a list of tracking data sending parameters:</p></blockquote>
 
 ```curl
-curl -X GET --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
+curl -X GET --header "Authorization: Bearer YOUR_ACCESS_TOKEN" \
 "https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData?\
 externalId={EXTERNAL TRACKING DATA ID}&\
 raw={RAW VALUE}&\

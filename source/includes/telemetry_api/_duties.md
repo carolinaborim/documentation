@@ -21,7 +21,7 @@ Possible duty states are:
 
 ```curl
 curl -X GET \
-    --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
+    --header "Authorization: Bearer YOUR_ACCESS_TOKEN" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/duties"
 ```
 
@@ -49,7 +49,7 @@ There are some [parameters](#duties-request-parameters) that can be sent to `GET
 
 ```curl
 curl -X GET \
-    --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
+    --header "Authorization: Bearer YOUR_ACCESS_TOKEN" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/duties/{DUTY ID}"
 ```
 
@@ -57,7 +57,7 @@ curl -X GET \
 
 ```curl
 curl -X GET \
-    --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
+    --header "Authorization: Bearer YOUR_ACCESS_TOKEN" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData?id={DUTY ID 1},{DUTY ID 2}"
 ```
 
@@ -84,7 +84,7 @@ There are some [parameters](#duties-request-parameters) that can be sent to `GET
 <blockquote class='lang-specific curl'><p>curl example to get a list of tracking points sending parameters:</p></blockquote>
 
 ```curl
-curl -X GET --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
+curl -X GET --header "Authorization: Bearer YOUR_ACCESS_TOKEN" \
 "https://agco-fuse-trackers-sandbox.herokuapp.com/trackingData?\
 status={DUTY VALUE}&\
 limit=10&\

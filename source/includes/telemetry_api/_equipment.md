@@ -16,7 +16,7 @@ You will only access equipment your access token allows.
 
 ```curl
 curl -X GET \
-    --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
+    --header "Authorization: Bearer YOUR_ACCESS_TOKEN" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/equipment"
 ```
 
@@ -46,7 +46,7 @@ There are some [parameters](#equipment-request-parameters) that can be sent to `
 
 ```curl
 curl -X GET \
-    --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
+    --header "Authorization: Bearer YOUR_ACCESS_TOKEN" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/equipment/{EQUIPMENT ID}"
 ```
 
@@ -54,7 +54,7 @@ curl -X GET \
 
 ```curl
 curl -X GET \
-    --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
+    --header "Authorization: Bearer YOUR_ACCESS_TOKEN" \
     "https://agco-fuse-trackers-sandbox.herokuapp.com/equipment?id={EQUIPMENT ID 1},{EQUIPMENT ID 2}"
 ```
 
@@ -83,7 +83,7 @@ There are some parameters that can be sent to `GET /equipment/{id}` to get more 
 <blockquote class='lang-specific curl'><p>curl example to get a list of equipment sending parameters:</p></blockquote>
 
 ```curl
-curl -X GET --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
+curl -X GET --header "Authorization: Bearer YOUR_ACCESS_TOKEN" \
 "https://agco-fuse-trackers-sandbox.herokuapp.com/equipment?&\
 include=model,dealer,manufacturingModel&\
 limit=10&\
