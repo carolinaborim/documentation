@@ -30,7 +30,7 @@ A second e-mail containing your application's identifier for [authentication](#a
 Property                 | Description
 --------                 | -----------
 `client_id`              | Application identifier to authenticate using [OAuth2](#authenticate-using-oauth2).
-`client_secret`         | Application secret to authenticate using [OAuth2](#authenticate-using-oauth2).
+`client_secret`          | Application secret to authenticate using [OAuth2](#authenticate-using-oauth2).
 
 ## Reset your password
 
