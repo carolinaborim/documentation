@@ -17,6 +17,7 @@ includes:
   - telemetry_api/equipment
   - telemetry_api/trackingData
   - telemetry_api/trackingPoints
+  - telemetry_api/sse
   - canVariables
 
 search: true
