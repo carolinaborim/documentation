@@ -409,6 +409,7 @@ You must replace <code>[token]</code> with the token response from the Authentic
 <pre class="highlight schema"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"array"</span><span class="p">,</span><span class="w">
       </span><span class="nt">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
           </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -429,18 +430,18 @@ You must replace <code>[token]</code> with the token response from the Authentic
                 </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
               </span><span class="p">},</span><span class="w">
               </span><span class="nt">"manufacturingDate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="nt">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"date"</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"date"</span><span class="w">
               </span><span class="p">},</span><span class="w">
               </span><span class="nt">"trackingPoint"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                 </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                   </span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                     </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                       </span><span class="nt">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"array"</span><span class="p">,</span><span class="w">
                         </span><span class="nt">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                           </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
-                        </span><span class="p">},</span><span class="w">
-                        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"array"</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
                       </span><span class="p">},</span><span class="w">
                       </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                         </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
@@ -521,8 +522,7 @@ You must replace <code>[token]</code> with the token response from the Authentic
           </span><span class="p">}</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"array"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="w">
@@ -587,18 +587,18 @@ extra parameters.</p>
               </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
             </span><span class="p">},</span><span class="w">
             </span><span class="nt">"manufacturingDate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-              </span><span class="nt">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"date"</span><span class="p">,</span><span class="w">
-              </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+              </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+              </span><span class="nt">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"date"</span><span class="w">
             </span><span class="p">},</span><span class="w">
             </span><span class="nt">"trackingPoint"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
               </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                 </span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                   </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                     </span><span class="nt">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"array"</span><span class="p">,</span><span class="w">
                       </span><span class="nt">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                         </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
-                      </span><span class="p">},</span><span class="w">
-                      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"array"</span><span class="w">
+                      </span><span class="p">}</span><span class="w">
                     </span><span class="p">},</span><span class="w">
                     </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                       </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
@@ -738,24 +738,24 @@ variables reported back from the tracker.</p>
 <pre class="highlight schema"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"array"</span><span class="p">,</span><span class="w">
       </span><span class="nt">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
           </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"number"</span><span class="p">,</span><span class="w">
             </span><span class="nt">"enum"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
               </span><span class="mi">401</span><span class="w">
-            </span><span class="p">],</span><span class="w">
-            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"number"</span><span class="w">
+            </span><span class="p">]</span><span class="w">
           </span><span class="p">},</span><span class="w">
           </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
             </span><span class="nt">"enum"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
               </span><span class="s2">"Unauthorized"</span><span class="w">
-            </span><span class="p">],</span><span class="w">
-            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+            </span><span class="p">]</span><span class="w">
           </span><span class="p">}</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"array"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="w">
@@ -773,24 +773,24 @@ variables reported back from the tracker.</p>
 <pre class="highlight schema"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"array"</span><span class="p">,</span><span class="w">
       </span><span class="nt">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
           </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"number"</span><span class="p">,</span><span class="w">
             </span><span class="nt">"enum"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
               </span><span class="mi">404</span><span class="w">
-            </span><span class="p">],</span><span class="w">
-            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"number"</span><span class="w">
+            </span><span class="p">]</span><span class="w">
           </span><span class="p">},</span><span class="w">
           </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
             </span><span class="nt">"enum"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
               </span><span class="s2">"Resource not found."</span><span class="w">
-            </span><span class="p">],</span><span class="w">
-            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+            </span><span class="p">]</span><span class="w">
           </span><span class="p">}</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"array"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="w">
@@ -808,24 +808,24 @@ variables reported back from the tracker.</p>
 <pre class="highlight schema"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"array"</span><span class="p">,</span><span class="w">
       </span><span class="nt">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
           </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"number"</span><span class="p">,</span><span class="w">
             </span><span class="nt">"enum"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
               </span><span class="mi">500</span><span class="w">
-            </span><span class="p">],</span><span class="w">
-            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"number"</span><span class="w">
+            </span><span class="p">]</span><span class="w">
           </span><span class="p">},</span><span class="w">
           </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
             </span><span class="nt">"enum"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
               </span><span class="s2">"An unhandled error occurred"</span><span class="w">
-            </span><span class="p">],</span><span class="w">
-            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+            </span><span class="p">]</span><span class="w">
           </span><span class="p">}</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"array"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="w">
@@ -1909,6 +1909,61 @@ offset=0"</span>
 </ul>
 
 <aside class="info">There is a curl example on the right panel.</aside>
+
+          <h2 id="observing-changes-with-server-sent-events">Observing changes with Server Sent Events</h2>
+
+<p>The Telemetry API endpoints support observing event changes through
+(SSE)<a href="Server Sent Events">http://www.w3.org/TR/2009/WD-eventsource-20091029/</a>.</p>
+
+<p>By appending a <code class="prettyprint">/changes/stream</code> to the endpoints, a connection will start to
+send information whenever the data changes in the background, reducing the
+latency of the connection and supporting live data for streaming.</p>
+
+<blockquote>
+<p>Example of using the <code class="prettyprint">/changes/stream</code> endpoint</p>
+</blockquote>
+<pre class="highlight shell"><code>curl -X GET <span class="se">\</span>
+    --header <span class="s2">"Authorization: Bearer YOUR ACCESS TOKEN"</span> <span class="se">\</span>
+    -v
+    <span class="s2">"https://agco-fuse-trackers-sandbox.herokuapp.com/equipment/changes/stream"</span>
+
+<span class="gp">&gt; </span><span class="o">[</span>...]
+&lt; HTTP/1.1 200 OK
+&lt; Server: Cowboy
+&lt; Connection: keep-alive
+&lt; Content-Type: text/event-stream
+&lt; Cache-Control: no-cache
+&lt; Date: Mon, 16 May 2016 21:27:30 GMT
+&lt; Transfer-Encoding: chunked
+&lt; Via: 1.1 vegur
+&lt;
+event: ticker
+data: 0
+
+event: ticker
+data: 1
+
+event: equipment_i
+id: 1463492955_1
+data: <span class="o">{</span><span class="s2">"id"</span>:<span class="s2">"ff69026f-eec7-44c5-8456-c08ac062fa67"</span>,<span class="s2">"description"</span>:<span class="s2">"Equipment with manufactoringModel"</span>,<span class="s2">"serviceLevel"</span>:1,<span class="s2">"identificationNumber"</span>:<span class="s2">"0000001"</span>,<span class="s2">"manufacturingDate"</span>:<span class="s2">"2014-06-30T15:18:51.000Z"</span>,<span class="s2">"links"</span>:<span class="o">{</span><span class="s2">"dealer"</span>:<span class="s2">"d7e07085-253c-4028-82fa-96f2bfcc9c4b"</span>,<span class="s2">"manufacturingModel"</span>:<span class="s2">"e93e018d-07be-45c4-8b60-8e0770daf18a"</span>,<span class="s2">"model"</span>:<span class="s2">"ffbfa8e6-aa5e-4572-8820-32adc97c8dc4"</span>,<span class="s2">"owner"</span>:<span class="s2">"fd80ac0d-4813-4810-a978-9f68a07cd8ac"</span><span class="o">}}</span>
+
+</code></pre>
+
+<p>The Server Sent Events are built on top of HTTP protocol, allowing it to be
+used through proxies and websocket if required.
+A HTTP response with the header of <code class="prettyprint">Content-Type: text/event-stream</code> is sent back, streaming events as they are computed by the service.</p>
+
+<p>The previous filters and aggregations can be combined to manimulate the information returned.</p>
+
+<p>There are libraries available for many backend platforms, as
+<a href="https://github.com/aslakhellesoy/eventsource-java">Java</a> or
+<a href="https://github.com/aslakhellesoy/eventsource-node">Node</a>, and the <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource">EventSource
+interface</a> is
+<a href="http://caniuse.com/#feat=eventsource">widely available</a> on modern browsers.</p>
+
+<p>More information about the supported arguments on the <code class="prettyprint">/changes/stream</code>
+endpoint is available on <a href="https://github.com/agco/agco-json-api-profiles/blob/master/public/change-events-profile.md">AGCO JSON API profile
+specs</a></p>
 
           <h1 id="can-variables">CAN Variables</h1>
 
