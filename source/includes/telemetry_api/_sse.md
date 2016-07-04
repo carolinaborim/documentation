@@ -11,7 +11,7 @@ latency of the connection and supporting live data for streaming.
 
 ```shell
 curl -X GET \
-    --header "Authorization: Bearer {YOUR ACCESS TOKEN}" \
+    --header "Authorization: Bearer YOUR ACCESS TOKEN" \
     -v
     "https://agco-fuse-trackers-sandbox.herokuapp.com/equipment/changes/stream"
 
