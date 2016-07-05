@@ -28,7 +28,7 @@ Property                 | Description
 
 <br>
 
-The second one will contain your application's identifier for [authentication](#authenticate) purposes:
+The second one containing your application's identifier for [authentication](#authenticate) purposes:
 
 Property                 | Description
 --------                 | -----------
