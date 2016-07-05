@@ -143,7 +143,7 @@ There is a [documentation](https://agco-fuse.github.io/documentation/#authentica
 
 ### Request an access token
 
-The best way of authentication having credentials in a Bearer token format, there is a [code example](https://github.com/agco-fuse/dealership-demo/blob/master/index.js#L17) showing how to do that.
+The best way of authentication having credentials in a Bearer token format, there is a [code example](https://github.com/agco-fuse/dealership-demo/blob/master/index.js#L17-L30) showing how to do that.
 
 ### Equipment API
 
@@ -154,7 +154,7 @@ The API will answer with the requested list<br>
 
 **How it works?**
 
-At this [code example](https://github.com/agco-fuse/dealership-demo/blob/master/app/scripts/services/apiservice.js#L11) we are requesting the API to get a list of equipment.
+At this [code example](https://github.com/agco-fuse/dealership-demo/blob/master/app/scripts/services/apiservice.js#L11-L19) we are requesting the API to get a list of equipment.
 
 To access this list, it's necessary to make a HTTP Request in the following format: GET /equipment and when the information is returned with success, a list of equipment will be available.
 
@@ -169,7 +169,7 @@ The API will answer with the requested equipment<br>
 
 **How it works?**
 
-At this [code example](https://github.com/agco-fuse/dealership-demo/blob/master/app/scripts/services/apiservice.js#L21) we are requesting the API to get a specific equipment by passing a valid id as a parameter.
+At this [code example](https://github.com/agco-fuse/dealership-demo/blob/master/app/scripts/services/apiservice.js#L21-L29) we are requesting the API to get a specific equipment by passing a valid id as a parameter.
 
 To access this equipment, it's necessary to make a HTTP Request in the following format: GET /equipment/{id} and when the information is returned with success, a single equipment will be available.
 
