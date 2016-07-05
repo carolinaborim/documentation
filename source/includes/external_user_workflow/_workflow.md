@@ -16,8 +16,9 @@ Our team will get in contact with you as soon as posible.
 
 ## Check your e-mail inbox
 
-Once our team handle your request, you will receive two e-mails. The first one containing
-the following information:
+Once our team handle your request, you will receive two e-mails.
+
+The first one containing the following information:
 
 Property                 | Description
 --------                 | -----------
