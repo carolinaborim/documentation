@@ -134,7 +134,7 @@ of the following examples available on the right side.
 All requests should contain an Authorization header.
 </aside>
 
-## Use case scenarios
+## Retrieving equipment data
 
 ### Credentials
 
@@ -149,7 +149,6 @@ The best way of authentication having credentials in a Bearer token format, ther
 
 ### Get a list of equipment
 Given I'm a developer with a Bearer token,<br>
-
 When I do a request to Equipment API, asking for a list of equipment<br>
 The API will answer with the requested list<br>
 
