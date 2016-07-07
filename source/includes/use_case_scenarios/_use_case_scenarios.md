@@ -6,16 +6,14 @@ The AGCO's Telemetry API is a solution where equipment data are centralized and 
 
 There is also a façade of Telemetry API, that respond with more information related to the equipment, making it easier to collect telemetry data, such as *status*, *location* and *CAN variables*.
 
-## Credentials
+### Credentials
 
 To do the requests it is necessary to have a credential with access to a list of equipment.
 There is a [documentation](https://agco-fuse.github.io/documentation/#authenticate-using-oauth2) that explains how the authentication works.
 
-## Request an access token
+### Request an access token
 
 The best way of authentication having credentials in a Bearer token format, there is a [code example](https://github.com/agco-fuse/dealership-demo/blob/master/index.js#L17-L30) showing how to do that.
-
-## Equipment API
 
 ## Get a list of equipment
 Given I'm a developer with a Bearer token,<br>
