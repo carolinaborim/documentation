@@ -11,6 +11,7 @@ language_tabs:
 
 includes:
   - external_user_workflow/workflow
+  - use_case_scenarios/use_case_scenarios
   - equipment_api/equipment
   - telemetry_api/introduction
   - telemetry_api/duties
