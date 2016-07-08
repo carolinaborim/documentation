@@ -10,8 +10,8 @@ Documentation
 You should have the following components installed on your computer:
 
 - Ruby 2.x
-- Bundler
-- Rake
+- [Bundler](http://bundler.io/)
+- [Rake](http://rake.rubyforge.org/)
 
 Once you have these, you should execute the following command:
 
