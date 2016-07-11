@@ -17,7 +17,7 @@ In order to consume our API, a valid bearer token must be set in the Authorizati
 
 ## Get a list of equipment
 
-To access a list of equipment, it's necessary to make a HTTP Request to [Equipment API](https://agco-fuse.github.io/documentation/#get-equipment) in the following format: `GET /equipment` and when the information is returned with success, the list will be available.
+To access a list of equipment, it's necessary to make a HTTP Request to [Equipment API](https://agco-fuse.github.io/documentation/#get-equipment) in the following format: `GET /equipment`. When the information is returned with success, the list will be available.
 
 At this [code example](https://github.com/agco-fuse/dealership-demo/blob/master/app/scripts/services/apiservice.js#L11-L19) we are requesting the API to get a list of equipment.
 
@@ -27,7 +27,7 @@ More details can be found on link [Get equipment section](#get-equipment)
 
 ## Get a single equipment
 
-  To access an equipment, it's necessary to make a HTTP Request to [Equipment API](https://agco-fuse.github.io/documentation/#get-equipment) in the following format: `GET /equipment/{id}` and when the information is returned with success, a single equipment will be available.
+To access an equipment, it's necessary to make a HTTP Request to [Equipment API](https://agco-fuse.github.io/documentation/#get-equipment) in the following format: `GET /equipment/{id}`. When the information is returned with success, a single equipment will be available.
 
 At this [code example](https://github.com/agco-fuse/dealership-demo/blob/master/app/scripts/services/apiservice.js#L21-L29) we are requesting the API to get a specific equipment by passing a valid id as a parameter.
 
@@ -37,7 +37,7 @@ More details can be found on link [Get single equipment section](#get-equipment-
 
 ## Get the dealer associated to an equipment
 
-  To get a dealer associated to an equipment, it's necessary to make a HTTP Request to Dealer API in the following format: `GET /dealer/{id}` and when the information is returned with success, a single dealer will be available.
+  To get a dealer associated to an equipment, it's necessary to make a HTTP Request to Dealer API in the following format: `GET /dealer/{id}`. When the information is returned with success, a single dealer will be available.
 
   At this [code example](https://github.com/agco-fuse/dealership-demo/blob/master/app/scripts/services/apiservice.js#L31-L38) we are requesting the API to get a specific dealer by passing a valid id as a parameter.
 
