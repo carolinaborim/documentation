@@ -16,31 +16,93 @@ There is a [documentation](https://agco-fuse.github.io/documentation/#authentica
 In order to consume our API, a valid bearer token must be set in the Authorization header of every HTTP request. There is a [code example](https://github.com/agco-fuse/dealership-demo/blob/master/index.js#L17-L30) showing how to do that.
 
 ## Get a list of equipment
-Given I'm a developer with a Bearer token,<br>
-When I do a request to Equipment API, asking for a list of equipment<br>
-The API will answer with the requested list<br>
 
-**How it works?**
+To access a list of equipment, it's necessary to make a HTTP Request to [Equipment API](https://agco-fuse.github.io/documentation/#get-equipment) in the following format: `GET /equipment`. When the information is returned with success, the list will be available.
 
 At this [code example](https://github.com/agco-fuse/dealership-demo/blob/master/app/scripts/services/apiservice.js#L11-L19) we are requesting the API to get a list of equipment.
-
-To access this list, it's necessary to make a HTTP Request in the following format: GET /equipment and when the information is returned with success, a list of equipment will be available.
 
 The equipment on the response contains the identification information, as the manufacturing date and description, and related information to the current status. It is possible to extract the location coordinates and the latest values of CAN variables reported back from the tracker.
 
 More details can be found on link [Get equipment section](#get-equipment)
 
 ## Get a single equipment
-Given I'm a developer with a Bearer token,<br>
-When I do a request to Equipment API, asking for a single equipment<br>
-The API will answer with the requested equipment<br>
 
-**How it works?**
+To access an equipment, it's necessary to make a HTTP Request to [Equipment API](https://agco-fuse.github.io/documentation/#get-equipment) in the following format: `GET /equipment/{id}`. When the information is returned with success, a single equipment will be available.
 
 At this [code example](https://github.com/agco-fuse/dealership-demo/blob/master/app/scripts/services/apiservice.js#L21-L29) we are requesting the API to get a specific equipment by passing a valid id as a parameter.
-
-To access this equipment, it's necessary to make a HTTP Request in the following format: GET /equipment/{id} and when the information is returned with success, a single equipment will be available.
 
 The equipment on the response contains the identification information, as the manufacturing date and description, and related information to the current status. It is possible to extract the location coordinates and the latest values of CAN variables reported back from the tracker.
 
 More details can be found on link [Get single equipment section](#get-equipment-id)
+
+## Get the dealer associated to an equipment
+
+  To get a dealer associated to an equipment, it's necessary to make a HTTP Request to Dealer API in the following format: `GET /dealer/{id}`. When the information is returned with success, a single dealer will be available.
+
+  At this [code example](https://github.com/agco-fuse/dealership-demo/blob/master/app/scripts/services/apiservice.js#L31-L38) we are requesting the API to get a specific dealer by passing a valid id as a parameter.
+
+## Get available CAN variables from an equipment
+
+  When a HTTP Request is done to the Equipment API, the answer will include a list of equipment.<br>
+
+  Each of those equipment will include a list of its available `CAN varibles snapshots` inside the `trackingData` as can be seen on the example on the right side.<br>
+
+  > The example below shows a group of CAN variables that belongs to an equipment.
+
+  ```json
+{
+  "data": [
+  {
+    "type": "equipment",
+      "id": "example-id",
+      "attributes": {
+        "description": "Example Equipment",
+        "serviceLevel": 1,
+        "identificationNumber": "00000",
+        "manufacturingDate": "2014-06-30T15:18:51.000Z",
+        "trackingPoint": {
+          "location": {
+            "type": "Point",
+            "coordinates": [
+              38,
+            32,
+            400
+            ]
+          },
+          "status": "OFF_PARKED"
+        },
+        "trackingData": {
+          "DRIVING_DIRECTION": "3",
+          "ENGINE_HOURS": "180000",
+          "ENGINE_LOAD": "90",
+          "ENGINE_SPEED": "125",
+          "FUEL_LEVEL": "30"
+        }
+      },
+      "relationships": {
+        "dealer": {
+          "links": {
+            "self": "",
+            "related": ""
+          },
+          "data": {
+            "type": "dealer",
+            "id": "de1729a8-a294-4293-83c8-3d96f9686b04"
+          }
+        },
+        "model": {
+          "links": {
+            "self": "",
+            "related": ""
+          },
+          "data": {
+            "type": "model",
+            "id": "ffbfa8e6-aa5e-4572-8820-32adc97c8dc4"
+          }
+        }
+      }
+  }
+  ]
+}
+
+  ```
