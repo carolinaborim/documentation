@@ -24,7 +24,7 @@ The API will answer with the requested list<br>
 
 At this [code example](https://github.com/agco-fuse/dealership-demo/blob/master/app/scripts/services/apiservice.js#L11-L19) we are requesting the API to get a list of equipment.
 
-To access this list, it's necessary to make a HTTP Request in the following format: GET /equipment and when the information is returned with success, a list of equipment will be available.
+To access this list, it's necessary to make a HTTP Request in the following format: `GET /equipment` and when the information is returned with success, a list of equipment will be available.
 
 The equipment on the response contains the identification information, as the manufacturing date and description, and related information to the current status. It is possible to extract the location coordinates and the latest values of CAN variables reported back from the tracker.
 
@@ -39,8 +39,20 @@ The API will answer with the requested equipment<br>
 
 At this [code example](https://github.com/agco-fuse/dealership-demo/blob/master/app/scripts/services/apiservice.js#L21-L29) we are requesting the API to get a specific equipment by passing a valid id as a parameter.
 
-To access this equipment, it's necessary to make a HTTP Request in the following format: GET /equipment/{id} and when the information is returned with success, a single equipment will be available.
+To access this equipment, it's necessary to make a HTTP Request in the following format: `GET /equipment/{id}` and when the information is returned with success, a single equipment will be available.
 
 The equipment on the response contains the identification information, as the manufacturing date and description, and related information to the current status. It is possible to extract the location coordinates and the latest values of CAN variables reported back from the tracker.
 
 More details can be found on link [Get single equipment section](#get-equipment-id)
+
+## Get dealer name of an equipment
+  Given I'm a developer,<br>
+  When I do a request to Dealer API, asking for a a specific dealer<br>
+  The dealer API will answer with the requested dealer<br>
+
+  **How it works?**
+
+  At this [code example](https://github.com/agco-fuse/dealership-demo/blob/master/app/scripts/services/apiservice.js#L31-L38) we are requesting the API to get a specific dealer by passing a valid id as a parameter.
+
+  To access this dealer, it's necessary to make a HTTP Request in the following format: `GET /dealer/{id}` and when the information is returned with success, a single dealer will be available.
+
