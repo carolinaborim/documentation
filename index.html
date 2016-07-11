@@ -372,15 +372,9 @@ There is a <a href="https://agco-fuse.github.io/documentation/#authenticate-usin
 
 <h2 id="get-a-list-of-equipment">Get a list of equipment</h2>
 
-<p>Given I&rsquo;m a developer with a Bearer token,<br>
-When I do a request to Equipment API, asking for a list of equipment<br>
-The API will answer with the requested list<br></p>
-
-<p><strong>How it works?</strong></p>
+<p>To access a list of equipment, it&rsquo;s necessary to make a HTTP Request to <a href="https://agco-fuse.github.io/documentation/#get-equipment">Equipment API</a> in the following format: <code class="prettyprint">GET /equipment</code>. When the information is returned with success, the list will be available.</p>
 
 <p>At this <a href="https://github.com/agco-fuse/dealership-demo/blob/master/app/scripts/services/apiservice.js#L11-L19">code example</a> we are requesting the API to get a list of equipment.</p>
-
-<p>To access this list, it&rsquo;s necessary to make a HTTP Request in the following format: GET /equipment and when the information is returned with success, a list of equipment will be available.</p>
 
 <p>The equipment on the response contains the identification information, as the manufacturing date and description, and related information to the current status. It is possible to extract the location coordinates and the latest values of CAN variables reported back from the tracker.</p>
 
@@ -388,19 +382,85 @@ The API will answer with the requested list<br></p>
 
 <h2 id="get-a-single-equipment">Get a single equipment</h2>
 
-<p>Given I&rsquo;m a developer with a Bearer token,<br>
-When I do a request to Equipment API, asking for a single equipment<br>
-The API will answer with the requested equipment<br></p>
-
-<p><strong>How it works?</strong></p>
+<p>To access an equipment, it&rsquo;s necessary to make a HTTP Request to <a href="https://agco-fuse.github.io/documentation/#get-equipment">Equipment API</a> in the following format: <code class="prettyprint">GET /equipment/{id}</code>. When the information is returned with success, a single equipment will be available.</p>
 
 <p>At this <a href="https://github.com/agco-fuse/dealership-demo/blob/master/app/scripts/services/apiservice.js#L21-L29">code example</a> we are requesting the API to get a specific equipment by passing a valid id as a parameter.</p>
-
-<p>To access this equipment, it&rsquo;s necessary to make a HTTP Request in the following format: GET /equipment/{id} and when the information is returned with success, a single equipment will be available.</p>
 
 <p>The equipment on the response contains the identification information, as the manufacturing date and description, and related information to the current status. It is possible to extract the location coordinates and the latest values of CAN variables reported back from the tracker.</p>
 
 <p>More details can be found on link <a href="#get-equipment-id">Get single equipment section</a></p>
+
+<h2 id="get-the-dealer-associated-to-an-equipment">Get the dealer associated to an equipment</h2>
+
+<p>To get a dealer associated to an equipment, it&rsquo;s necessary to make a HTTP Request to Dealer API in the following format: <code class="prettyprint">GET /dealer/{id}</code>. When the information is returned with success, a single dealer will be available.</p>
+
+<p>At this <a href="https://github.com/agco-fuse/dealership-demo/blob/master/app/scripts/services/apiservice.js#L31-L38">code example</a> we are requesting the API to get a specific dealer by passing a valid id as a parameter.</p>
+
+<h2 id="get-available-can-variables-from-an-equipment">Get available CAN variables from an equipment</h2>
+
+<p>When a HTTP Request is done to the Equipment API, the answer will include a list of equipment.<br></p>
+
+<p>Each of those equipment will include a list of its available <code class="prettyprint">CAN varibles snapshots</code> inside the <code class="prettyprint">trackingData</code> as can be seen on the example on the right side.<br></p>
+
+<blockquote>
+<p>The example below shows a group of CAN variables that belongs to an equipment.</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"equipment"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example-id"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example Equipment"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"serviceLevel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"identificationNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00000"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"manufacturingDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-06-30T15:18:51.000Z"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"trackingPoint"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Point"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+              </span><span class="mi">38</span><span class="p">,</span><span class="w">
+            </span><span class="mi">32</span><span class="p">,</span><span class="w">
+            </span><span class="mi">400</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OFF_PARKED"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"trackingData"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"DRIVING_DIRECTION"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"ENGINE_HOURS"</span><span class="p">:</span><span class="w"> </span><span class="s2">"180000"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"ENGINE_LOAD"</span><span class="p">:</span><span class="w"> </span><span class="s2">"90"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"ENGINE_SPEED"</span><span class="p">:</span><span class="w"> </span><span class="s2">"125"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"FUEL_LEVEL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"30"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"dealer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dealer"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"de1729a8-a294-4293-83c8-3d96f9686b04"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"model"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"model"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ffbfa8e6-aa5e-4572-8820-32adc97c8dc4"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
 
           <h1 id="equipment-api">Equipment API</h1>
 
