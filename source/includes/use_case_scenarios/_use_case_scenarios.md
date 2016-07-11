@@ -47,7 +47,7 @@ More details can be found on link [Get single equipment section](#get-equipment-
 
 ## Get dealer name of an equipment
   Given I'm a developer,<br>
-  When I do a request to Dealer API, asking for a a specific dealer<br>
+  When I do a request to Dealer API, asking for a specific dealer<br>
   The dealer API will answer with the requested dealer<br>
 
   **How it works?**
@@ -56,3 +56,72 @@ More details can be found on link [Get single equipment section](#get-equipment-
 
   To access this dealer, it's necessary to make a HTTP Request in the following format: `GET /dealer/{id}` and when the information is returned with success, a single dealer will be available.
 
+## Get available CAN variables from an equipment
+  Given I'm a developer,<br>
+  When I do a request to `Equipment API`, asking for an equipment<br>
+  The `Equipment API` will answer with the equipment including all available `CAN variables`<br>
+
+  **How it works?**
+
+When a HTTP Request is done to the Equipment API, the answer will include a list of equipment.<br>
+Each of those equipment will include a list of its available `CAN varibles snapshots` inside the `trackingData`.<br>
+
+  > The example below shows a group of CAN variables that belongs to an equipment.
+
+  ```json
+{
+  "data": [
+  {
+    "type": "equipment",
+      "id": "example-id",
+      "attributes": {
+        "description": "Example Equipment",
+        "serviceLevel": 1,
+        "identificationNumber": "00000",
+        "manufacturingDate": "2014-06-30T15:18:51.000Z",
+        "trackingPoint": {
+          "location": {
+            "type": "Point",
+            "coordinates": [
+              38,
+            32,
+            400
+            ]
+          },
+          "status": "OFF_PARKED"
+        },
+        "trackingData": {
+          "DRIVING_DIRECTION": "3",
+          "ENGINE_HOURS": "180000",
+          "ENGINE_LOAD": "90",
+          "ENGINE_SPEED": "125",
+          "FUEL_LEVEL": "30"
+        }
+      },
+      "relationships": {
+        "dealer": {
+          "links": {
+            "self": "",
+            "related": ""
+          },
+          "data": {
+            "type": "dealer",
+            "id": "de1729a8-a294-4293-83c8-3d96f9686b04"
+          }
+        },
+        "model": {
+          "links": {
+            "self": "",
+            "related": ""
+          },
+          "data": {
+            "type": "model",
+            "id": "ffbfa8e6-aa5e-4572-8820-32adc97c8dc4"
+          }
+        }
+      }
+  }
+  ]
+}
+
+  ```
